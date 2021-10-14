@@ -1,26 +1,39 @@
 extends layout/main.pug
 
 
-include ../blocks/sContent/_sContent.pug
+include ../blocks/sOffers/_sOffers.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sCalc/_sCalc.pug
+include ../blocks/sAdvantages/_sAdvantages.pug
+include ../blocks/sReviews/_sReviews.pug
+include ../blocks/sDeposits/_sDeposits.pug
+include ../blocks/sRequest/_sRequest.pug
+include ../blocks/sAbout/_sAbout.pug
 include ../blocks/sContact/_sContact.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= null
+	- let  bg= 'main.jpg'
 
 block title
-	- let  title= 'title'
+	- let  title= 'Главная'
 	title= title
 block pagecontent
-	+mob-mnu()
+	//- +mob-mnu()
 	+header()
-	+top-nav()
-	
-	+topLine()
+		+topLine()
+		//- +top-nav()
 	+headerBlock()
-	+sForm()
-	+sContact()
-	+footer()
+	+sOffers()
+	+sCatalog()
+	+sCalc()
+	+sAdvantages()
+	+sReviews()
+	+sDeposits()
+	+sRequest()
+	+sAbout()
+	//- +sContact()
+	//- +footer()
       
 
 

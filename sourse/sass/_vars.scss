@@ -1,6 +1,7 @@
 $rfs-rem-value: 16 !default;
 $em-base: $rfs-rem-value * 1px;
-$small: rem(14);
+$small: rem(15);
+$large: rem(18);
 $url: '../img/';
 $path2: '@2x/';
 $path1: '@1x/';
@@ -91,7 +92,7 @@ $colors: ("blue": $blue,
 // scss-docs-end colors-map
 
 // scss-docs-start theme-color-variables
-$primary: $blue !default;
+$primary: #b11b1b;
 $secondary: $gray-600 !default;
 $success: $green !default;
 $info: $cyan !default;
@@ -259,8 +260,8 @@ $grid-breakpoints: (xs: 0,
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px,
-  xxl: 1400px) !default;
+  xl: 1200px
+  ) !default;
 // scss-docs-end grid-breakpoints
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
@@ -275,8 +276,8 @@ $grid-breakpoints: (xs: 0,
 $container-max-widths: (sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px,
-  xxl: 1320px) !default;
+  xl: 1170px
+  ) !default;
 // scss-docs-end container-max-widths
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");

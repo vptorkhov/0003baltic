@@ -1,4 +1,4 @@
-$default-font: "roboto";
+$default-font: "Helvetica Neue";
 // $file-form: ($file-formats: woff2 woff ttf);
 $addr: '../fonts/';
 $file-format: woff2;
@@ -6,7 +6,11 @@ $file-format: woff2;
 
 // If font from googlefont, next lines remove
 
-// @include font-face ($default-font, $addr + "Roboto-Regular/Roboto-Regular", $file-formats: $file-format);
+@include font-face ($default-font, $addr + "Helvetica_Neue-Thin/Helvetica_Neue-Thin", 200,$file-formats: $file-format);
+@include font-face ($default-font, $addr + "Helvetica Neue-Light/Helvetica Neue-Light", $file-formats: $file-format);
+@include font-face ($default-font, $addr + "Helvetica_Neue-Medium/Helvetica_Neue-Medium", 500,$file-formats: $file-format);
+@include font-face ($default-font, $addr + "Helvetica_Neue-Bold/Helvetica_Neue-Bold", 700,$file-formats: $file-format);
+@include font-face ($default-font, $addr + "Helvetica_Neue-Black/Helvetica_Neue-Black", 900,$file-formats: $file-format);
 // @include font-face ($default-font, $addr + "Roboto-Bold/Roboto-Bold", bold, $file-formats: $file-format);
 // @include font-face ($default-font, $addr + "Roboto-Medium/Roboto-Medium", 500, $file-formats: $file-format);
 // @include font-face ($default-font, $addr + "Roboto-Black/Roboto-Black", 900, $file-formats: $file-format);
