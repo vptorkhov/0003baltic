@@ -1,9 +1,12 @@
-mixin topLine()
+mixin topLine(cart)
 	// start topLine
 	+b.SECTION.topLine.section#topLine&attributes(attributes)
-		.container
+		.container-lg
 			.row
-				.col-auto
+				+e.col.col-auto.d-lg-none.d-block
+					+e.top-nav-btn
+						+icon("toggle-icon")
+				+e.col.col-auto
 					+e.choose-city
 						+e.choose-city-btn Санкт-Петербург
 						+e.choose-city-list
@@ -14,11 +17,41 @@ mixin topLine()
 									a(href="#") Санкт-Петербург
 								li
 									a(href="#") Саратов
-				.col-auto.d-lg-block.d-none
-				.col-lg
-				.col-12.d-lg-block.d-none
-				.col-auto
-				.col-lg
-				.col-lg-auto
-
+				+e.col.col-auto.d-lg-block.d-none
+					+e.info-wrap
+						+e.address Маршала Блюхера, 12, корп. 7, оф. 612-2
+						+e.mail(href="mailto:info@baltkz.ru") info@baltkz.ru
+				+e.col.col-lg.col-sm-auto.col
+					+e.soc-link
+						+e.whatsapp(href="#")
+							img(src="img/svg/whatsapp.svg", alt="")
+						+e.telegram(href="#")
+							img(src="img/svg/telegram.svg", alt="")
+				+e.col.col-12.m-0
+				+e.col.col-auto
+					+e.logo-wrap(href="/")
+						+pic('logo.svg','',0)
+						+e.logo-title Балтийский Камнеобрабатывающий Завод
+				+e.col.col
+					+input('Поиск по товарам')
+						+icon('search')
+					+e.BUTTON.search-btn(type="button")
+						+icon('search')
+				+e.col.col-lg-auto.col-sm.col-12
+					+e.tel-wrap
+						+e.tel
+							+e.tel-number 8 (812) 565-02-20
+							+e.tel-link(href="#") Заказать звонок
+							+e.tel-time ПН-ВС:с 9:30 до 18
+						+e.tel-link-mob.d-lg-none.d-block(href="#") Заказать звонок
+				+e.col.col-auto
+					+e.cart
+						+e.cart-btn(href="#" class=(cart ? "goods" : ""))
+							+icon('shoping-bag')
+							if cart
+								+e.cart-counter 3
+						+e.cart-caption
+							+e.cart-caption-title Корзина
+							+e.cart-caption-count 25 товаров
+							+e.cart-caption-price на сумму 123254 руб.
 	// end topLine

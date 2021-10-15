@@ -17,9 +17,16 @@
 			<header class="header" id="header">
 				<!-- start topLine-->
 				<section class="topLine section" id="topLine">
-					<div class="container">
+					<div class="container-lg">
 						<div class="row">
-							<div class="col-auto">
+							<div class="topLine__col col-auto d-lg-none d-block">
+								<div class="topLine__top-nav-btn">
+									<svg class="icon icon-toggle-icon ">
+										<use xlink:href="img/svg/sprite.svg#toggle-icon"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="topLine__col col-auto">
 								<div class="topLine__choose-city">
 									<div class="topLine__choose-city-btn">Санкт-Петербург
 									</div>
@@ -32,12 +39,81 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-auto d-lg-block d-none"></div>
-							<div class="col-lg"></div>
-							<div class="col-12 d-lg-block d-none"></div>
-							<div class="col-auto"></div>
-							<div class="col-lg"></div>
-							<div class="col-lg-auto"></div>
+							<div class="topLine__col col-auto d-lg-block d-none">
+								<div class="topLine__info-wrap">
+									<div class="topLine__address">Маршала Блюхера, 12, корп. 7, оф. 612-2
+									</div>
+									<a class="topLine__mail" href="mailto:info@baltkz.ru">info@baltkz.ru
+									</a>
+								</div>
+							</div>
+							<div class="topLine__col col-lg col-sm-auto col">
+								<div class="topLine__soc-link">
+									<a class="topLine__whatsapp" href="#"><img src="img/svg/whatsapp.svg" alt=""/>
+									</a>
+									<a class="topLine__telegram" href="#"><img src="img/svg/telegram.svg" alt=""/>
+									</a>
+								</div>
+							</div>
+							<div class="topLine__col col-12 m-0">
+							</div>
+							<div class="topLine__col col-auto">
+								<a class="topLine__logo-wrap" href="/">
+									<!-- picture-->
+									<picture> 
+										<source type="image/webp" srcset="img/@2x/webp/logo.webp"/><img src="img/@2x/logo.svg" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture-->
+									<div class="topLine__logo-title">Балтийский Камнеобрабатывающий Завод
+									</div>
+								</a>
+							</div>
+							<div class="topLine__col col">
+								<div class="topLine__input-wrap form-group"><input class="topLine__input form-control" name="text" type="text" placeholder="Поиск по товарам"/>
+									<svg class="icon icon-search ">
+										<use xlink:href="img/svg/sprite.svg#search"></use>
+									</svg>
+								</div>
+								<!-- +e.input-wrap-->
+								<button class="topLine__search-btn" type="button">
+									<svg class="icon icon-search ">
+										<use xlink:href="img/svg/sprite.svg#search"></use>
+									</svg>
+								</button>
+							</div>
+							<div class="topLine__col col-lg-auto col-sm col-12">
+								<div class="topLine__tel-wrap">
+									<div class="topLine__tel">
+										<div class="topLine__tel-number">8 (812) 565-02-20
+										</div>
+										<a class="topLine__tel-link" href="#">Заказать звонок
+										</a>
+										<div class="topLine__tel-time">ПН-ВС:с 9:30 до 18
+										</div>
+									</div>
+									<a class="topLine__tel-link-mob d-lg-none d-block" href="#">Заказать звонок
+									</a>
+								</div>
+							</div>
+							<div class="topLine__col col-auto">
+								<div class="topLine__cart">
+									<a class="topLine__cart-btn goods" href="#">
+										<svg class="icon icon-shoping-bag ">
+											<use xlink:href="img/svg/sprite.svg#shoping-bag"></use>
+										</svg>
+										<div class="topLine__cart-counter">3
+										</div>
+									</a>
+									<div class="topLine__cart-caption">
+										<div class="topLine__cart-caption-title">Корзина
+										</div>
+										<div class="topLine__cart-caption-count">25 товаров
+										</div>
+										<div class="topLine__cart-caption-price">на сумму 123254 руб.
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</section>

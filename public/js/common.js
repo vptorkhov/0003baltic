@@ -326,7 +326,8 @@ function eventHandler() {
 	whenResize();
 
 	$('.topLine__choose-city-btn').click(function(){
-		$(this).next().toggleClass('active');
+		$(this).toggleClass('active');
+		$(this).next().toggleClass('show');
 	});
 
 	let defaultSl = {
