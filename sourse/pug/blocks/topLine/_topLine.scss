@@ -160,9 +160,31 @@
 			display: none;
 			position: absolute;
 			top: 100%;
-			left: 0;
+			left: -50%;
+			@include media-breakpoint-up(sm){
+				left: 0;
+			}
+			background-color: $white;
+			padding-top: rem(24);
+			padding-bottom: rem(24);
+			padding-left: rem(28);
+			padding-right: rem(28);
+			width: rem(237);
+			max-width: 74vw;
+			box-shadow: 0 0 16px rgba(0, 0, 0, 0.24);
+			z-index: 3;
 			ul {
 				list-style-type: none;
+				margin-bottom: 0;
+				li{
+					line-height: rem(40);
+					a{
+						color: $black;
+						&:hover{
+							color: #8e1616;
+						}
+					}
+				}
 			}
 		}
 		.active {

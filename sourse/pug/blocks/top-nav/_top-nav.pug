@@ -18,11 +18,66 @@ mixin top-nav()
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			.row.g-0
-				.col-auto
-					+b.toggle-menu-mobile--js
-						span
-				.col.d-none.d-lg-block
-					+mnu()
-					
+			//- .row.g-0
+			//- 	.col-lg-auto
+			//- 		+e.catalog-btn Каталог
+			//- 			+icon("toggle-icon")
+			//- 	.col-lg
+			//- 		+e.menu-link(href="#") Производство
+			//- 	.col-lg
+			//- 		+e.menu-link(href="#") Месторождения
+			//- 	.col-lg
+			//- 		+e.menu-link(href="#") О компании
+			//- 	.col-lg
+			//- 		+e.menu-link(href="#") Наши работы
+			//- 	.col-lg
+			//- 		+e.menu-link(href="#") Клиентам
+			//- 	.col-lg
+			//- 		+e.menu-link(href="#") Контакты
+			+e.catalog-close.d-lg-none.d-block
+				+icon('close-btn')
+			ul
+				li.catalog-toggle
+					+e.catalog-btn Каталог
+						+icon("toggle-icon")
+					ul
+						mixin item(i,t)
+							li
+								a(href="#")!=t
+									+pic(`catalog-menu-${i}.png`,'',0)
+						+item(1,`Облицовочные плиты`)
+						+item(2,`Плиты мощения`)
+						+item(3,`Брусчатка`)
+						+item(4,`Ступени`)
+						+item(5,`Бордюры`)
+						+item(6,`Пандусы`)
+						+item(7,`Архитектурные изделия`)
+				li
+					a(href="#") Производство
+				li
+					a(href="#") Месторождения
+				li.list-item
+					a.drop(href="#") О компании
+						+icon('link-arrow')
+					ul
+						li
+							a(href="#") О компании
+						li
+							a(href="#") О компании
+						li
+							a(href="#") О компании
+				li
+					a(href="#") Наши работы
+				li.list-item
+					a.drop(href="#") Клиентам
+						+icon('link-arrow')
+					ul
+						li
+							a(href="#") Клиентам
+						li
+							a(href="#") Клиентам
+						li
+							a(href="#") Клиентам
+				li
+					a(href="#") Контакты
 	// end top-nav

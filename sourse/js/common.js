@@ -286,7 +286,7 @@ function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
 	// JSCCommon.tabscostume('tabs');
-	// JSCCommon.mobileMenu();
+	JSCCommon.mobileMenu();
 	// JSCCommon.inputMask();
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
@@ -329,7 +329,17 @@ function eventHandler() {
 		$(this).toggleClass('active');
 		$(this).next().toggleClass('show');
 	});
-
+	// $('.catalog-toggle').click(function(){
+	// 	$(this).toggleClass('active');
+	// });
+	$('.topLine__top-nav-btn').click(function(){
+		$('body').toggleClass('fixed');
+		$('.top-nav').toggleClass('mob-menu');
+	}); //до утра
+	$('.top-nav__catalog-close').click(function(){
+		$('body').toggleClass('fixed');
+		$('.top-nav').toggleClass('mob-menu');
+	}); //до утра
 	let defaultSl = {
 		spaceBetween: 0,
 		lazy: {
