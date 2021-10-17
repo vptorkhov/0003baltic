@@ -6,6 +6,23 @@
 	position: relative;
 	@include media-breakpoint-up(lg) {
 		display: block;
+		z-index: 3;
+	}
+	@include media-breakpoint-down(lg) {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 9999;
+		width: rem(345);
+		max-width: 95vw;
+		max-height: 100vh;
+		min-height: 100vh;
+		overflow: scroll;
+		background-color: #f7f7f7;
+		.container {
+			padding: 0;
+		}
 	}
 	&__catalog-btn {
 		position: relative;
@@ -51,6 +68,7 @@
 		@include media-breakpoint-up(lg) {
 			display: flex;
 			justify-content: space-between;
+			margin-bottom: 0;
 		}
 		li {
 			@include media-breakpoint-up(lg) {
@@ -147,6 +165,7 @@
 			ul {
 				display: var(--db);
 				justify-content: unset;
+				border-bottom: none;
 				@include media-breakpoint-up(lg) {
 					background-color: $white;
 					padding: 20px;
@@ -206,6 +225,7 @@
 					}
 				}
 				ul {
+					border-bottom: none;
 					display: var(--db);
 					background-color: $white;
 					column-count: 2;
@@ -340,20 +360,31 @@
 	}
 }
 
-.mob-menu {
-	@include media-breakpoint-down(lg) {
-		display: block;
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 9999;
-		width: rem(345);
-		max-width: 95vw;
-		max-height: 100vh;
-		overflow: scroll;
-		background-color: #f7f7f7;
-		.container {
-			padding: 0;
+// .mob-menu {
+// 	@include media-breakpoint-down(lg) {
+// 		display: block;
+// 		position: absolute;
+// 		top: 0;
+// 		left: 0;
+// 		z-index: 9999;
+// 		width: rem(345);
+// 		max-width: 95vw;
+// 		max-height: 100vh;
+// 		min-height: 100vh;
+// 		overflow: scroll;
+// 		background-color: #f7f7f7;
+// 		.container {
+// 			padding: 0;
+// 		}
+// 	}
+// }
+.main-page{
+	@include media-breakpoint-up(lg){
+		.top-nav{
+			background-color: transparent;
+			ul{
+				border-bottom: 1px solid #5a616b;
+			}
 		}
 	}
 }

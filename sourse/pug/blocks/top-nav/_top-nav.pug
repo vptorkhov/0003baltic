@@ -16,7 +16,7 @@ mixin mob-mnu()
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
-	+b.top-nav.block-with-lazy
+	+b.top-nav.block-with-lazy.menu-mobile.menu-mobile--js
 		.container
 			//- .row.g-0
 			//- 	.col-lg-auto
@@ -34,7 +34,7 @@ mixin top-nav()
 			//- 		+e.menu-link(href="#") Клиентам
 			//- 	.col-lg
 			//- 		+e.menu-link(href="#") Контакты
-			+e.catalog-close.d-lg-none.d-block
+			.top-nav__catalog-close.toggle-menu-mobile--js.d-lg-none
 				+icon('close-btn')
 			ul
 				li.catalog-toggle

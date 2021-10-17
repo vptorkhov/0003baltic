@@ -332,14 +332,14 @@ function eventHandler() {
 	// $('.catalog-toggle').click(function(){
 	// 	$(this).toggleClass('active');
 	// });
-	$('.topLine__top-nav-btn').click(function(){
-		$('body').toggleClass('fixed');
-		$('.top-nav').toggleClass('mob-menu');
-	}); //до утра
-	$('.top-nav__catalog-close').click(function(){
-		$('body').toggleClass('fixed');
-		$('.top-nav').toggleClass('mob-menu');
-	}); //до утра
+	// $('.topLine__top-nav-btn').click(function(){
+	// 	$('body').toggleClass('fixed');
+	// 	$('.top-nav').toggleClass('mob-menu');
+	// }); //до утра
+	// $('.top-nav__catalog-close').click(function(){
+	// 	$('body').toggleClass('fixed');
+	// 	$('.top-nav').toggleClass('mob-menu');
+	// }); //до утра
 	let defaultSl = {
 		spaceBetween: 0,
 		lazy: {

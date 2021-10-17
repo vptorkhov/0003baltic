@@ -20,7 +20,7 @@
 					<div class="container-lg">
 						<div class="row">
 							<div class="topLine__col col-auto d-lg-none d-block">
-								<div class="topLine__top-nav-btn">
+								<div class="topLine__top-nav-btn toggle-menu-mobile toggle-menu-mobile--js">
 									<svg class="icon icon-toggle-icon ">
 										<use xlink:href="img/svg/sprite.svg#toggle-icon"></use>
 									</svg>
@@ -119,9 +119,9 @@
 				</section>
 				<!-- end topLine-->
 				<!-- start top-nav-->
-				<div class="top-nav block-with-lazy">
+				<div class="top-nav block-with-lazy menu-mobile menu-mobile menu-mobile--js">
 					<div class="container">
-						<div class="top-nav__catalog-close d-lg-none d-block">
+						<div class="top-nav__catalog-close toggle-menu-mobile--js d-lg-none">
 							<svg class="icon icon-close-btn ">
 								<use xlink:href="img/svg/sprite.svg#close-btn"></use>
 							</svg>
@@ -209,12 +209,66 @@
 			</header>
 			<!-- end header-->
 			<!-- start headerBlock-->
-			<div class="headerBlock section" id="headerBlock">
+			<div class="headerBlock section bg-wrap" id="headerBlock">
+				<!-- picture-->
+				<picture class="picture-bg"> 
+					<source type="image/webp" srcset="img/@2x/webp/header-block.webp"/><img class="object-fit-js" src="img/@2x/header-block.png" alt="" loading="lazy"/>
+				</picture>
+				<!-- /picture-->
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>headerBlock ds dfsdfdsfsd</h2>
+					<div class="row">
+						<div class="col-lg-8 col-12">
+							<h1>Более <span>170 видов</span> изделия из камня&nbsp;по цене от производителя</h1>
+							<div class="headerBlock__caption">Пилим и&nbsp;готовим материал на&nbsp;собственном производстве. <br /> Вы&nbsp;получаете самые выгодные цены без накруток сторонних поставщиков
+							</div>
+							<div class="headerBlock__btn-wrap">
+								<div class="row">
+									<div class="col-sm-6 col-12">
+										<a class="headerBlock__btn-catch" href="#">Получить образцы
+										</a>
+									</div>
+									<div class="col-sm-6 col-12">
+										<a class="headerBlock__btn-download" href="#">
+											<div class="headerBlock__btn-download-pic">
+												<svg class="icon icon-download ">
+													<use xlink:href="img/svg/sprite.svg#download"></use>
+												</svg>
+											</div>
+											<div class="headerBlock__btn-download-title">Скачать полный прайс и спец. предложения
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-12">
+							<div class="headerBlock__pic-item-wrap">
+								<div class="headerBlock__pic-item">
+									<div class="headerBlock__icon-wrap">
+										<svg class="icon icon-quality-header ">
+											<use xlink:href="img/svg/sprite.svg#quality-header"></use>
+										</svg>
+									</div>
+									<div class="headerBlock__pic-item-title">Качество соответствует требованиям ГОСТ
+									</div>
+								</div>
+								<div class="headerBlock__pic-item">
+									<svg class="icon icon-cargo-truck ">
+										<use xlink:href="img/svg/sprite.svg#cargo-truck"></use>
+									</svg>
+									<div class="headerBlock__pic-item-title">Не срываем сроки поставки
+									</div>
+								</div>
+								<div class="headerBlock__pic-item">
+									<svg class="icon icon-pasport ">
+										<use xlink:href="img/svg/sprite.svg#pasport"></use>
+									</svg>
+									<div class="headerBlock__pic-item-title">Паспорт качества с каждой поставкой
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="row"></div>
 				</div>
 			</div>
 			<!-- end headerBlock-->
