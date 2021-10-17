@@ -110,6 +110,10 @@
 		@include media-breakpoint-up(lg) {
 			// padding-right: rem(31);
 		}
+		--db:none;
+		&:hover{
+			--db:block;
+		}
 		&-btn {
 			color: $primary;
 			font-size: rem(14);
@@ -157,7 +161,7 @@
 			}
 		}
 		&-list {
-			display: none;
+			display: var(--db);
 			position: absolute;
 			top: 100%;
 			left: -50%;
