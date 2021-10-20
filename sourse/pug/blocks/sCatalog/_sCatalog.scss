@@ -3,8 +3,8 @@
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(71)};
 	}
+	background-color: $white;
 	h2 {
-		font-size: rem(36);
 		font-weight: 500;
 		margin-bottom: rem(44);
 	}

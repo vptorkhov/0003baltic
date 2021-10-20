@@ -11,12 +11,14 @@
 		font-size: rem(28);
 		font-weight: 500;
 		margin-bottom: rem(16);
+		position: relative;
+		z-index: 3;
 		@include media-breakpoint-up(md) {
 			margin-bottom: 0;
 		}
 		@include media-breakpoint-up(sm) {
 			// margin-bottom: rem(37);
-			font-size: rem(36);
+			font-size: $h2-font-size;
 		}
 	}
 	&__slider {
