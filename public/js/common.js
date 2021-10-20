@@ -340,6 +340,10 @@ function eventHandler() {
 	// 	$('body').toggleClass('fixed');
 	// 	$('.top-nav').toggleClass('mob-menu');
 	// }); //до утра
+
+	$('.sCatalog__show-more').click(function(){
+		$('.sCatalog__caption').toggleClass('sCatalog__caption--active');
+	});
 	let defaultSl = {
 		spaceBetween: 0,
 		lazy: {

@@ -2,8 +2,38 @@ mixin sCatalog(data)
 	// start sCatalog
 	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sCatalog
-				
 			.row
+				.col-lg-9.col-12
+					h2 Каталог изделий из гранита
+					+e.caption Данный натуральный камень считается одним из самых первых, появившихся на нашей планете, полагают, что он образовался еще 300 миллионов лет тому назад. Гранит является плутонической. Данный натуральный камень считается одним из самых первых, появившихся на нашей планете, полагают, что он образовался еще 300 миллионов лет тому назад. 
+					+e.show-more.d-sm-none Развернуть
+				.col-lg-3.d-none.d-lg-flex.align-items-center.flex-column
+					+e.call-wrap
+						+e.call-icon
+							+icon('phone')
+						+e.call-title Звоните ежедневно с 9:30 до 18:00.<br>Ответим за 1 минуту
+					+e.tel 8 (812) 317-12-09
+					+e.tel-link(href="#") Заказать звонок
+					+e.soc-wrap
+						a(href="#")
+							img(src="img/svg/whatsapp.svg", alt="")
+						a(href="#")
+							img(src="img/svg/telegram.svg", alt="")
+			+e.row.row
+				mixin item(i,t,p)
+					.col-lg-3.col-md-4.col-sm-6.col-12
+						+e.item
+							a(href="#")
+								+pic(`sCatalog-${i}.png`,'',0)
+							+e.item-text
+								+e.item-link(href="#")!=t
+								+e.item-price!=`от ${p} / м<sup>2</sup>`
+				+item(1,`Брусчатка`,`1 500`)
+				+item(2,`Плита облицовочная`,`2 300`)
+				+item(3,`Плиты Мощения`,`2 800`)
+				+item(4,`Бордюры`,`2 800`)
+				+item(5,`Архитектурные изделия`,`1 000`)
+				+item(6,`Ступени`,`X XXX`)
+				+item(7,`Пандусы`,`X XXX`)
+				+item(8,`Лорем ипсум`,`X XXX`)
 	// end sCatalog
