@@ -1,6 +1,7 @@
 // start .topLine
 .topLine {
 	--sPT: 0;
+	--sPB: 0;
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(17)};
 		--sPB: #{rem(40)};
@@ -110,9 +111,9 @@
 		@include media-breakpoint-up(lg) {
 			// padding-right: rem(31);
 		}
-		--db:none;
-		&:hover{
-			--db:block;
+		--db: none;
+		&:hover {
+			--db: block;
 		}
 		&-btn {
 			color: $primary;
@@ -165,7 +166,7 @@
 			position: absolute;
 			top: 100%;
 			left: -50%;
-			@include media-breakpoint-up(sm){
+			@include media-breakpoint-up(sm) {
 				left: 0;
 			}
 			background-color: $white;
@@ -180,11 +181,11 @@
 			ul {
 				list-style-type: none;
 				margin-bottom: 0;
-				li{
+				li {
 					line-height: rem(40);
-					a{
+					a {
 						color: $black;
-						&:hover{
+						&:hover {
 							color: #8e1616;
 						}
 					}
