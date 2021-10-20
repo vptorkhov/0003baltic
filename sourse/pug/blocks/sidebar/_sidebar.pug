@@ -1,0 +1,16 @@
+mixin sidebar(data)
+	// start sidebar
+	+b.sidebar&attributes(attributes)
+		+e.head
+		+e.body
+			+ddGroup()
+				+ddGroupItem('Цена (руб.)', 'active')
+				+ddGroupItem('Цвет', 'active')
+				+ddGroupItem('Вид изделия', 'active')
+				+ddGroupItem('Ширина', 'active')
+				+ddGroupItem('Месторождение', 'active')
+				+ddGroupItem('Поверхность')
+				+ddGroupItem('Наличие')
+				+ddGroupItem('Толщина')
+			+e.btn(type="button") Показать
+	// end sidebar

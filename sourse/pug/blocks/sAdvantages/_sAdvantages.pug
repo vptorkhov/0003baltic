@@ -5,7 +5,8 @@ mixin sAdvantages(data)
 		.bg-text 10 000м<sup>3</sup>
 		.container
 			h2 Более 10 000 м<sup>3</sup> камня мы ежегодно перерабатываем в изделие для наших покупателей
-			.row
+			+e.row.row
+				+e.IMG.bg-line(alt="" src="img/@2x/sAdvantages-bg-line.png")
 				mixin item(i,t,c)
 					.col-lg-4.col-sm-6.col-12
 						+e.item
