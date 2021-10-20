@@ -5,6 +5,7 @@
 	// --sTPB: ;
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(74)};
+		--sPB: #{rem(56)};
 	}
 	overflow: hidden;
 	position: relative;
@@ -123,6 +124,72 @@
 		transform: translateX(-50%);
 		@include media-breakpoint-down(sm){
 			display: none;
+		}
+	}
+	&__step{
+		display: flex;
+		align-items: center;
+		position: relative;
+		@include media-breakpoint-down(lg){
+			justify-content: center;
+		}
+		&::before{
+			content: '';
+			position: absolute;
+			background-image: url('../img/svg/sAdvantages-steps.svg');
+			@include media-breakpoint-up(xl){
+				left: rem(-61);
+			}
+			@include media-breakpoint-up(lg){
+				top: 50%;
+				left: rem(-43);
+				transform: translateY(-50%);
+				width: 30px;
+				height: 11px;
+			}
+			@include media-breakpoint-down(lg){
+				top: -20px;
+				left: 50%;
+				width: 30px;
+				height: 11px;
+				transform: translateX(-50%) rotate(90deg);
+			}
+		}
+		&-number{
+			font-size: 125px;
+			color: $primary;
+			font-weight: 900;
+			letter-spacing: 3.27px;
+			
+			@include media-breakpoint-up(xl){
+				font-size: 131px;
+			}
+			@include media-breakpoint-up(lg){
+				font-size: 100px;
+				position: relative;
+			}
+			@include media-breakpoint-down(lg){
+				line-height: 140px;
+			}
+		}
+		&-caption{
+			margin-left: 20px;
+			font-size: $large;
+			color: $black;
+			line-height: calc(20/18);
+			max-width: 117px;
+		}
+	}
+	&__col{
+		&:first-child{
+			.sAdvantages__step-caption{
+				margin-left: 0;
+			}
+			.sAdvantages__step{
+				&::before{
+					display: none;
+				}
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {
