@@ -1,32 +1,26 @@
- 
-	  
-.soc{
+.soc {
 	@include roww(10px, m);
 	display: flex;
-	&__item{
-		text-decoration: none !important; 
+	&__item {
+		text-decoration: none !important;
 		vertical-align: middle;
 		@include mt;
 		display: grid;
 		place-items: center;
-		&:hover{
-		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+		&:hover {
+			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			// opacity: .6 ;
 		}
-		
 	}
-	.icon{
+	.icon {
 		font-size: rem(30);
 	}
-	 
-
 }
- 
 
-.counter{
+.counter {
 	counter-reset: num;
 	&__item {
-		position: relative; 
+		position: relative;
 		&::before {
 			content: counter(num);
 			counter-increment: num;
@@ -34,3 +28,50 @@
 	}
 }
 
+.slider-arrows-wrap {
+	display: flex;
+	flex-direction: row-reverse;
+	position: absolute;
+	@include media-breakpoint-up(md) {
+		top: rem(23);
+		right: 0;
+	}
+	@include media-breakpoint-down(md) {
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	@extend .btn, .btn-primary;
+	@include mt;
+	position: relative;
+	width: 52px;
+	height: 52px;
+	left: auto;
+	right: auto;
+	margin-right: 5px;
+	margin-left: 5px;
+	border-radius: 50%;
+	box-shadow: none !important;
+	&::after {
+		content: "";
+		background-image: url("../img/svg/arrow-slider.svg");
+		width: 23px;
+		height: 15px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		position: absolute;
+	}
+}
+.swiper-button-prev {
+	&::after {
+		transform: translate(-50%, -50%) scaleX(-1);
+	}
+}
+.swiper-button-disabled {
+	@extend .btn-primary-disabled;
+}

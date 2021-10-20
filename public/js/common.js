@@ -365,6 +365,19 @@ function eventHandler() {
 			// }
 		},
 	}
+
+	var reviews = new Swiper(".sReviews__slider--js", {
+		slidesPerView:'auto',
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 1
+			},
+		},
+	});
 	var offers = new Swiper(".sOffers__slider--js", {
 		slidesPerView: 'auto',
 		spaceBetween: 15,

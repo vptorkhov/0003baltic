@@ -13,6 +13,7 @@
 		margin-bottom: rem(16);
 		position: relative;
 		z-index: 3;
+		display: inline-block;
 		@include media-breakpoint-up(md) {
 			margin-bottom: 0;
 		}
@@ -56,50 +57,6 @@
 					}
 				}
 			}
-		}
-		.swiper-button-prev,
-		.swiper-button-next {
-			position: relative;
-			width: 52px;
-			height: 52px;
-			background-color: $primary;
-			left: auto;
-			right: auto;
-			margin-right: 5px;
-			margin-left: 5px;
-			border-radius: 50%;
-			&::after {
-				content: "";
-				background-image: url("../img/svg/arrow-slider.svg");
-				width: 23px;
-				height: 15px;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				position: absolute;
-			}
-		}
-		.swiper-button-prev {
-			&::after {
-				transform: translate(-50%, -50%) scaleX(-1);
-			}
-		}
-		.swiper-button-disabled {
-			background-color: #bfbfbf;
-		}
-	}
-	&__slider-arrows {
-		display: flex;
-		flex-direction: row-reverse;
-		position: absolute;
-		@include media-breakpoint-up(md) {
-			top: rem(23);
-			right: 0;
-		}
-		@include media-breakpoint-down(md){
-			bottom: 0;
-			left: 50%;
-			transform: translateX(-50%);
 		}
 	}
 	&__text-wrap {

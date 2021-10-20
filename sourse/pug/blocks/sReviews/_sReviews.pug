@@ -1,7 +1,27 @@
 mixin sReviews(data)
 	// start sReviews
-	+b.SECTION.sReviews.section#sReviews&attributes(attributes)
+	+b.SECTION.sReviews.section.bg-wrap#sReviews&attributes(attributes)
+		+pic('sReviews-bg.png','bg',0).picture-bg
 		.container
-			+b.section-title.text-center
-				h2 sReviews
+			+b.section-title
+				h2 Отзывы наших клиентов
+			.row(style="--bs-gutter-y:50px;")
+				.col-md-6.col-12
+					+e.pics
+						.row
+							mixin item(i)
+								+e.col.col-lg-4.col-6
+									+pic(`sReviews-logo-${i}`)
+							- for(var x =1;x<10;x++)
+								+item(x)
+						+e.link(href="#") Все клиенты
+				.col-md-6.col-12
+					+e.slider--js.swiper
+						.swiper-wrapper
+							- for (var x=0;x<9;x++)
+								.swiper-slide
+									a(href="#" data-fancybox="single" data-src="img/@2x/reviews-slider.png")
+										+pic('reviews-slider.png','',0)
+						.swiper-button-prev.d-md-inline-block.d-none
+						.swiper-button-next.d-md-inline-block.d-none
 	// end sReviews
