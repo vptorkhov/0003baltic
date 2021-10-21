@@ -448,7 +448,31 @@ function eventHandler() {
 			// }
 		},
 	}
-
+	var SliderThumbs = new Swiper(".sOneProduct__slider-thumbs--js", {
+		spaceBetween: 10,
+		direction: "vertical",
+		slidesPerView: 5,
+		watchOverflow: true,
+		// freeMode: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		lazy: {
+			loadPrevNext: true,
+		},
+	});
+	var sOneProductSlider = new Swiper(".sOneProduct__slider--js", {
+		spaceBetween: 10,
+		slidesPerView: 1,
+		direction: "vertical",
+		watchOverflow: true,
+		lazy: {
+			loadPrevNext: true,
+		},
+		thumbs: {
+			swiper: SliderThumbs,
+			watchOverflow: true,
+		}
+	});
 	var deposits = new Swiper(".sDeposits__slider--js ", {
 		slidesPerView:'auto',
 		spaceBetween: 42,
@@ -509,6 +533,13 @@ function eventHandler() {
 			nextEl: ".place-slider-wrap .swiper-button-next",
 			prevEl: ".place-slider-wrap .swiper-button-prev",
 		},
+	}); 
+	const swiperbreadcrumb = new Swiper('.breadcrumb-wrap .swiper', {
+		// slidesPerView: 5,
+		...defaultSl,
+		slidesPerView: 'auto',
+		freeMode: true,  
+		loop: false,
 	}); 
 
 

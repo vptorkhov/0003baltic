@@ -22,11 +22,17 @@ mixin ProductSlider()
 				+slide1()
 				+slide1()
 				+slide1()
+				+slide1()
+				+slide1()
+				+slide1()
 		+e.slider-thumbs--js.swiper
 			.swiper-wrapper
 				mixin slide2()
 					.swiper-slide
 						+pic('sOneProduct.png','',0)
+				+slide2()
+				+slide2()
+				+slide2()
 				+slide2()
 				+slide2()
 				+slide2()
@@ -39,18 +45,18 @@ mixin ProductCalc()
 			h1 Облицовочная плита
 		+e.group
 			+e.table
-				.row.row-cols-2
-					+e.col.col Месторождение: Южно Сулатаевский
-					+e.col.col Цвет: Красный
-					+e.col.col Поверхность: Полировка,  
-					+e.col.col 600х300х20 (ДхШхТ)
+				.row.row-cols-sm-2
+					+e.col.col-sm Месторождение: Южно Сулатаевский
+					+e.col.col-sm Цвет: Красный
+					+e.col.col-sm Поверхность: Полировка,  
+					+e.col.col-sm 600х300х20 (ДхШхТ)
 			+e.more Все характеристики
 		+e.group
 			.row
 				+e.price.col-auto
 					+e.price--old 2 900 руб/м<sup>2</sup>
 					+e.price--new 2 450 руб/м<sup>2</sup>
-				.col-auto
+				.col-sm-auto
 					+addblock()
 			+e.total Итого: #[strong 369 950 руб]
 			p Указаны оптовые цены от 100 м2. Окончательную стоимость уточняйте у менеджера.

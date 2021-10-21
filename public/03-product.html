@@ -211,15 +211,15 @@
 			</header>
 			<!-- end header-->
 			<div class="breadcrumb-wrap">
-				<nav class="container" aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+				<nav class="container swiper" aria-label="breadcrumb">
+					<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+						<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
 								<meta itemprop="position" content="1"/></a></li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Каталог</span>
+						<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Каталог</span>
 								<meta itemprop="position" content="2"/></a></li>
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Облицовочные плиты</span>
+						<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Облицовочные плиты</span>
 								<meta itemprop="position" content="3"/></a></li>
-						<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Облицовочная плита</span>
+						<li class="breadcrumb-item swiper-slide active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Облицовочная плита</span>
 								<meta itemprop="position" content="4"/></a></li>
 					</ol>
 				</nav>
@@ -234,10 +234,34 @@
 										<div class="swiper-slide"><a href="img/@2x/sOneProduct.png" data-fancybox="single"> <img src="img/@2x/sOneProduct.png" alt=""/></a></div>
 										<div class="swiper-slide"><a href="img/@2x/sOneProduct.png" data-fancybox="single"> <img src="img/@2x/sOneProduct.png" alt=""/></a></div>
 										<div class="swiper-slide"><a href="img/@2x/sOneProduct.png" data-fancybox="single"> <img src="img/@2x/sOneProduct.png" alt=""/></a></div>
+										<div class="swiper-slide"><a href="img/@2x/sOneProduct.png" data-fancybox="single"> <img src="img/@2x/sOneProduct.png" alt=""/></a></div>
+										<div class="swiper-slide"><a href="img/@2x/sOneProduct.png" data-fancybox="single"> <img src="img/@2x/sOneProduct.png" alt=""/></a></div>
+										<div class="swiper-slide"><a href="img/@2x/sOneProduct.png" data-fancybox="single"> <img src="img/@2x/sOneProduct.png" alt=""/></a></div>
 								</div>
 							</div>
 							<div class="sOneProduct__slider-thumbs sOneProduct__slider-thumbs--js swiper">
 								<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/sOneProduct.webp"/><img src="img/@2x/sOneProduct.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="swiper-slide">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/sOneProduct.webp"/><img src="img/@2x/sOneProduct.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="swiper-slide">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/sOneProduct.webp"/><img src="img/@2x/sOneProduct.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+										</div>
 										<div class="swiper-slide">
 											<!-- picture-->
 											<picture> 
@@ -268,14 +292,14 @@
 							</div>
 							<div class="prod-right-block__group">
 								<div class="prod-right-block__table">
-									<div class="row row-cols-2">
-										<div class="prod-right-block__col col">Месторождение: Южно Сулатаевский
+									<div class="row row-cols-sm-2">
+										<div class="prod-right-block__col col-sm">Месторождение: Южно Сулатаевский
 										</div>
-										<div class="prod-right-block__col col">Цвет: Красный
+										<div class="prod-right-block__col col-sm">Цвет: Красный
 										</div>
-										<div class="prod-right-block__col col">Поверхность: Полировка,  
+										<div class="prod-right-block__col col-sm">Поверхность: Полировка,  
 										</div>
-										<div class="prod-right-block__col col">600х300х20 (ДхШхТ)
+										<div class="prod-right-block__col col-sm">600х300х20 (ДхШхТ)
 										</div>
 									</div>
 								</div>
@@ -290,7 +314,7 @@
 										<div class="prod-right-block__price prod-right-block__price--new">2 450 руб/м<sup>2</sup>
 										</div>
 									</div>
-									<div class="col-auto">
+									<div class="col-sm-auto">
 										<div class="addBlock">
 											<button class="addBlock__btn addBlock__btn--minus" type="button">
 											</button>
