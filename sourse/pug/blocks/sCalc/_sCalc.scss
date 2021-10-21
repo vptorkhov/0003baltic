@@ -2,10 +2,67 @@
 .sCalc {
 		// --sPT: ;
 		// --sPB: ;
-		// --sTPB: ;
+		@include media-breakpoint-up(xl) {
+			--sPB: 105px;
+			--sTPB: 30px;
+		}
 	.section-title{
 		max-width: rem(670);
 		color: #fff;
+	}
+	&__sidebar{
+		.row{
+			justify-content: center;
+		}
+		@include media-breakpoint-up(lg) {
+
+			max-width: rem(240);
+			padding-top: rem(20);
+		}
+		padding-top: rem(40);
+			margin-left: auto;
+	}
+	color: #fff;
+	&__circle{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: rem(10);
+		margin-left: auto;
+		margin-right: auto;
+		width: 119px;
+		height: 119px;
+		font-size: 14px;
+		font-weight: 300;
+		background-color: var(--bg,#00abdf);
+		border-radius: 50%;
+		text-align: center;
+		flex-direction: column;
+		.strong{
+			font-size: $h4-font-size;
+			line-height: 1.2;
+		}
+		&--gar{
+			--bg: #69bb41;
+		}
+	}
+	ul{
+		margin-top: rem(40);
+		max-width: rem(240);
+		font-size: $small;
+		font-weight: 300;
+		li{
+			position: relative;
+			list-style: none;
+			padding-left: rem(25);
+			margin-bottom: rem(30);
+			&::before{
+				content: url(../img/svg/check.svg);
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
