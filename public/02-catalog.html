@@ -10,6 +10,7 @@
 		<link href="libs/swiper/swiper.min.css" rel="stylesheet"/>
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body data-bg="2.png">
@@ -221,92 +222,349 @@
 			</div>
 			<div class="container container--main">
 				<div class="row">
-					<div class="col-4">
+					<div class="col-lg-3 order-lg-0 order-last">
 						<!-- start sidebar-->
 						<div class="sidebar">
-							<div class="sidebar__head">
-							</div>
-							<div class="sidebar__body">
-								<div class="dd-group dd-group-js">
-									<div class="dd-group__item active">
-										<div class="dd-group__head dd-head-js">Цена (руб.)
-										</div>
-										<div class="dd-group__content dd-content-js active">
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.</p>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.</p>
-										</div>
-									</div>
-									<div class="dd-group__item active">
-										<div class="dd-group__head dd-head-js">Цвет
-										</div>
-										<div class="dd-group__content dd-content-js active">
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.</p>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.</p>
-										</div>
-									</div>
-									<div class="dd-group__item active">
-										<div class="dd-group__head dd-head-js">Вид изделия
-										</div>
-										<div class="dd-group__content dd-content-js active">
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.</p>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.</p>
-										</div>
-									</div>
-									<div class="dd-group__item active">
-										<div class="dd-group__head dd-head-js">Ширина
-										</div>
-										<div class="dd-group__content dd-content-js active">
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.</p>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.</p>
-										</div>
-									</div>
-									<div class="dd-group__item active">
-										<div class="dd-group__head dd-head-js">Месторождение
-										</div>
-										<div class="dd-group__content dd-content-js active">
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.</p>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.</p>
-										</div>
-									</div>
-									<div class="dd-group__item">
-										<div class="dd-group__head dd-head-js">Поверхность
-										</div>
-										<div class="dd-group__content dd-content-js">
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.</p>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.</p>
-										</div>
-									</div>
-									<div class="dd-group__item">
-										<div class="dd-group__head dd-head-js">Наличие
-										</div>
-										<div class="dd-group__content dd-content-js">
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.</p>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.</p>
-										</div>
-									</div>
-									<div class="dd-group__item">
-										<div class="dd-group__head dd-head-js">Толщина
-										</div>
-										<div class="dd-group__content dd-content-js">
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.</p>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.</p>
-										</div>
-									</div>
+							<div class="sidebar__filter">
+								<div class="sidebar__head">Фильтр
 								</div>
-								<button class="sidebar__btn" type="button">Показать
-								</button>
+								<div class="sidebar__body">
+									<div class="dd-group dd-group-js">
+										<div class="dd-group__item active">
+											<div class="dd-group__head dd-head-js">Цена (руб.)
+												<svg class="icon icon-chevron-down ">
+													<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+												</svg>
+											</div>
+											<div class="dd-group__content dd-content-js active">
+												<div class="range-wrap price_slider_amount">
+													<div class="row">
+														<div class="col-6">
+															<div class="form-group">
+																<input class="input_from form-control" type="number" step="any"/>
+															</div>
+														</div>
+														<div class="col-6">
+															<div class="form-group">
+																<input class="input_to form-control" type="number" step="any"/>
+															</div>
+														</div>
+													</div>
+													<input class="range-slider slider-js" data-max="150000" data-min="0" type="text"/>
+												</div>
+											</div>
+										</div>
+										<div class="dd-group__item active">
+											<div class="dd-group__head dd-head-js">Цвет
+												<svg class="icon icon-chevron-down ">
+													<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+												</svg>
+											</div>
+											<div class="dd-group__content dd-content-js active">
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"><span class="custom-input__color" style="--color:#fff"></span>Белый<span class="text-secondary">(54) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"><span class="custom-input__color" style="--color:#84642a"></span>Коричневый<span class="text-secondary"> (277) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"><span class="custom-input__color" style="--color:#b11b1b"></span>Красный <span class="text-secondary">(238) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"><span class="custom-input__color" style="--color:#dbaca9"></span>Розовый<span class="text-secondary">(106)</span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"><span class="custom-input__color" style="--color:#808080"></span>Серый <span class="text-secondary">(400) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"><span class="custom-input__color" style="--color:#000000"></span>Черный<span class="text-secondary">(106) </span></span>
+												</label>
+											</div>
+										</div>
+										<div class="dd-group__item active">
+											<div class="dd-group__head dd-head-js">Вид изделия
+												<svg class="icon icon-chevron-down ">
+													<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+												</svg>
+											</div>
+											<div class="dd-group__content dd-content-js active">
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Бордюр<span class="text-secondary">(54) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Пандус<span class="text-secondary"> (277) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"> Ступени<span class="text-secondary">(238) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Брусчатка <span class="text-secondary">(106)</span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Облицовочные плиты  <span class="text-secondary">(400) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">лорем ипсум <span class="text-secondary">(106) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">лорем ипсум <span class="text-secondary">(54) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">лорем<span class="text-secondary"> (277) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">лорем<span class="text-secondary"> (277) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">лорем<span class="text-secondary"> (277) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">лорем<span class="text-secondary"> (277) </span></span>
+												</label>
+											</div>
+										</div>
+										<div class="dd-group__item active">
+											<div class="dd-group__head dd-head-js">Ширина
+												<svg class="icon icon-chevron-down ">
+													<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+												</svg>
+											</div>
+											<div class="dd-group__content dd-content-js active">
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">80<span class="text-secondary">(54) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">100<span class="text-secondary"> (277) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"> 150<span class="text-secondary">(238) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">200<span class="text-secondary">(106)</span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"> 300<span class="text-secondary">(400) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">400<span class="text-secondary">(106) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">500<span class="text-secondary">(106) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">600<span class="text-secondary">(106) </span></span>
+												</label>
+											</div>
+										</div>
+										<div class="dd-group__item active">
+											<div class="dd-group__head dd-head-js">Месторождение
+												<svg class="icon icon-chevron-down ">
+													<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+												</svg>
+											</div>
+											<div class="dd-group__content dd-content-js active"> 
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">80<span class="text-secondary">(54) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">100<span class="text-secondary"> (277) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"> 150<span class="text-secondary">(238) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">200<span class="text-secondary">(106)</span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"> 300<span class="text-secondary">(400) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">400<span class="text-secondary">(106) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">500<span class="text-secondary">(106) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">600<span class="text-secondary">(106) </span></span>
+												</label>
+											</div>
+										</div>
+										<div class="dd-group__item">
+											<div class="dd-group__head dd-head-js">Поверхность
+												<svg class="icon icon-chevron-down ">
+													<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+												</svg>
+											</div>
+											<div class="dd-group__content dd-content-js">
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">80<span class="text-secondary">(54) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">100<span class="text-secondary"> (277) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"> 150<span class="text-secondary">(238) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">200<span class="text-secondary">(106)</span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"> 300<span class="text-secondary">(400) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">400<span class="text-secondary">(106) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">500<span class="text-secondary">(106) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">600<span class="text-secondary">(106) </span></span>
+												</label>
+											</div>
+										</div>
+										<div class="dd-group__item">
+											<div class="dd-group__head dd-head-js">Наличие
+												<svg class="icon icon-chevron-down ">
+													<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+												</svg>
+											</div>
+											<div class="dd-group__content dd-content-js">
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">80<span class="text-secondary">(54) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">100<span class="text-secondary"> (277) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"> 150<span class="text-secondary">(238) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">200<span class="text-secondary">(106)</span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"> 300<span class="text-secondary">(400) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">400<span class="text-secondary">(106) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">500<span class="text-secondary">(106) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">600<span class="text-secondary">(106) </span></span>
+												</label>
+											</div>
+										</div>
+										<div class="dd-group__item">
+											<div class="dd-group__head dd-head-js">Толщина
+												<svg class="icon icon-chevron-down ">
+													<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+												</svg>
+											</div>
+											<div class="dd-group__content dd-content-js">
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">80<span class="text-secondary">(54) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">100<span class="text-secondary"> (277) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"> 150<span class="text-secondary">(238) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">200<span class="text-secondary">(106)</span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"> 300<span class="text-secondary">(400) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">400<span class="text-secondary">(106) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">500<span class="text-secondary">(106) </span></span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">600<span class="text-secondary">(106) </span></span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<button class="sidebar__btn btn-primary" type="button">Показать
+									</button>
+									<button class="sidebar__btn btn-link" type="button"> 
+										<svg class="icon icon-close ">
+											<use xlink:href="img/svg/sprite.svg#close"></use>
+										</svg>Сбросить
+									</button>
+								</div>
+							</div>
+							<div class="consultant-block">
+								<div class="consultant-block__avatar">
+									<!-- picture-->
+									<picture> 
+										<source type="image/webp" srcset="img/@2x/webp/avatar.webp"/><img src="img/@2x/avatar.png" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture-->
+								</div>
+								<div class="consultant-block__name">Александр
+								</div>
+								<div class="consultant-block__prof">Консультант завода
+								</div>
+								<a class="consultant-block__tel" href="tel:8(812)565-02-20">8 (812) 565-02-20
+								</a>
+								<div class="consultant-block__soc row g-1 gx-3">
+									<div class="col-auto"><a href="#"> <img src="img/svg/whatsapp.svg" alt=""/></a></div>
+									<div class="col-auto"><a href="#"> <img src="img/svg/telegram.svg" alt=""/></a></div>
+								</div>
 							</div>
 						</div>
 						<!-- end sidebar-->
 					</div>
-					<div class="col-8">
+					<div class="col-lg-9">
 						<!-- start sProducts-->
 						<section class="sProducts section" id="sProducts">
 							<div class="container">
-								<div class="section-title text-center">
-									<h2>sProducts</h2>
+								<div class="section-title">
+									<div class="row">
+										<div class="col-auto">
+											<h1> Каталог</h1>
+										</div>
+										<div class="col-auto text-secondary"> 1181 товаров</div>
+									</div>
+									<p>Тщательно контролируем производство. Готовый камень получается без сколов, трещин и запилов по торцам. Изготавливаем изделия разной сложности: от обычных модульных плит до нестандартных решенийНа странице представлен весь ассортимент изделий из гранита: плиты, брусчатка, бордюры, пандусы, ступени и т.д.</p>
 								</div>
-								<div class="row"></div>
+								<div class="place-title">Популярные месторождения
+								</div>
+								<div class="place-slider-wrap">
+									<div class="place-slider place-slider--js swiper">
+										<div class="swiper-wrapper">
+												<div class="place-slider__slide swiper-slide">
+													<a class="place-slider__item" href="#">
+														<!-- picture-->
+														<picture> 
+															<source type="image/webp" srcset="img/@2x/webp/place-1.webp"/><img class="object-fit-js" src="img/@2x/place-1.png" alt="" loading="lazy"/>
+														</picture>
+														<!-- /picture-->
+														<div class="place-slider__title">Ала-Носкуа
+														</div>
+													</a>
+												</div>
+												<div class="place-slider__slide swiper-slide">
+													<a class="place-slider__item" href="#">
+														<!-- picture-->
+														<picture> 
+															<source type="image/webp" srcset="img/@2x/webp/place-2.webp"/><img class="object-fit-js" src="img/@2x/place-2.png" alt="" loading="lazy"/>
+														</picture>
+														<!-- /picture-->
+														<div class="place-slider__title">Балтийский
+														</div>
+													</a>
+												</div>
+												<div class="place-slider__slide swiper-slide">
+													<a class="place-slider__item" href="#">
+														<!-- picture-->
+														<picture> 
+															<source type="image/webp" srcset="img/@2x/webp/place-3.webp"/><img class="object-fit-js" src="img/@2x/place-3.png" alt="" loading="lazy"/>
+														</picture>
+														<!-- /picture-->
+														<div class="place-slider__title">Возрождение
+														</div>
+													</a>
+												</div>
+												<div class="place-slider__slide swiper-slide">
+													<a class="place-slider__item" href="#">
+														<!-- picture-->
+														<picture> 
+															<source type="image/webp" srcset="img/@2x/webp/place-4.webp"/><img class="object-fit-js" src="img/@2x/place-4.png" alt="" loading="lazy"/>
+														</picture>
+														<!-- /picture-->
+														<div class="place-slider__title">Гранатовый Амфиболит
+														</div>
+													</a>
+												</div>
+												<div class="place-slider__slide swiper-slide">
+													<a class="place-slider__item" href="#">
+														<!-- picture-->
+														<picture> 
+															<source type="image/webp" srcset="img/@2x/webp/place-4.webp"/><img class="object-fit-js" src="img/@2x/place-4.png" alt="" loading="lazy"/>
+														</picture>
+														<!-- /picture-->
+														<div class="place-slider__title">Ала-Носкуа
+														</div>
+													</a>
+												</div>
+												<div class="place-slider__slide swiper-slide">
+													<a class="place-slider__item" href="#">
+														<!-- picture-->
+														<picture> 
+															<source type="image/webp" srcset="img/@2x/webp/place-4.webp"/><img class="object-fit-js" src="img/@2x/place-4.png" alt="" loading="lazy"/>
+														</picture>
+														<!-- /picture-->
+														<div class="place-slider__title">Ала-Носкуа
+														</div>
+													</a>
+												</div>
+												<div class="place-slider__slide swiper-slide">
+													<a class="place-slider__item" href="#">
+														<!-- picture-->
+														<picture> 
+															<source type="image/webp" srcset="img/@2x/webp/place-4.webp"/><img class="object-fit-js" src="img/@2x/place-4.png" alt="" loading="lazy"/>
+														</picture>
+														<!-- /picture-->
+														<div class="place-slider__title">Ала-Носкуа
+														</div>
+													</a>
+												</div>
+										</div>
+									</div>
+									<div class="place-slider-wrap__slider-arrows slider-arrows">
+										<div class="swiper-button-next"></div>
+										<div class="swiper-button-prev"></div>
+									</div>
+								</div>
 							</div>
 						</section>
 						<!-- end sProducts-->
@@ -363,6 +621,7 @@
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"> </script>
 		<script src="js/common.js"></script>
 	</body>
 </html>
