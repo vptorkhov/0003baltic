@@ -2,6 +2,7 @@
 .sCatalog {
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(71)};
+		--sPB: #{rem(83)};
 	}
 	background-color: $white;
 	h2 {

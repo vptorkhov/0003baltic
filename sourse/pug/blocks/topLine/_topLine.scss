@@ -1,5 +1,8 @@
 // start .topLine
 .topLine {
+	background-color: #fff;
+	position: relative;
+	z-index: 100;
 	--sPT: 0;
 	--sPB: 0;
 	@include media-breakpoint-up(lg) {
@@ -290,17 +293,24 @@
 	&__input-wrap {
 		@include media-breakpoint-up(lg) {
 			margin-top: rem(3);
-			display: block;
+			display: block !important;
+			position: relative;
 		}
 		display: none;
-		position: relative;
+		@include media-breakpoint-down(lg) {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		top: 100%;
+		width: 100%; 
+		}
 		input {
 			height: rem(62);
 			border-radius: 0;
 			border: 1px solid #d7d7d7;
 			font-size: $small;
+			padding-left: rem(49);
 			@include media-breakpoint-up(lg) {
-				padding-left: rem(49);
 			}
 		}
 		.icon {
