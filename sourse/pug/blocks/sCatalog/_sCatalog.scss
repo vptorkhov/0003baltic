@@ -83,7 +83,7 @@
 		}
 		.icon {
 			color: $white;
-			font-size: rem(23);
+			font-size: rem(25);
 			position: absolute;
 			top: 50%;
 			left: 50%;
@@ -101,8 +101,11 @@
 		display: inline-block;
 		font-size: $small;
 		line-height: calc(24 / 15);
-		border-bottom: 1px dashed $primary;
+		border-bottom: 1px dashed transparent;
 		margin-bottom: rem(9);
+		&:hover{
+			border-color: $primary;
+		}
 	}
 	&__soc-wrap {
 		display: flex;

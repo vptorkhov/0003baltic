@@ -1,14 +1,166 @@
 // start .sRequest
 .sRequest {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
-
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(69)};
+	}
+	background-color: #1a1a1a;
+	.picture-bg {
+		opacity: 0.15;
+	}
+	h2 {
+		font-weight: 500;
+		// margin-bottom: rem(35);
+		color: $white;
+		margin-bottom: 0;
+	}
+	.h2 {
+		color: $white;
+		margin-bottom: 0;
+	}
+	&__caption {
+		font-size: $h4-font-size;
+		margin-top: rem(56);
+		margin-bottom: rem(52);
+		color: $white;
+	}
+	&__call-wrap {
+		display: flex;
+		margin-bottom: rem(3);
+		padding-top: rem(6);
+		color: $white;
+		@include media-breakpoint-up(xl) {
+			padding-left: rem(25);
+		}
+	}
+	&__call-title {
+		font-size: $large;
+		padding-left: rem(12);
+	}
+	&__call-icon {
+		min-width: rem(64);
+		height: rem(64);
+		position: relative;
+		background-color: $primary;
+		border-radius: 50%;
+		box-shadow: 0px 0px 0px 8px rgba($primary, 0.2), 0px 0px 0px 16px rgba($primary, 0.07);
+		animation-name: shadowPulse;
+		animation-duration: 1.5s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		@keyframes shadowPulse {
+			0% {
+				box-shadow: 0px 0px 0px 8px rgba($primary, 0.2), 0px 0px 0px 16px rgba($primary, 0.07);
+			}
+			50% {
+				box-shadow: 0px 0px 0px 8px rgba($primary, 0.5), 0px 0px 0px 16px rgba($primary, 0.2);
+			}
+			100% {
+				box-shadow: 0px 0px 0px 8px rgba($primary, 0.2), 0px 0px 0px 16px rgba($primary, 0.07);
+			}
+		}
+		.icon {
+			color: $white;
+			font-size: rem(15);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 1;
+		}
+	}
+	&__tel-link {
+		display: inline-block;
+		font-size: $small;
+		line-height: calc(24 / 15);
+		border-bottom: 1px dashed transparent;
+		margin-bottom: rem(9);
+		padding-left: rem(47);
+		&:hover {
+			border-color: $primary;
+		}
+	}
+	&__soc-wrap {
+		display: flex;
+		padding-left: rem(47);
+		a {
+			display: inline-block;
+			img {
+				width: 25px;
+				height: 25px;
+				margin-left: 7px;
+				margin-right: 7px;
+			}
+		}
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		@include media-breakpoint-down(lg) {
+			justify-content: center;
+		}
+		&-number {
+			margin-right: rem(15);
+			font-size: 131px;
+			line-height: 131px;
+			color: $primary;
+			font-weight: 900;
+		}
+		&-text {
+			@include media-breakpoint-up(lg) {
+				margin-left: 0;
+				max-width: 180px;
+			}
+			max-width: 220px;
+			margin-left: rem(15);
+			font-size: $large;
+			color: $white;
+			line-height: $h4-font-size;
+			span {
+				font-weight: 900;
+			}
+		}
+	}
+	&__row {
+		// --bs-gutter-x:68px;
+		--bs-gutter-y: 55px;
+	}
+	h3 {
+		color: $white;
+		text-align: center;
+		margin-top: rem(45);
+	}
+	&__btn {
+		@extend .btn, .btn-primary;
+		width: 100%;
+		max-width: rem(419);
+		position: relative;
+		@include media-breakpoint-up(lg){
+			&::after{
+				content: '';
+				position: absolute;
+				right: 100px;
+				top: -50px;
+				width: 83px;
+				height: 91px;
+				background-image: url('../img/@2x/request-arrow.png');
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sRequest

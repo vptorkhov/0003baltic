@@ -1,9 +1,35 @@
 mixin sRequest(data)
 	// start sRequest
-	+b.SECTION.sRequest.section#sRequest&attributes(attributes)
+	+b.SECTION.sRequest.section.bg-wrap#sRequest&attributes(attributes)
+		+pic('sRequest-bg.png','bg',0).picture-bg
 		.container
-			+b.section-title.text-center
-				h2 sRequest
-				
 			.row
+				.col-lg-9.col-12
+					h2 – Какой гранит выбрать?
+					.h2 – Сколько материала потребуется?
+					.h2 – Сколько это стоит?
+					+e.caption Специалисты Балтийского камнеобрабатывающего завода:
+				.col-lg-3.d-none.d-lg-flex.align-items-center.flex-column
+					+e.call-wrap
+						+e.call-icon
+							+icon('question')
+						+e.call-title Перед тем, как выбрать поставщика, получите ответы на свои вопросы.
+					+e.tel-link(href="#") Заказать звонок
+					+e.soc-wrap
+						a(href="#")
+							img(src="img/svg/whatsapp.svg", alt="")
+						a(href="#")
+							img(src="img/svg/telegram.svg", alt="")
+			+e.row.row
+				mixin item(n,t)
+					.col-lg-4.col-12
+						+e.item
+							+e.item-number!=n
+							+e.item-text!=t
+				+item(`1.`,`<span>Подскажут</span>, какой материал подойдет лучше в своей ценовой категории`)
+				+item(`2.`,`<span>Подберет</span> материал под условия климата и окружающий ландшафт`)
+				+item(`3.`,`<span>Скажут</span>, сколько гранита потребуется для строительства и подготовят смету`)
+			h3 Оставьте заявку на бесплатный расчет
+			+e.btn Рассчитать стоимость материала для строительства
+			
 	// end sRequest

@@ -5,7 +5,7 @@
 	// --sTPB: ;
 	@include media-breakpoint-up(lg){
 		--sPT:#{rem(72)};
-		--sPB:#{rem(121)};
+		--sPB:#{rem(103)};
 	}
 	h2 {
 		font-weight: 500;
@@ -75,8 +75,11 @@
 		display: inline-block;
 		font-size: $small;
 		line-height: calc(24 / 15);
-		border-bottom: 1px dashed $primary;
+		border-bottom: 1px dashed transparent;
 		margin-bottom: rem(9);
+		&:hover{
+			border-color: $primary;
+		}
 	}
 	&__soc-wrap {
 		display: flex;
