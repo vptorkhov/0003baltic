@@ -6,15 +6,15 @@ mixin sOffers(data)
 			+e.slider--js.swiper
 				.swiper-wrapper
 					mixin item(i,t)
-						+e.slider-item.swiper-slide
-							+e.slider-item-wrap
+						+e.slide.swiper-slide
+							+e.item(href="#")
 								+pic(`sOffers-${i}.png`,'',0)
 								+e.text-wrap
-									+e.title(href="#")!=t
+									+e.title!=t
 									+e.old-price 4 900 руб/м<sup>2</sup>
 									+e.new-price 4 159 руб/м<sup>2</sup>
 								+e.offer-label Акция
-								+e.link(href="#")
+								+e.link
 									+icon('arrow-link')
 					+item(1,`Гранит Дымовский Брусчатка`)
 					+item(2,`Гранит Серый Плита`)

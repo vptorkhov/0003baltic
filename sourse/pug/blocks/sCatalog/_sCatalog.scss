@@ -59,6 +59,7 @@
 	&__call-title {
 		font-size: $small;
 		padding-left: rem(12);
+		max-width: 165px;
 	}
 	&__call-icon {
 		min-width: rem(64);
@@ -204,6 +205,9 @@
 			font-size: $small;
 			color: #868686;
 		}
+	}
+	&__col{
+		@extend .d-none, .d-lg-flex, .align-items-center, .flex-column;
 	}
 	@include media-breakpoint-up(xl) {
 	}

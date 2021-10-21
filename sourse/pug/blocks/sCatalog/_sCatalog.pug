@@ -7,11 +7,11 @@ mixin sCatalog(data)
 					h2 Каталог изделий из гранита
 					+e.caption Данный натуральный камень считается одним из самых первых, появившихся на нашей планете, полагают, что он образовался еще 300 миллионов лет тому назад. Гранит является плутонической. Данный натуральный камень считается одним из самых первых, появившихся на нашей планете, полагают, что он образовался еще 300 миллионов лет тому назад. 
 					+e.show-more.d-sm-none Развернуть
-				.col-lg-3.d-none.d-lg-flex.align-items-center.flex-column
+				+e.col.col-lg-3
 					+e.call-wrap
 						+e.call-icon
 							+icon('phone')
-						+e.call-title Звоните ежедневно с 9:30 до 18:00.<br>Ответим за 1 минуту
+						+e.call-title Звоните ежедневно с 9:30 до 18:00. Ответим за 1 минуту
 					+e.tel 8 (812) 317-12-09
 					+e.tel-link(href="#") Заказать звонок
 					+e.soc-wrap
@@ -21,12 +21,11 @@ mixin sCatalog(data)
 							img(src="img/svg/telegram.svg", alt="")
 			+e.row.row
 				mixin item(i,t,p)
-					.col-lg-3.col-md-4.col-sm-6.col-12
-						+e.item
-							a(href="#")
-								+pic(`sCatalog-${i}.png`,'',0)
+					.col-lg-3.col-md-4.col-sm-6
+						+e.item(href="#")
+							+pic(`sCatalog-${i}.png`,'',0)
 							+e.item-text
-								+e.item-link(href="#")!=t
+								+e.item-link!=t
 								+e.item-price!=`от ${p} / м<sup>2</sup>`
 				+item(1,`Брусчатка`,`1 500`)
 				+item(2,`Плита облицовочная`,`2 300`)

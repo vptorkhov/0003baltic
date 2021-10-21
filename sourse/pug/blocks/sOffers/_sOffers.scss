@@ -27,7 +27,7 @@
 		padding-bottom: 75px;
 		padding-left: 11px;
 		padding-right: 11px;
-		@include media-breakpoint-down(lg){
+		@include media-breakpoint-down(lg) {
 			overflow: unset !important;
 		}
 		@include media-breakpoint-up(md) {
@@ -35,35 +35,35 @@
 			margin-top: rem(-50);
 			padding-bottom: 20px;
 		}
-		&-item {
-			width: auto;
-			&-wrap {
-				position: relative;
-				@include mt;
-				@include media-breakpoint-down(lg) {
-					width: 274px;
-					height: 357px;
-				}
-				&:hover {
-					box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
-				}
-				picture {
-					@include block(274, 192);
-					background-color: $white;
-					img {
-						position: absolute;
-						top: 0;
-						left: 0;
-						width: 100%;
-						height: 100%;
-						object-fit: cover;
-					}
-				}
-			}
-		}
-	
 	}
 
+	&__slide {
+		width: auto;
+	}
+	&__item {
+		display: block;
+		position: relative;
+		@include mt;
+		@include media-breakpoint-down(lg) {
+			width: 274px;
+			height: 357px;
+		}
+		&:hover {
+			box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+		}
+		picture {
+			@include block(274, 192);
+			background-color: $white;
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
 	&__text-wrap {
 		background-color: $white;
 		padding-top: rem(25);
