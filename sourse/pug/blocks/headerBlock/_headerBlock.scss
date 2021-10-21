@@ -53,6 +53,7 @@
 	}
 	&__btn-catch {
 		@extend .btn, .btn-primary;
+		@include mt;
 		height: rem(79);
 		border-radius: 0;
 		font-size: rem(20);
