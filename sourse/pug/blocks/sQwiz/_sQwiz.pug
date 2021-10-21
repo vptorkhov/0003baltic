@@ -1,0 +1,102 @@
+mixin radio-item(t,n, typ='radio')
+	+b.LABEL.radio-block 
+		input(type=`${typ}` name= n)
+		+e.title= t
+
+mixin sQwiz(data)
+	// start sQwiz
+	+b.sQwiz 
+		mixin item(w, t, dis)
+			+e.step&attributes(attributes)
+				if t
+					+e.head
+						.row
+							.col-auto
+								+e.btn-wrap
+									+e.btn-control.sCalc__btn--prev(class= dis) 
+							.col=` ${w} вопрос из 7`
+							.col-auto
+								+e.btn-wrap
+									+e.btn-control.sCalc__btn--next.d-none 
+					+e.body 
+						+e.title= t
+						.row
+							if block 
+								block 
+							else
+								.col-sm-6 
+									+radio-item('Брусчатка','type')
+								.col-sm-6 
+									+radio-item('Бордюры','type')
+								.col-sm-6 
+									+radio-item('Облицовачные плиты','type')
+								.col-sm-6 
+									+radio-item('Пандусы','type')
+								.col-sm-6 
+									+radio-item('Плиты мощения','type')
+								.col-sm-6 
+									+radio-item('Другое','type')
+				else
+					+e.head Шаг 7 из 7
+					+e.body 
+						+e.title.text-center Расчет стоимости готов!
+					+b.form-wrap
+						
+						.row.gx-3
+							.col-lg-4.col-md-6
+								+input("Имя")
+							.col-lg-4.col-md-6
+								+input("Телефон",'tel')
+							.col-lg-4
+								button.btn.btn-primary(type="submit") Получить расчёт стоимости
+		+item(1,'Какой вид продукции вас интересует?','disabled')
+		+item(2,'Напишите месторождение/цвет')
+			.col-12
+				+e.block-wrap
+					+input("Укажите")
+				+e.block-wrap
+					+radio-item('Пока не знаю','count') 
+		
+		+item(3,'Напишите размер изделия')
+			.col-12
+				+e.block-wrap
+					+input("Укажите")
+				+e.block-wrap
+					+radio-item('Пока не знаю','size','checkbox')
+		+item(4,'Укажите толщину камня')
+			.col-12
+				+e.range-wrap 
+					input(type="text" data-min="10" data-max='1000').qwiz-range
+				+e.block-wrap
+					+input("Своя величина")
+				+e.block-wrap
+					+radio-item('Пока не знаю','tt','checkbox')
+		+item(5,'Выберите обработку поверхности')
+			.col-sm-6 
+				+radio-item('Пиленая','treatment')
+			.col-sm-6 
+				+radio-item('Полированная','treatment')
+			.col-sm-6 
+				+radio-item('Лощеная','treatment')
+			.col-sm-6 
+				+radio-item('Термообработанная','treatment')
+			.col-sm-6 
+				+radio-item('Колотая','treatment')
+			.col-sm-6 
+				+radio-item('обработка "Скала"','treatment')
+			.col-sm-6 
+				+radio-item('Бучардированная','treatment')
+			.col-sm-6 
+				+radio-item('Пока не знаю','treatment')
+		+item(6,'Напишите размер изделия')
+			.col-12
+				+e.block-wrap
+					+input("Необходимый объем, м2")
+				+e.block-wrap
+					+radio-item('Пока не знаю','val','checkbox')
+		+item(6,'Укажите город доставки')
+			.col-12
+				+e.block-wrap
+					+input("Город")
+		+item().--last.active
+	// end sQwiz

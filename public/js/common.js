@@ -27,7 +27,10 @@ const JSCCommon = {
 				Fancybox.close();
 			})
 		})
-		// fancybox.defaults.backFocus = false;
+		Fancybox.bind('[data-fancybox]', {
+			placeFocusBack: false,
+		});
+
 		const linkModal = document.querySelectorAll(link);
 		function addData() {
 			linkModal.forEach(element => {
@@ -281,16 +284,14 @@ const JSCCommon = {
 	},
 
 	customRange() {
-		function InputFormat() {// $('.input_from, .input_to').toFixed(2,0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '0')
-		}
 
-		InputFormat();
-
-		function currencyFormat(num) {
-			return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
-		} // currencyFormat(num)
-
-
+		$(".qwiz-range").ionRangeSlider({
+			skin: "round",
+			grid: false,
+			grid_snap: false,
+			hide_min_max: true,
+			// hide_from_to: true,
+		});
 		$(".range-wrap").each(function () {
 			var _this = $(this);
 
@@ -364,7 +365,7 @@ function eventHandler() {
 	JSCCommon.modalCall();
 	// JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
-	// JSCCommon.inputMask();
+	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.customRange();
@@ -504,8 +505,27 @@ function eventHandler() {
 			nextEl: ".place-slider-wrap .swiper-button-next",
 			prevEl: ".place-slider-wrap .swiper-button-prev",
 		},
-	});
-	// modal window
+	}); 
+
+
+
+	$(".sQwiz__body .radio-block ").click(function () {
+		if ($(this).find('input').is(':checked')) {
+			$(this).parents(".sQwiz__step").find(".sCalc__btn--next.d-none").removeClass("d-none")
+		}
+
+	})
+
+	$(".sCalc__btn--next, .sQwiz__body .radio-block").click(function () {
+		$(this).parents(".sQwiz__step").hide().removeClass('active').next().fadeIn(function () {
+			$(this).addClass('active');
+		})
+	})
+	$(".sCalc__btn--prev").click(function () {
+		$(this).parents(".sQwiz__step").hide().removeClass('active').prev().fadeIn(function () {
+			$(this).addClass('active');
+		})
+	})
 
 };
 if (document.readyState !== 'loading') {
