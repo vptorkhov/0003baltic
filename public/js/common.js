@@ -527,6 +527,11 @@ function eventHandler() {
 		})
 	})
 
+
+	$(".toggle-search-js").click(function () {
+		$(this).toggleClass("active");
+		$(".topLine__input-wrap").slideToggle();
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
