@@ -3,6 +3,7 @@ extends layout/main.pug
 
 include ../blocks/sOffers/_sOffers.pug
 include ../blocks/sidebar/_sidebar.pug
+include ../blocks/sContact/_sContact.pug
 include ../blocks/sProducts/_sProducts.pug 
 
 block variables
@@ -26,6 +27,7 @@ block pagecontent
 			.col-lg-9
 				+sProducts
 	+sForm
+	+sContact()
 	+footer()
       
 

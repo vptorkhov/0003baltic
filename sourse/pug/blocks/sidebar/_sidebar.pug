@@ -10,6 +10,7 @@ mixin sidebar(data)
 	+b.sidebar&attributes(attributes)
 		+e.filter
 			+e.head Фильтр
+				span
 			+e.body
 				+ddGroup()
 					+ddGroupItem('Цена (руб.)', 'active')

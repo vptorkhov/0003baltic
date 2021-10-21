@@ -576,3 +576,40 @@ iframe {
 	background-color: #bfbfbf !important;
 	border-color: #bfbfbf !important;
 }
+
+
+.text-block{
+	display: flex;
+	align-items: flex-end;
+	position: relative;
+	justify-content: space-between;
+	background-color: #fff; 
+ 
+	&__left{
+		span{
+			background-color: inherit;
+			position: relative;
+			z-index: 2;
+
+		}
+		// flex-grow: 1;
+		padding-right: 30px; 
+		position: relative;
+		&::before{
+			content: '............................................................................................................................................................................................';
+			position: absolute;
+			left: 0;bottom: 0;
+			max-width: 100%;
+			width: 100%;
+			// position: relative;
+			overflow: hidden;
+	
+		}
+	}
+	&__left,
+	&__right{
+		position: relative;
+		z-index: 2;
+		background-color: inherit;
+	}
+}

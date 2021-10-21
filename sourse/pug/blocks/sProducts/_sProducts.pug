@@ -1,31 +1,144 @@
+mixin prodCard(data)
+	+b.product-card
+		+e.img-wrap(href="#")
+			if data.stock
+				+e.labels-wrap
+					+e.label(style="--bg-color:#b11b1b")= data.stock
+			+pic("sCatalog-2.png",'',0)
+		+e.title
+			a(href="#")= data.t
+		+e.list
+			+e.list-item Полировка
+			+e.list-item Южно Сулатаевский 
+			+e.list-item 300x600x20
+		+e.footer
+			.row
+				.col
+					if data.old
+						+e.price--old 2 900 руб/м2
+					+e.price--new 2 450 руб/м2
+				.col-auto
+					if data.blockAdd
+						+addblock()
+					else
+						+e.btn(href="#")
+
+
 mixin sProducts(data)
 	// start sProducts
-	+b.SECTION.sProducts.section#sProducts&attributes(attributes)
-		.container
-			+b.section-title
-				.row
-					.col-auto
-						h1  Каталог
-					.col-auto.text-secondary  1181 товаров
-				p Тщательно контролируем производство. Готовый камень получается без сколов, трещин и запилов по торцам. Изготавливаем изделия разной сложности: от обычных модульных плит до нестандартных решенийНа странице представлен весь ассортимент изделий из гранита: плиты, брусчатка, бордюры, пандусы, ступени и т.д.
+	+b.sProducts.section#sProducts&attributes(attributes) 
+		+b.section-title
+			.row
 				
-			+b.place-title Популярные месторождения
-			+b.place-slider-wrap
-				+b.place-slider--js.swiper
-					.swiper-wrapper
-						mixin slide(i,t)
-							+e.slide.swiper-slide
-								+e.item(href="#")
-									+pic(`place-${i}.png`,'bg',0)
-									+e.title!= t
-						+slide(`1`,`Ала-Носкуа`)
-						+slide(`2`,`Балтийский`)
-						+slide(`3`,`Возрождение`)
-						+slide(`4`,`Гранатовый Амфиболит`)
-						+slide(`4`,`Ала-Носкуа`)
-						+slide(`4`,`Ала-Носкуа`)
-						+slide(`4`,`Ала-Носкуа`)
-				+e.slider-arrows.slider-arrows
-					.swiper-button-next
-					.swiper-button-prev
+
+				.col-auto
+					h1  Каталог
+				.col-auto.text-secondary  1181 товаров
+			p Тщательно контролируем производство. Готовый камень получается без сколов, трещин и запилов по торцам. Изготавливаем изделия разной сложности: от обычных модульных плит до нестандартных решенийНа странице представлен весь ассортимент изделий из гранита: плиты, брусчатка, бордюры, пандусы, ступени и т.д.
+			
+		+b.place-title Популярные месторождения
+		+b.place-slider-wrap
+			+b.place-slider--js.swiper
+				.swiper-wrapper
+					mixin slide(i,t)
+						+e.slide.swiper-slide
+							+e.item(href="#")
+								+pic(`place-${i}.png`,'bg',0)
+								+e.title!= t
+					+slide(`1`,`Ала-Носкуа`)
+					+slide(`2`,`Балтийский`)
+					+slide(`3`,`Возрождение`)
+					+slide(`4`,`Гранатовый Амфиболит`)
+					+slide(`4`,`Ала-Носкуа`)
+					+slide(`4`,`Ала-Носкуа`)
+					+slide(`4`,`Ала-Носкуа`)
+			+e.slider-arrows.slider-arrows
+				.swiper-button-next
+				.swiper-button-prev
+		+b.categories-block
+			.row
+				mixin item(t)
+					.col-xl-4.col-6
+						+b.LABEL.radio-cat
+							input(type="checkbox" name="cat").btn-check
+							span.btn.btn-light
+								= t
+				+item(`Брусчатка Габбро-Диабаз 100х100х50мм пилено колотая`)
+				+item(`Гранитная плита Балтийский 300х300х80мм`)
+				+item(`Брусчатка Габбро-Диабаз 100х100х50мм пилено колотая`)
+				+item(`Облицовочная плита Полировка  400x600x20 Елизовский `)
+				+item(`Гранитная плита мощения Термообработанная 400x600x80`)
+				+item(`Гранитная плита Балтийский 300х300х80мм`)
+		+b.producs-filter
+			.row
+				.col-sm-auto.col-auto
+					
+					+e.LABEL.item
+						+e.title Сортировать:  
+						select
+							option Выберите
+							option Выберите
+							option Выберите
+				.col-sm-auto.col
+					+e.LABEL.item
+						+e.title Показывать по: 
+						select
+							option  Выберите  
+							option 20
+							option 40
+							option 100
+				.col-auto.d-lg-none 
+					+b.toggle-filter--js
+						+icon('filter')
+						| Фильтр
+		+e.row.row
+			- for (var x = 0; x < 4; x++)
+				.col-xl-4.col-sm-6
+					+prodCard({
+						stock:'Акция',
+						old:'true',
+						t:'Облицовочная плита '
+						})
+						
+				.col-xl-4.col-sm-6
+					+prodCard({
+						stock:'Акция',
+						old:'true',
+						blockAdd:'true',
+						t:'Облицовочная плита '
+						})
+				.col-xl-4.col-sm-6
+					+prodCard({
+						t:'Облицовочная плита '
+
+					})
+			.col-xl-4.col-sm-6
+				+prodCard({
+					stock:'Акция',
+					old:'true',
+					blockAdd:'true',
+					t:'Облицовочная плита '
+					})
+			.col-xl-4.col-sm-6
+				+prodCard({
+					t:'Облицовочная плита '
+
+				})
+			.col-xl-4.col-md-6
+				+b.bannerCard(href="#")
+					+e.head %
+					+e.title Хотите специальные условия?
+					+e.text Оставьте заявку и мы&nbsp;предложим скидку от&nbsp;объема
+					+e.btn Оставить заявку
+						+icon("arrow-right")
+		+e.footer-control
+			+b.more-btn
+				+e.icon-wrap
+					+icon("more")
+				| Показать еще 15 товаров
+			hr
+			+pugin()
+			+e.footer-alert 
+				img(src="img/svg/warning-alt.svg", alt="")
+				span  Цены указаны в&nbsp;информационных целях и&nbsp;ни&nbsp;при каких условиях не&nbsp;являются публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса&nbsp;РФ.
 	// end sProducts
