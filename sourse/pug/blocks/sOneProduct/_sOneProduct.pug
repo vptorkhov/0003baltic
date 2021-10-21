@@ -1,0 +1,49 @@
+mixin sOneProduct(data)
+	// start sOneProduct
+	+b.SECTION.sOneProduct.section#sOneProduct&attributes(attributes)
+		.container
+			+e.wrap
+				+ProductSlider()
+				+ProductCalc()
+				+ProductSpec()
+				+ProductAdvantages()
+				+ProductSeeAlso()
+	// end sOneProduct
+
+
+mixin ProductSlider()
+	+e.slider-block
+		+e.slider--js.swiper
+			.swiper-wrapper
+				mixin slide1()
+					.swiper-slide
+						a(href="#" data-fancybox="single" data-src="img/@2x/sOneProduct.png")
+							img(src="img/@2x/sOneProduct.png", alt="")
+				+slide1()
+				+slide1()
+				+slide1()
+		+e.slider-thumbs--js.swiper
+			.swiper-wrapper
+				mixin slide2()
+					.swiper-slide
+						+pic('sOneProduct.png','',0)
+				+slide2()
+				+slide2()
+				+slide2()
+
+
+
+mixin ProductCalc()
+	+e.calc
+
+
+
+mixin ProductSpec()
+	+e.spec
+
+
+mixin ProductAdvantages()
+	+e.advantages
+
+mixin ProductSeeAlso()
+	+e.seeAlso

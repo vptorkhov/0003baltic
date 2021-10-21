@@ -1,0 +1,28 @@
+// start .sOneProduct
+.sOneProduct {
+	position: relative;
+	&__wrap{
+		max-width: 100%;
+		@include media-breakpoint-up(lg){
+			max-width: 50%;
+		}
+	}
+	&__calc{
+		@include media-breakpoint-up(lg){
+			position: absolute;
+			top: 0;
+			left: 50%;
+		}
+	}
+	&__slider-block{
+		margin-bottom: rem(7);
+		position: relative;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sOneProduct

@@ -126,7 +126,7 @@
 			.active {
 				@include media-breakpoint-down(md) {
 					&::after {
-						transform: translateY(-50%) rotate(180deg);
+						transform: translateY(-50%) rotateX(180deg);
 					}
 				}
 			}
