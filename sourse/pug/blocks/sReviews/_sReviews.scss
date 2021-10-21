@@ -89,6 +89,9 @@
 		@include media-breakpoint-up(xl) {
 			padding-left: rem(53);
 		}
+		@include media-breakpoint-down(md){
+			overflow: unset !important;
+		}
 		.swiper-slide {
 			width: auto;
 			@include media-breakpoint-down(md){

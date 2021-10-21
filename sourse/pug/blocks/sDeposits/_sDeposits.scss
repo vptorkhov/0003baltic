@@ -123,6 +123,7 @@
 		&-caption{
 			font-size: $small;
 			color: #6a6a6a;
+			max-width: rem(192);
 		}
 	}
 	&__link {
@@ -142,6 +143,16 @@
 		&-wrap{
 			display: flex;
 			justify-content: center;
+		}
+	}
+	&__slider{
+		@include media-breakpoint-down(lg){
+			overflow: visible !important;
+		}
+		.swiper-slide{
+			@include media-breakpoint-down(lg){
+				width: auto;
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {
