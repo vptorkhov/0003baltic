@@ -366,6 +366,15 @@ function eventHandler() {
 		},
 	}
 
+	var reviews = new Swiper(".sDeposits__slider--js ", {
+		slidesPerView:'auto',
+		spaceBetween: 42,
+		breakpoints: {
+			992: {
+				slidesPerView: 5
+			},
+		},
+	});
 	var reviews = new Swiper(".sReviews__slider--js", {
 		slidesPerView:'auto',
 		navigation: {

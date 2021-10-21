@@ -5,7 +5,8 @@
 	// --sTPB: ;
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(72)};
-		--sTPB: 60px;
+		--sPB: #{rem(132)};
+		--sTPB: #{rem(51)};
 	}
 	.picture-bg {
 		opacity: 0.59;
@@ -50,7 +51,7 @@
 		}
 	}
 	&__link {
-		margin-top: rem(25);
+		margin-top: rem(33);
 		display: inline-block;
 		position: relative;
 		@include media-breakpoint-up(lg) {
