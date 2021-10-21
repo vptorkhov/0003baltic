@@ -4,7 +4,7 @@
 	position: relative;
 	z-index: 100;
 	--sPT: 0;
-	--sPB: 0;
+	--sPB: 27px;
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(17)};
 		--sPB: #{rem(40)};
