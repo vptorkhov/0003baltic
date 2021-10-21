@@ -1,22 +1,30 @@
 // start .sOneProduct
 .sOneProduct {
-	position: relative;
+	--sPT: 0;
 	&__wrap{
+		position: relative;
 		max-width: 100%;
 		@include media-breakpoint-up(lg){
-			max-width: 50%;
+			max-width: calc(50% - 4px);
 		}
 	}
 	&__calc{
-		@include media-breakpoint-up(lg){
-			position: absolute;
-			top: 0;
-			left: 50%;
-		}
+		
 	}
 	&__slider-block{
 		margin-bottom: rem(7);
 		position: relative;
+	}
+	&__seeAlso{
+		.addBlock{
+			--color: #fff;
+			background-color: $primary;
+			border-color: $primary;
+			input{
+				background-color: transparent;
+			}
+			// color: var(--color, #{$primary});
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -26,3 +34,88 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sOneProduct
+
+
+.prod-right-block{
+		@include media-breakpoint-up(lg){
+			position: absolute;
+			top: 0;
+			left: calc(100% + 8px);
+			width: 100%;
+		}
+		background-color: #fff;
+		&__head,
+		&__group{
+			padding: rem(30);
+			border-bottom: 1px solid #efefef;
+		}
+		h1{
+			margin: 0;
+			line-height: normal;
+		}
+		&__head{
+		}
+		&__table{
+			color: #6a6a6a;
+			.col{
+				flex-grow: 1;
+				margin-bottom: 0.5rem;
+				&:nth-child(2n) {
+					max-width: rem(200);
+				}
+			}
+		}
+		&__more{
+			display: inline-block;
+			cursor: pointer;@include mt;
+			border-bottom: 1px dotted;
+			line-height: 1;
+			@extend .text-primary;
+			margin-top: 1rem;
+			&:hover{
+				border-color: transparent;
+			}
+		}
+		&__price--old{
+		color: $primary; 
+		font-size: $em-base;
+		font-weight: 300;
+		text-decoration: line-through;
+	}
+	&__price--new{
+		color: $black; 
+		@extend .h4; 
+		font-weight: 300;
+		min-width: rem(180);
+	}
+	.addBlock{
+		width: 166px;
+		border-radius: 25px;
+		--color: #{$body-color};
+		--h: 54px;
+		background-color: $body-bg;
+		border-color: $body-bg;
+		
+	}
+	&__total{
+		@extend .h2;
+		font-weight: normal;
+		margin-top: rem(35);
+	}
+	p{
+		color: #6a6a6a;
+		max-width: rem(440);
+	}
+	&__btn-wrap{
+		display: flex;
+		margin-left: -9px;
+		margin-right: -9px;
+	}
+	&__btn{
+		margin-left: 9px;
+		margin-right: 9px;
+		@extend .btn;
+		padding: rem(16);
+		width: calc(50% - 9px);
+	}
+}

@@ -17,7 +17,7 @@ mixin ProductSlider()
 			.swiper-wrapper
 				mixin slide1()
 					.swiper-slide
-						a(href="#" data-fancybox="single" data-src="img/@2x/sOneProduct.png")
+						a(href="img/@2x/sOneProduct.png" data-fancybox="single") 
 							img(src="img/@2x/sOneProduct.png", alt="")
 				+slide1()
 				+slide1()
@@ -34,16 +34,61 @@ mixin ProductSlider()
 
 
 mixin ProductCalc()
-	+e.calc
-
-
-
+	+b.prod-right-block
+		+e.head
+			h1 Облицовочная плита
+		+e.group
+			+e.table
+				.row.row-cols-2
+					+e.col.col Месторождение: Южно Сулатаевский
+					+e.col.col Цвет: Красный
+					+e.col.col Поверхность: Полировка,  
+					+e.col.col 600х300х20 (ДхШхТ)
+			+e.more Все характеристики
+		+e.group
+			.row
+				+e.price.col-auto
+					+e.price--old 2 900 руб/м<sup>2</sup>
+					+e.price--new 2 450 руб/м<sup>2</sup>
+				.col-auto
+					+addblock()
+			+e.total Итого: #[strong 369 950 руб]
+			p Указаны оптовые цены от 100 м2. Окончательную стоимость уточняйте у менеджера.
+			+e.btn-wrap
+				+e.btn(href="#").btn-primary В корзину
+				+e.btn(href="#").btn-outline-primary Купить в 1 клик
 mixin ProductSpec()
-	+e.spec
+	+e.spec 2
 
 
 mixin ProductAdvantages()
-	+e.advantages
+	+e.advantages 3
 
 mixin ProductSeeAlso()
 	+e.seeAlso
+		h3 Смотрите также
+		.row
+			.col-sm-6
+				+prodCard({
+					stock:'Акция',
+					old:'true',
+					t:'Облицовочная плита '
+					})
+					
+			.col-sm-6
+				+prodCard({
+					stock:'Акция',
+					old:'true',
+					blockAdd:'true',
+					t:'Облицовочная плита '
+					})
+			.col-sm-6
+				+prodCard({
+					t:'Облицовочная плита '
+
+				})
+			.col-sm-6
+				+prodCard({
+					t:'Облицовочная плита '
+
+				})

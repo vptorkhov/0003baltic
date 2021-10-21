@@ -545,6 +545,14 @@ function eventHandler() {
 		$(".sidebar__filter").removeClass("active")
 		$("body").removeClass("fixed")
 	})
+
+	if (document.querySelector(".prod-right-block")) {
+
+		var Sticky = new hcSticky('.prod-right-block', {
+			stickTo: '.sOneProduct__wrap'
+		});
+	}
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

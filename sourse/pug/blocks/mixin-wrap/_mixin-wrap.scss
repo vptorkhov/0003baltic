@@ -89,17 +89,19 @@
 		color: inherit;
 		text-align: center;
 		border: none;
-		height: rem(45);
+		height: var(--h, #{rem(45)});
 		width: auto;
 		flex-grow: 1;
 		width: calc(100% - #{rem(52)});
 		font-weight: 300;
 		line-height: normal;
+		outline: none !important;
+		background-color: transparent;
 	}
 	&__btn{
 		flex: 0 0 auto;
 		color: inherit;
-		height: rem(45);
+		height: var(--h, #{rem(45)});
 		position: relative;
 		border-radius: 23px;
 		background: none !important;
