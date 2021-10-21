@@ -68,7 +68,17 @@ mixin ProductSpec()
 
 
 mixin ProductAdvantages()
-	+e.advantages 3
+	+b.advantages-block
+		.row
+			mixin item(i,t)
+				+e.col.col-6
+					+e.img-wrap
+						img(src=`img/svg/qqadv-${i}.svg` laoding="lazy", alt="")
+					+e.title!= t
+			+item(`1`,`Не&nbsp;срываем сроки поставки`)
+			+item(`2`,`Производство в&nbsp;СПБ, 3&nbsp;склада по&nbsp;России`)
+			+item(`3`,`Гарантия 12&nbsp;месяцев`)
+			+item(`4`,`Напилим под ваши размеры`)
 
 mixin ProductSeeAlso()
 	+e.seeAlso
