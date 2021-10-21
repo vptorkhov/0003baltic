@@ -26,21 +26,69 @@
 &__row{
 	--bs-gutter-x: 13px;
 }
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+
+&__footer-control{
+	text-align: center;
+
+}
+.pagination-wrapper{
+margin-top: rem(29);	
+}
+&__footer-alert {
+	text-align: left;
+	display: flex;
+	// align-items: center;
+	color: #808080;
+	max-width: rem(740);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: rem(40);
+	img{
+		margin-right: rem(20);
+	}
+}
+@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(sm) {}
+@include media-breakpoint-between(md, xl) {}
+@include media-breakpoint-only(xl) {}
+@include media-breakpoint-down(xl) {}
 } // end.sProducts
 
+.more-btn{
+	margin-top: rem(30);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	color: #808080;
+	@include mt;
+	@include media-breakpoint-up(sm) {
+	font-size: 20px;
+	}
+	font-weight: bold;
+	margin-bottom: rem(40);
+	&:hover{
+		color: $primary;
+	}
+	.icon{
+		@include media-breakpoint-up(sm) {
+
+			// font-size: rem(47);
+		}
+		@include rfs(47px);
+	}
+	&__icon-wrap{
+		margin-right: rem(20);
+	}
+}
 .place-slider-wrap{
 	border: 1px solid #e1e1e1;
 	@include media-breakpoint-up(md) {
-	padding: rem(44) rem(40) 10px;
-}
-padding: rem(44) rem(20) rem(90);
+		padding: rem(44) rem(40) 10px;
+	}
+	padding: rem(44) rem(20) rem(90);
 	position: relative;
 	// overflow: hidden;
 	margin-top: em(-15);
@@ -296,6 +344,7 @@ font-weight: 300;
 }
 
 .bannerCard{
+	width: 100%;
 	@extend .btn, .btn-primary;
 	&:hover{
 		box-shadow: 0 0 $em-base rgba(0, 0, 0, 0.15);

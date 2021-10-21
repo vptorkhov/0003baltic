@@ -124,14 +124,21 @@ mixin sProducts(data)
 					t:'Облицовочная плита '
 
 				})
-			.col-xl-4.col-sm-6
+			.col-xl-4.col-md-6
 				+b.bannerCard(href="#")
 					+e.head %
 					+e.title Хотите специальные условия?
 					+e.text Оставьте заявку и мы&nbsp;предложим скидку от&nbsp;объема
 					+e.btn Оставить заявку
 						+icon("arrow-right")
-
-
-
+		+e.footer-control
+			+b.more-btn
+				+e.icon-wrap
+					+icon("more")
+				| Показать еще 15 товаров
+			hr
+			+pugin()
+			+e.footer-alert 
+				img(src="img/svg/warning-alt.svg", alt="")
+				span  Цены указаны в&nbsp;информационных целях и&nbsp;ни&nbsp;при каких условиях не&nbsp;являются публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса&nbsp;РФ.
 	// end sProducts

@@ -1,7 +1,58 @@
 
 	// start .sForm
 	.sForm {
-		 
+		 --sPT: 50px;
+		 --sPB: 50px;
+		color: #fff;
+		.form-wrap{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: rem(645);
+
+			&__input{
+					font-size: $large;
+				padding: rem(10.5) rem(30);
+				color: #fff;
+				font-weight: 300;
+				border-radius: 25px;
+				border: 3px solid rgba(255, 255, 255, 0.21);
+				&::placeholder{
+					color: #fff;
+				}
+			&:focus{
+				border-color: $primary;
+			}
+			background-color: transparent;
+			padding-left: rem(31);
+			margin-bottom: var(--bs-gutter-x); 
+			}
+			&__btn-circle{
+				width: 64px;
+				height: 64px;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+				top: rem(-6);
+				@extend .btn, .btn-primary;
+				box-shadow: 0px 0px 0px 8px rgba($primary, 0.2), 0px 0px 0px 16px rgba($primary, 0.07);
+				animation-name: shadowPulse;
+				animation-duration: 1.5s;
+				animation-iteration-count: infinite;
+				animation-timing-function: linear;
+				.icon{
+					font-size: rem(15);
+					font-size: $small;
+				}
+			}
+			&__policy{
+				opacity: 0.52;
+				color: #838383; 
+				font-size: 14px;
+				padding-left: rem(33);
+			}
+		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
