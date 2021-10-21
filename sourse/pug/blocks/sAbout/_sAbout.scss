@@ -5,6 +5,7 @@
 	--sTPB: 31px;
 	@include media-breakpoint-up(xl) {
 		--sPT: 75px;
+		--sPB: 82px;
 	}
 	background-color: $white;
 	&__item {
@@ -29,7 +30,7 @@
 				padding-left: 12px;
 				text-align: left;
 			}
-			@include media-breakpoint-down(md){
+			@include media-breakpoint-down(md) {
 				margin-bottom: 46px;
 			}
 		}
@@ -39,30 +40,30 @@
 		@include media-breakpoint-up(md) {
 			--bs-gutter-y: 50px;
 		}
-		@include media-breakpoint-between(md,lg){
+		@include media-breakpoint-between(md, lg) {
 			--bs-gutter-x: 56px;
 		}
 	}
-	picture{
+	picture {
 		position: relative;
-		@include media-breakpoint-down(lg){
+		@include media-breakpoint-down(lg) {
 			margin-bottom: 30px;
 		}
-		@include media-breakpoint-down(md){
+		@include media-breakpoint-down(md) {
 			width: calc(100% + var(--bs-gutter-x));
 			margin-left: calc(-0.5 * var(--bs-gutter-x));
-			img{
+			img {
 				width: 100%;
 			}
 		}
 	}
-	&__caption{
+	&__caption {
 		font-size: $large;
 		font-weight: 200;
 		color: #6a6a6a;
 		letter-spacing: 0.45px;
-		line-height: calc(28/18);
-		@include media-breakpoint-up(lg){
+		line-height: calc(28 / 18);
+		@include media-breakpoint-up(lg) {
 			max-width: 516px;
 		}
 	}

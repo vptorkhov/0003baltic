@@ -1,9 +1,18 @@
 mixin sContact()
 	// start sContact
-	+b.SECTION.sContact.section#sContact&attributes(attributes)
+	+b.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
 			.row
+				.col-lg-4.col-12
+					.row(style="--bs-gutter-y:25px")
+						.col-lg-12.col-md-6.col-12
+							+e.logo-wrap(href="/")
+								+pic('logo.svg','',0)
+								+e.logo-title Балтийский Камнеобрабатывающий Завод
+						.col-lg-12.col-md-6.col-12
+							+e.address Санкт-Петербург,<br>Маршала Блюхера, 12, корп. 7, оф. 612-2
+							+e.mail(href="mailto:info@baltkz.ru") info@baltkz.ru
+						.col-lg-12.col-md-6.col-12
+						.col-lg-12.col-md-6.col-12
+				.col-lg-8.col-12
 	// end sContact

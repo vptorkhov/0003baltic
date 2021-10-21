@@ -445,7 +445,7 @@ function eventHandler() {
 		},
 	}
 
-	var reviews = new Swiper(".sDeposits__slider--js ", {
+	var deposits = new Swiper(".sDeposits__slider--js ", {
 		slidesPerView:'auto',
 		spaceBetween: 42,
 		breakpoints: {
