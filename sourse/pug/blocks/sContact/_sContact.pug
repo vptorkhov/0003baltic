@@ -1,10 +1,10 @@
 mixin sContact()
 	// start sContact
 	+b.sContact.section#sContact&attributes(attributes)
-		.container
-			.row
-				.col-lg-4.col-12
-					.row(style="--bs-gutter-y:25px")
+		.container-md
+			+e.row.row
+				+e.col.col-lg-4.col-12
+					.row(style="--bs-gutter-y:12px")
 						.col-lg-12.col-md-6.col-12
 							+e.logo-wrap(href="/")
 								+pic('logo.svg','',0)
@@ -13,6 +13,77 @@ mixin sContact()
 							+e.address Санкт-Петербург,<br>Маршала Блюхера, 12, корп. 7, оф. 612-2
 							+e.mail(href="mailto:info@baltkz.ru") info@baltkz.ru
 						.col-lg-12.col-md-6.col-12
+							+e.tel-wrap
+								+e.tel 8 (812) 565-02-20
+								+e.tel-link(href="#") Заказать звонок
 						.col-lg-12.col-md-6.col-12
+							+e.soc-wrap
+								+e.soc(href="#")
+									img(src="img/svg/whatsapp.svg", alt="")
+								+e.soc(href="#")
+									img(src="img/svg/telegram.svg", alt="")
+								+e.soc(href="#")
+									img(src="img/svg/youtube.svg", alt="")
+								+e.soc(href="#")
+									img(src="img/svg/insta.svg", alt="")
 				.col-lg-8.col-12
+					ul
+						li 
+							+b.list-title.d-none.d-md-block О компании
+							+b.list-title--js.d-md-none О компании
+							ul
+								li
+									a(href="#") Производство
+								li
+									a(href="#") Месторождения
+								li
+									a(href="#") Статьи
+								li
+									a(href="#") Наши проекты
+								li
+									a(href="#") Контакты
+								li
+									a(href="#") Карта сайта
+						li
+							+b.list-title.d-none.d-md-block Клиентам
+							+b.list-title--js.d-md-none Клиентам
+							ul
+								li
+									a(href="#") Доставка
+								li
+									a(href="#") Оплата
+								li
+									a(href="#") Гарантия
+								li
+									a(href="#") Акции и скидки
+						li.me-0
+							+b.list-title.d-none.d-md-block Каталог
+							+b.list-title--js.d-md-none Каталог
+							ul.double-list
+								li
+									a(href="#") Плиты
+								li
+									a(href="#") Брусчатка
+								li
+									a(href="#") Бордюры
+								li
+									a(href="#") Ступени
+								li
+									a(href="#") Мемориалы
+								li
+									a(href="#") Балясины
+								li
+									a(href="#") Столбики
+								li
+									a(href="#") Фонтаны
+								li
+									a(href="#") Камины
+								li
+									a(href="#") Скульптуры
+								li
+									a(href="#") Барные стойки
+								li
+									a(href="#") Столешницы
+								li
+									a(href="#") Подоконники
 	// end sContact

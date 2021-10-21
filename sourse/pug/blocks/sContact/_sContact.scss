@@ -4,6 +4,17 @@
 	@include media-breakpoint-up(lg) {
 		--sPT: 62px;
 	}
+	.container-md {
+		@include media-breakpoint-down(md) {
+			padding: 0;
+		}
+	}
+	&__col {
+		@include media-breakpoint-down(md) {
+			padding-left: 25px;
+			padding-right: 25px;
+		}
+	}
 	&__logo-wrap {
 		color: $body-color !important;
 		display: flex;
@@ -34,6 +45,139 @@
 		@include mt;
 		&:hover {
 			border-color: $body-color;
+		}
+	}
+	&__tel-wrap {
+		display: flex;
+		margin-bottom: 10px;
+	}
+	&__tel {
+		font-weight: 900;
+		@include media-breakpoint-up(sm) {
+			font-size: $large;
+			margin-right: 25px;
+		}
+		margin-right: 15px;
+	}
+	&__tel-link {
+		font-size: $small;
+		line-height: $h4-font-size;
+		border-bottom: 1px dashed transparent;
+		@include mt;
+		&:hover {
+			border-color: $primary;
+		}
+	}
+	&__soc-wrap {
+		display: flex;
+	}
+	&__soc {
+		width: 29px;
+		height: 29px;
+		margin-right: 16px;
+	}
+	ul {
+		list-style-type: none;
+		display: flex;
+		flex-direction: column;
+		@include media-breakpoint-up(md) {
+			flex-direction: row;
+		}
+		li {
+			@include media-breakpoint-up(md) {
+				margin-right: 80px;
+			}
+			@include media-breakpoint-down(md) {
+				border-top: 1px solid #dadada;
+				border-bottom: 1px solid #dadada;
+				&:nth-child(2) {
+					border-top: none;
+				}
+				&:nth-child(3) {
+					border-top: none;
+				}
+			}
+
+			.list-title {
+				font-weight: 700;
+				@include media-breakpoint-up(md) {
+					margin-bottom: 15px;
+				}
+				@include media-breakpoint-down(md) {
+					position: relative;
+					padding-top: 20px;
+					padding-bottom: 20px;
+					padding-left: 15px;
+					padding-right: 30px;
+					cursor: pointer;
+					&::after {
+						content: "";
+						position: absolute;
+						right: 16px;
+						top: 50%;
+						transform: translateY(-50%);
+						width: 14px;
+						height: 8px;
+						background-image: url("../img/svg/list-title.svg");
+						@include mt;
+					}
+				}
+			}
+			.active {
+				@include media-breakpoint-down(md) {
+					&::after {
+						transform: translateY(-50%) rotate(180deg);
+					}
+				}
+			}
+			ul {
+				display: none;
+				@include media-breakpoint-up(md) {
+					display: block;
+					padding: 0;
+				}
+				padding-left: 15px;
+				padding-right: 15px;
+				padding-bottom: 10px;
+				li {
+					margin-bottom: 7px;
+					margin-right: 0;
+
+					@include media-breakpoint-down(md) {
+						border: none;
+						padding: 0;
+					}
+					a {
+						font-weight: 300;
+						color: $body-color !important;
+						border-bottom: 1px solid transparent;
+						@include mt;
+						&:hover {
+							border-color: $body-color;
+						}
+					}
+				}
+			}
+			.double-list {
+				display: none;
+				@include media-breakpoint-up(md) {
+					display: block;
+				}
+				column-count: 2;
+				li {
+					margin-right: 70px;
+					@include media-breakpoint-down(md) {
+						border: none;
+						padding: 0;
+					}
+				}
+			}
+		}
+	}
+	&__row {
+		--bs-gutter-y: 24px;
+		@include media-breakpoint-up(md) {
+			--bs-gutter-y: 49px;
 		}
 	}
 	@include media-breakpoint-up(xl) {

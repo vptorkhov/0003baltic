@@ -423,6 +423,10 @@ function eventHandler() {
 	$('.sCatalog__show-more').click(function(){
 		$('.sCatalog__caption').toggleClass('sCatalog__caption--active');
 	});
+	$('.list-title--js').click(function(){
+		$(this).toggleClass('active');
+		$(this).next().slideToggle();
+	});
 	let defaultSl = {
 		spaceBetween: 0,
 		lazy: {

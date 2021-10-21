@@ -1,6 +1,28 @@
 .footer {
-	
-
+	background-color: $white;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	p{
+		text-align: center;
+		font-size: $small;
+		color: #8e8e8e;
+		margin-bottom: 0;
+		line-height: $small;
+		max-width: 220px;
+		margin-left: auto;
+		margin-right: auto;
+		@include media-breakpoint-up(md){
+			max-width: none;
+			margin: 0;
+		}
+		a{
+			color: #8e8e8e;
+			text-decoration: underline;
+			&:hover{
+				color:#8e1616;
+			}
+		}
+	}
 	//
 	@include media-breakpoint-up(xl) {
 	}
