@@ -532,6 +532,15 @@ function eventHandler() {
 		$(this).toggleClass("active");
 		$(".topLine__input-wrap").slideToggle().find("input").focus();
 	})
+
+	$(".toggle-filter--js").click(function () {
+		$(".sidebar__filter").toggleClass("active")
+		$("body").toggleClass("fixed")
+	})
+	$(".sidebar__head span").click(function () {
+		$(".sidebar__filter").removeClass("active")
+		$("body").removeClass("fixed")
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

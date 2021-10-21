@@ -75,3 +75,52 @@
 .swiper-button-disabled {
 	@extend .btn-primary-disabled;
 }
+
+
+
+.addBlock{
+	color: var(--color, #{$primary});
+	border: 1px solid;
+	border-radius: 23px;
+	display: flex;
+	position: relative;
+	overflow: hidden;
+	input{
+		color: inherit;
+		text-align: center;
+		border: none;
+		height: rem(45);
+		width: auto;
+		flex-grow: 1;
+		width: calc(100% - #{rem(52)});
+		font-weight: 300;
+		line-height: normal;
+	}
+	&__btn{
+		flex: 0 0 auto;
+		color: inherit;
+		height: rem(45);
+		position: relative;
+		border-radius: 23px;
+		background: none !important;
+		border: none !important;
+		box-shadow: none !important;
+		outline: none !important;
+		background: transparent;
+		// padding-left: rem(8);
+		// padding-right: rem(8);
+		width: rem(26);
+		&::before,
+		&::after{
+			content: '';
+			width: 10px;
+			height: 2px; 
+			background-color: currentColor;
+			@include a-cent;
+			position: absolute;
+		}
+		&--plus::after{
+			transform: rotate(90deg);
+		}
+	}
+}
