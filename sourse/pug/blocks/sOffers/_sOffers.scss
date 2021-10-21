@@ -27,6 +27,9 @@
 		padding-bottom: 75px;
 		padding-left: 11px;
 		padding-right: 11px;
+		@include media-breakpoint-down(lg){
+			overflow: unset !important;
+		}
 		@include media-breakpoint-up(md) {
 			padding-top: rem(100);
 			margin-top: rem(-50);
