@@ -35,6 +35,10 @@
 		padding-top: rem(35);
 		padding-bottom: rem(32);
 		padding-left: rem(73);
+		@include mt;
+		&:hover{
+			background-color: #961717;
+		}
 		@include media-breakpoint-up(xl) {
 			padding-top: rem(29);
 			padding-bottom: rem(29);

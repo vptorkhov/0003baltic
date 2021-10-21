@@ -353,6 +353,8 @@
 				display: none;
 			}
 			&-mob {
+				@extend  .btn, .btn-primary;
+				border-radius: 0;
 				font-size: $small;
 				color: #f7f7f7 !important;
 				padding: rem(15) rem(29);

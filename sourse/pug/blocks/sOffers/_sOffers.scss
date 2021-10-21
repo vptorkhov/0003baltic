@@ -13,6 +13,7 @@
 		margin-bottom: rem(16);
 		position: relative;
 		z-index: 3;
+		display: inline-block;
 		@include media-breakpoint-up(md) {
 			margin-bottom: 0;
 		}
