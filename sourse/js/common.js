@@ -262,23 +262,100 @@ const JSCCommon = {
 					$(ChildHeads).each(function () {
 						if (this === clickedHead) {
 							//parent element gain toggle class, style head change via parent
-							$(this.parentElement).toggleClass('active');
-							$(this.parentElement).find('.dd-content-js').slideToggle(function () {
+							$(this.parentElement).toggleClass('active')
+							.find('.dd-content-js').slideToggle(function () {
 								$(this).toggleClass('active');
 							});
 						}
-						else {
-							$(this.parentElement).removeClass('active');
-							$(this.parentElement).find('.dd-content-js').slideUp(function () {
-								$(this).removeClass('active');
-							});
-						}
+						// else {
+						// 	$(this.parentElement).removeClass('active');
+						// 	$(this.parentElement).find('.dd-content-js').slideUp(function () {
+						// 		$(this).removeClass('active');
+						// 	});
+						// }
 					});
 
 				});
 			}
 		}
 	},
+
+	customRange() {
+		function InputFormat() {// $('.input_from, .input_to').toFixed(2,0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '0')
+		}
+
+		InputFormat();
+
+		function currencyFormat(num) {
+			return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
+		} // currencyFormat(num)
+
+
+		$(".range-wrap").each(function () {
+			var _this = $(this);
+
+			var $range = _this.find(".slider-js");
+
+			var $inputFrom = _this.find(".input_from");
+
+			var $inputTo = _this.find(".input_to");
+
+			var instance,
+				from,
+				to,
+				min = $range.data('min'),
+				max = $range.data('max');
+			$range.ionRangeSlider({
+				skin: "round",
+				type: "double",
+				grid: false,
+				grid_snap: false,
+				hide_min_max: true,
+				hide_from_to: true,
+				onStart: updateInputs,
+				onChange: updateInputs,
+				onFinish: updateInputs
+			});
+			instance = $range.data("ionRangeSlider");
+
+			function updateInputs(data) {
+				from = data.from;
+				to = data.to;
+				$inputFrom.prop("value", from);
+				$inputTo.prop("value", to); // InputFormat();
+			}
+
+			$inputFrom.on("change input ", function () {
+				var val = +$(this).prop("value").replace(/\s/g, ''); // validate
+
+				if (val < min) {
+					val = min;
+				} else if (val > to) {
+					val = to;
+				}
+
+				instance.update({
+					from: val
+				});
+				$(this).prop("value", val);
+				console.log(val);
+			});
+			$inputTo.on("change input ", function () {
+				var val = +$(this).prop("value").replace(/\s/g, ''); // validate
+
+				if (val < from) {
+					val = from;
+				} else if (val > max) {
+					val = max;
+				}
+
+				instance.update({
+					to: val
+				});
+				$(this).prop("value", currencyFormat(val));
+			});
+		});
+	}
 };
 const $ = jQuery;
 
@@ -290,6 +367,7 @@ function eventHandler() {
 	// JSCCommon.inputMask();
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
+	JSCCommon.customRange();
 	JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
@@ -411,12 +489,21 @@ function eventHandler() {
 		// slidesPerView: 5,
 		...defaultSl,
 		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
+		freeMode: true, 
+		slideToClickedSlide: true, 
 
+	});
+	// modal window
+	const swiper5 = new Swiper('.place-slider--js', {
+		// slidesPerView: 5,
+		...defaultSl,
+		slidesPerView: 'auto',
+		freeMode: true,  
+		loop: false,
+		navigation: {
+			nextEl: ".place-slider-wrap .swiper-button-next",
+			prevEl: ".place-slider-wrap .swiper-button-prev",
+		},
 	});
 	// modal window
 

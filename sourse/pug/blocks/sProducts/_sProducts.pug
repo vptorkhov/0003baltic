@@ -1,0 +1,31 @@
+mixin sProducts(data)
+	// start sProducts
+	+b.SECTION.sProducts.section#sProducts&attributes(attributes)
+		.container
+			+b.section-title
+				.row
+					.col-auto
+						h1  Каталог
+					.col-auto.text-secondary  1181 товаров
+				p Тщательно контролируем производство. Готовый камень получается без сколов, трещин и запилов по торцам. Изготавливаем изделия разной сложности: от обычных модульных плит до нестандартных решенийНа странице представлен весь ассортимент изделий из гранита: плиты, брусчатка, бордюры, пандусы, ступени и т.д.
+				
+			+b.place-title Популярные месторождения
+			+b.place-slider-wrap
+				+b.place-slider--js.swiper
+					.swiper-wrapper
+						mixin slide(i,t)
+							+e.slide.swiper-slide
+								+e.item(href="#")
+									+pic(`place-${i}.png`,'bg',0)
+									+e.title!= t
+						+slide(`1`,`Ала-Носкуа`)
+						+slide(`2`,`Балтийский`)
+						+slide(`3`,`Возрождение`)
+						+slide(`4`,`Гранатовый Амфиболит`)
+						+slide(`4`,`Ала-Носкуа`)
+						+slide(`4`,`Ала-Носкуа`)
+						+slide(`4`,`Ала-Носкуа`)
+				+e.slider-arrows.slider-arrows
+					.swiper-button-next
+					.swiper-button-prev
+	// end sProducts

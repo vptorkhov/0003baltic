@@ -1,0 +1,33 @@
+extends layout/main.pug
+
+
+include ../blocks/sOffers/_sOffers.pug
+include ../blocks/sidebar/_sidebar.pug
+include ../blocks/sProducts/_sProducts.pug 
+
+block variables
+	- let  mainPage= null 
+	- let  bg= '2.png'
+
+block title
+	- let  title= 'Каталог'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		+topLine('cart')
+		+top-nav()
+	+breadcrumb('Главная',title)
+	//- +sContact()
+	.container.container--main
+		.row
+			.col-lg-3.order-lg-0.order-last
+				+sidebar
+			.col-lg-9
+				+sProducts
+	+sForm
+	+footer()
+      
+
+
+

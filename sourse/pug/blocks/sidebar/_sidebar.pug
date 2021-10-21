@@ -1,0 +1,108 @@
+mixin filter-item(t,count, color)
+	+in-c()
+		+e.SPAN.text.form-check-label
+			if color
+				+e.SPAN.color(style=`--color:${color}`)
+			=t
+			span.text-secondary= count
+mixin sidebar(data)
+	// start sidebar
+	+b.sidebar&attributes(attributes)
+		+e.filter
+			+e.head Фильтр
+			+e.body
+				+ddGroup()
+					+ddGroupItem('Цена (руб.)', 'active')
+						.range-wrap.price_slider_amount
+							.row
+								.col-6
+									.form-group
+										input.input_from.form-control(type='number'  step="any")
+								.col-6
+									.form-group
+										input.input_to.form-control(type='number' step="any" )
+							input.range-slider.slider-js(data-max='150000' data-min='0' type='text')
+					+ddGroupItem('Цвет', 'active')
+						+filter-item("Белый",'(54) ','#fff')
+						+filter-item("Коричневый",' (277) ','#84642a')
+						+filter-item("Красный ",'(238) ','#b11b1b')
+						+filter-item("Розовый",'(106)','#dbaca9')
+						+filter-item("Серый ",'(400) ','#808080')
+						+filter-item("Черный",'(106) ','#000000')
+
+					+ddGroupItem('Вид изделия', 'active')
+						+filter-item("Бордюр",'(54) ')
+						+filter-item("Пандус",' (277) ')
+						+filter-item(" Ступени",'(238) ')
+						+filter-item("Брусчатка ",'(106)')
+						+filter-item("Облицовочные плиты  ",'(400) ')
+						+filter-item("лорем ипсум ",'(106) ')
+						+filter-item("лорем ипсум ",'(54) ')
+						+filter-item("лорем",' (277) ') 
+						+filter-item("лорем",' (277) ') 
+						+filter-item("лорем",' (277) ') 
+						+filter-item("лорем",' (277) ') 
+
+					+ddGroupItem('Ширина', 'active')
+						+filter-item("80",'(54) ')
+						+filter-item("100",' (277) ')
+						+filter-item(" 150",'(238) ')
+						+filter-item("200",'(106)')
+						+filter-item(" 300",'(400) ')
+						+filter-item("400",'(106) ')
+						+filter-item("500",'(106) ')
+						+filter-item("600",'(106) ')
+					+ddGroupItem('Месторождение', 'active') 
+						+filter-item("80",'(54) ')
+						+filter-item("100",' (277) ')
+						+filter-item(" 150",'(238) ')
+						+filter-item("200",'(106)')
+						+filter-item(" 300",'(400) ')
+						+filter-item("400",'(106) ')
+						+filter-item("500",'(106) ')
+						+filter-item("600",'(106) ')
+					+ddGroupItem('Поверхность')
+						+filter-item("80",'(54) ')
+						+filter-item("100",' (277) ')
+						+filter-item(" 150",'(238) ')
+						+filter-item("200",'(106)')
+						+filter-item(" 300",'(400) ')
+						+filter-item("400",'(106) ')
+						+filter-item("500",'(106) ')
+						+filter-item("600",'(106) ')
+					+ddGroupItem('Наличие')
+						+filter-item("80",'(54) ')
+						+filter-item("100",' (277) ')
+						+filter-item(" 150",'(238) ')
+						+filter-item("200",'(106)')
+						+filter-item(" 300",'(400) ')
+						+filter-item("400",'(106) ')
+						+filter-item("500",'(106) ')
+						+filter-item("600",'(106) ')
+					+ddGroupItem('Толщина')
+						+filter-item("80",'(54) ')
+						+filter-item("100",' (277) ')
+						+filter-item(" 150",'(238) ')
+						+filter-item("200",'(106)')
+						+filter-item(" 300",'(400) ')
+						+filter-item("400",'(106) ')
+						+filter-item("500",'(106) ')
+						+filter-item("600",'(106) ')
+				+e.btn.btn-primary(type="button") Показать
+				+e.btn.btn-link(type="button") 
+					+icon("close") 
+					| Сбросить
+		+b.consultant-block
+			+e.avatar
+				+pic("avatar.png",'',0)
+			+e.name Александр
+			+e.prof Консультант завода
+			+e.tel(href="tel:8(812)565-02-20") 8 (812) 565-02-20
+			+e.soc.row.g-1.gx-3
+				.col-auto
+					a(href="#") 
+						img(src="img/svg/whatsapp.svg", alt="")
+				.col-auto
+					a(href="#") 
+						img(src="img/svg/telegram.svg", alt="")
+	// end sidebar
