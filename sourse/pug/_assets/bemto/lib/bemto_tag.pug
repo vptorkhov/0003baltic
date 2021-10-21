@@ -60,7 +60,7 @@ mixin bemto_tag(tag, tagMetadata)
     if !attributes.alt
       - attributes.alt = ''
     if attributes.alt === ''
-      - attributes.role = 'presentation'
+      - attributes.role = ''
     if !attributes.src
       if settings.nosrc_substitute === true
         - attributes.src = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='

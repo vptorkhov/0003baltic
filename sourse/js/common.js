@@ -530,7 +530,7 @@ function eventHandler() {
 
 	$(".toggle-search-js").click(function () {
 		$(this).toggleClass("active");
-		$(".topLine__input-wrap").slideToggle();
+		$(".topLine__input-wrap").slideToggle().find("input").focus();
 	})
 };
 if (document.readyState !== 'loading') {
