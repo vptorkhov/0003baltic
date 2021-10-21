@@ -1,9 +1,13 @@
 mixin sCalc(data)
 	// start sCalc
-	+b.SECTION.sCalc.section#sCalc&attributes(attributes)
+	+b.SECTION.sCalc.section.bg-wrap#sCalc&attributes(attributes)
+		+pic("sCalc-bg.jpg",'bg').picture-bg
 		.container
-			+b.section-title.text-center
-				h2 sCalc
+			+b.section-title
+				h2 Вы можете рассчитать стоимость материалов самостоятельно за 48 сек
 				
 			.row
+				.col-lg-8
+					+sQwiz
+				.col
 	// end sCalc

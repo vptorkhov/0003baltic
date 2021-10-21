@@ -3,7 +3,10 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
-
+	.section-title{
+		max-width: rem(670);
+		color: #fff;
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

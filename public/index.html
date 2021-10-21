@@ -588,12 +588,356 @@
 			</section>
 			<!-- end sCatalog-->
 			<!-- start sCalc-->
-			<section class="sCalc section" id="sCalc">
+			<section class="sCalc section bg-wrap" id="sCalc">
+				<!-- picture-->
+				<picture class="picture-bg"> 
+					<source type="image/webp" srcset="img/@2x/webp/sCalc-bg.webp" media="(min-width:576px)"/>
+					<source type="image/webp" srcset="img/@1x/webp/sCalc-bg.webp"/>
+					<source type="image/jpg" srcset="img/@2x/sCalc-bg.jpg" media="(min-width:576px)"/>
+					<source type="image/jpg" srcset="img/@1x/sCalc-bg.jpg"/><img class="object-fit-js" src="img/@2x/sCalc-bg.jpg" alt="" loading="lazy"/>
+				</picture>
+				<!-- /picture-->
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>sCalc</h2>
+					<div class="section-title">
+						<h2>Вы можете рассчитать стоимость материалов самостоятельно за 48 сек</h2>
 					</div>
-					<div class="row"></div>
+					<div class="row">
+						<div class="col-lg-8">
+							<!-- start sQwiz-->
+							<div class="sQwiz"> 
+								<div class="sQwiz__step">
+									<div class="sQwiz__head">
+										<div class="row">
+											<div class="col-auto">
+												<div class="sQwiz__btn-wrap">
+													<div class="sQwiz__btn-control sCalc__btn sCalc__btn--prev disabled"> 
+													</div>
+												</div>
+											</div>
+											<div class="col"> 1 вопрос из 7</div>
+											<div class="col-auto">
+												<div class="sQwiz__btn-wrap">
+													<div class="sQwiz__btn-control sCalc__btn sCalc__btn--next d-none"> 
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sQwiz__body"> 
+										<div class="sQwiz__title">Какой вид продукции вас интересует?
+										</div>
+										<div class="row">
+											<div class="col-sm-6"> 
+												<label class="radio-block"> 
+													<input type="radio" name="type"/><span class="radio-block__title">Брусчатка</span>
+												</label>
+											</div>
+											<div class="col-sm-6"> 
+												<label class="radio-block"> 
+													<input type="radio" name="type"/><span class="radio-block__title">Бордюры</span>
+												</label>
+											</div>
+											<div class="col-sm-6"> 
+												<label class="radio-block"> 
+													<input type="radio" name="type"/><span class="radio-block__title">Облицовачные плиты</span>
+												</label>
+											</div>
+											<div class="col-sm-6"> 
+												<label class="radio-block"> 
+													<input type="radio" name="type"/><span class="radio-block__title">Пандусы</span>
+												</label>
+											</div>
+											<div class="col-sm-6"> 
+												<label class="radio-block"> 
+													<input type="radio" name="type"/><span class="radio-block__title">Плиты мощения</span>
+												</label>
+											</div>
+											<div class="col-sm-6"> 
+												<label class="radio-block"> 
+													<input type="radio" name="type"/><span class="radio-block__title">Другое</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sQwiz__step">
+									<div class="sQwiz__head">
+										<div class="row">
+											<div class="col-auto">
+												<div class="sQwiz__btn-wrap">
+													<div class="sQwiz__btn-control sCalc__btn sCalc__btn--prev"> 
+													</div>
+												</div>
+											</div>
+											<div class="col"> 2 вопрос из 7</div>
+											<div class="col-auto">
+												<div class="sQwiz__btn-wrap">
+													<div class="sQwiz__btn-control sCalc__btn sCalc__btn--next d-none"> 
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sQwiz__body"> 
+										<div class="sQwiz__title">Напишите месторождение/цвет
+										</div>
+										<div class="row">
+											<div class="col-12">
+												<div class="sQwiz__block-wrap">
+													<div class="sQwiz__input-wrap form-group"><input class="sQwiz__input form-control" name="text" type="text" placeholder="Укажите"/>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+												<div class="sQwiz__block-wrap">
+													<label class="radio-block"> 
+														<input type="radio" name="count"/><span class="radio-block__title">Пока не знаю</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sQwiz__step">
+									<div class="sQwiz__head">
+										<div class="row">
+											<div class="col-auto">
+												<div class="sQwiz__btn-wrap">
+													<div class="sQwiz__btn-control sCalc__btn sCalc__btn--prev"> 
+													</div>
+												</div>
+											</div>
+											<div class="col"> 3 вопрос из 7</div>
+											<div class="col-auto">
+												<div class="sQwiz__btn-wrap">
+													<div class="sQwiz__btn-control sCalc__btn sCalc__btn--next d-none"> 
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sQwiz__body"> 
+										<div class="sQwiz__title">Напишите размер изделия
+										</div>
+										<div class="row">
+											<div class="col-12">
+												<div class="sQwiz__block-wrap">
+													<div class="sQwiz__input-wrap form-group"><input class="sQwiz__input form-control" name="text" type="text" placeholder="Укажите"/>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+												<div class="sQwiz__block-wrap">
+													<label class="radio-block"> 
+														<input type="checkbox" name="size"/><span class="radio-block__title">Пока не знаю</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sQwiz__step">
+									<div class="sQwiz__head">
+										<div class="row">
+											<div class="col-auto">
+												<div class="sQwiz__btn-wrap">
+													<div class="sQwiz__btn-control sCalc__btn sCalc__btn--prev"> 
+													</div>
+												</div>
+											</div>
+											<div class="col"> 4 вопрос из 7</div>
+											<div class="col-auto">
+												<div class="sQwiz__btn-wrap">
+													<div class="sQwiz__btn-control sCalc__btn sCalc__btn--next d-none"> 
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sQwiz__body"> 
+										<div class="sQwiz__title">Укажите толщину камня
+										</div>
+										<div class="row">
+											<div class="col-12">
+												<div class="sQwiz__range-wrap"> 
+													<input class="qwiz-range" type="text" data-min="10" data-max="1000"/>
+												</div>
+												<div class="sQwiz__block-wrap">
+													<div class="sQwiz__input-wrap form-group"><input class="sQwiz__input form-control" name="text" type="text" placeholder="Своя величина"/>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+												<div class="sQwiz__block-wrap">
+													<label class="radio-block"> 
+														<input type="checkbox" name="tt"/><span class="radio-block__title">Пока не знаю</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sQwiz__step">
+									<div class="sQwiz__head">
+										<div class="row">
+											<div class="col-auto">
+												<div class="sQwiz__btn-wrap">
+													<div class="sQwiz__btn-control sCalc__btn sCalc__btn--prev"> 
+													</div>
+												</div>
+											</div>
+											<div class="col"> 5 вопрос из 7</div>
+											<div class="col-auto">
+												<div class="sQwiz__btn-wrap">
+													<div class="sQwiz__btn-control sCalc__btn sCalc__btn--next d-none"> 
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sQwiz__body"> 
+										<div class="sQwiz__title">Выберите обработку поверхности
+										</div>
+										<div class="row">
+											<div class="col-sm-6"> 
+												<label class="radio-block"> 
+													<input type="radio" name="treatment"/><span class="radio-block__title">Пиленая</span>
+												</label>
+											</div>
+											<div class="col-sm-6"> 
+												<label class="radio-block"> 
+													<input type="radio" name="treatment"/><span class="radio-block__title">Полированная</span>
+												</label>
+											</div>
+											<div class="col-sm-6"> 
+												<label class="radio-block"> 
+													<input type="radio" name="treatment"/><span class="radio-block__title">Лощеная</span>
+												</label>
+											</div>
+											<div class="col-sm-6"> 
+												<label class="radio-block"> 
+													<input type="radio" name="treatment"/><span class="radio-block__title">Термообработанная</span>
+												</label>
+											</div>
+											<div class="col-sm-6"> 
+												<label class="radio-block"> 
+													<input type="radio" name="treatment"/><span class="radio-block__title">Колотая</span>
+												</label>
+											</div>
+											<div class="col-sm-6"> 
+												<label class="radio-block"> 
+													<input type="radio" name="treatment"/><span class="radio-block__title">обработка &quot;Скала&quot;</span>
+												</label>
+											</div>
+											<div class="col-sm-6"> 
+												<label class="radio-block"> 
+													<input type="radio" name="treatment"/><span class="radio-block__title">Бучардированная</span>
+												</label>
+											</div>
+											<div class="col-sm-6"> 
+												<label class="radio-block"> 
+													<input type="radio" name="treatment"/><span class="radio-block__title">Пока не знаю</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sQwiz__step">
+									<div class="sQwiz__head">
+										<div class="row">
+											<div class="col-auto">
+												<div class="sQwiz__btn-wrap">
+													<div class="sQwiz__btn-control sCalc__btn sCalc__btn--prev"> 
+													</div>
+												</div>
+											</div>
+											<div class="col"> 6 вопрос из 7</div>
+											<div class="col-auto">
+												<div class="sQwiz__btn-wrap">
+													<div class="sQwiz__btn-control sCalc__btn sCalc__btn--next d-none"> 
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sQwiz__body"> 
+										<div class="sQwiz__title">Напишите размер изделия
+										</div>
+										<div class="row">
+											<div class="col-12">
+												<div class="sQwiz__block-wrap">
+													<div class="sQwiz__input-wrap form-group"><input class="sQwiz__input form-control" name="text" type="text" placeholder="Необходимый объем, м2"/>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+												<div class="sQwiz__block-wrap">
+													<label class="radio-block"> 
+														<input type="checkbox" name="val"/><span class="radio-block__title">Пока не знаю</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sQwiz__step">
+									<div class="sQwiz__head">
+										<div class="row">
+											<div class="col-auto">
+												<div class="sQwiz__btn-wrap">
+													<div class="sQwiz__btn-control sCalc__btn sCalc__btn--prev"> 
+													</div>
+												</div>
+											</div>
+											<div class="col"> 6 вопрос из 7</div>
+											<div class="col-auto">
+												<div class="sQwiz__btn-wrap">
+													<div class="sQwiz__btn-control sCalc__btn sCalc__btn--next d-none"> 
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sQwiz__body"> 
+										<div class="sQwiz__title">Укажите город доставки
+										</div>
+										<div class="row">
+											<div class="col-12">
+												<div class="sQwiz__block-wrap">
+													<div class="sQwiz__input-wrap form-group"><input class="sQwiz__input form-control" name="text" type="text" placeholder="Город"/>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sQwiz__step sQwiz__step--last active">
+									<div class="sQwiz__head">Шаг 7 из 7
+									</div>
+									<div class="sQwiz__body"> 
+										<div class="sQwiz__title text-center">Расчет стоимости готов!
+										</div>
+									</div>
+									<div class="form-wrap">
+										<div class="row gx-3">
+											<div class="col-lg-4 col-md-6">
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Имя"/>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-lg-4 col-md-6">
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Телефон"/>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-lg-4">
+												<button class="btn btn-primary" type="submit">Получить расчёт стоимости</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- end sQwiz-->
+						</div>
+						<div class="col"></div>
+					</div>
 				</div>
 			</section>
 			<!-- end sCalc-->
@@ -832,55 +1176,55 @@
 						<div class="col-md-6 col-12">
 							<div class="sReviews__slider sReviews__slider--js swiper">
 								<div class="swiper-wrapper">
-									<div class="swiper-slide"><a href="#" data-fancybox="single" data-src="img/@2x/reviews-slider.png">
+									<div class="swiper-slide"><a href="img/@2x/reviews-slider.png" data-fancybox="single">
 											<!-- picture-->
 											<picture> 
 												<source type="image/webp" srcset="img/@2x/webp/reviews-slider.webp"/><img src="img/@2x/reviews-slider.png" alt="" loading="lazy"/>
 											</picture>
 											<!-- /picture--></a></div>
-									<div class="swiper-slide"><a href="#" data-fancybox="single" data-src="img/@2x/reviews-slider.png">
+									<div class="swiper-slide"><a href="img/@2x/reviews-slider.png" data-fancybox="single">
 											<!-- picture-->
 											<picture> 
 												<source type="image/webp" srcset="img/@2x/webp/reviews-slider.webp"/><img src="img/@2x/reviews-slider.png" alt="" loading="lazy"/>
 											</picture>
 											<!-- /picture--></a></div>
-									<div class="swiper-slide"><a href="#" data-fancybox="single" data-src="img/@2x/reviews-slider.png">
+									<div class="swiper-slide"><a href="img/@2x/reviews-slider.png" data-fancybox="single">
 											<!-- picture-->
 											<picture> 
 												<source type="image/webp" srcset="img/@2x/webp/reviews-slider.webp"/><img src="img/@2x/reviews-slider.png" alt="" loading="lazy"/>
 											</picture>
 											<!-- /picture--></a></div>
-									<div class="swiper-slide"><a href="#" data-fancybox="single" data-src="img/@2x/reviews-slider.png">
+									<div class="swiper-slide"><a href="img/@2x/reviews-slider.png" data-fancybox="single">
 											<!-- picture-->
 											<picture> 
 												<source type="image/webp" srcset="img/@2x/webp/reviews-slider.webp"/><img src="img/@2x/reviews-slider.png" alt="" loading="lazy"/>
 											</picture>
 											<!-- /picture--></a></div>
-									<div class="swiper-slide"><a href="#" data-fancybox="single" data-src="img/@2x/reviews-slider.png">
+									<div class="swiper-slide"><a href="img/@2x/reviews-slider.png" data-fancybox="single">
 											<!-- picture-->
 											<picture> 
 												<source type="image/webp" srcset="img/@2x/webp/reviews-slider.webp"/><img src="img/@2x/reviews-slider.png" alt="" loading="lazy"/>
 											</picture>
 											<!-- /picture--></a></div>
-									<div class="swiper-slide"><a href="#" data-fancybox="single" data-src="img/@2x/reviews-slider.png">
+									<div class="swiper-slide"><a href="img/@2x/reviews-slider.png" data-fancybox="single">
 											<!-- picture-->
 											<picture> 
 												<source type="image/webp" srcset="img/@2x/webp/reviews-slider.webp"/><img src="img/@2x/reviews-slider.png" alt="" loading="lazy"/>
 											</picture>
 											<!-- /picture--></a></div>
-									<div class="swiper-slide"><a href="#" data-fancybox="single" data-src="img/@2x/reviews-slider.png">
+									<div class="swiper-slide"><a href="img/@2x/reviews-slider.png" data-fancybox="single">
 											<!-- picture-->
 											<picture> 
 												<source type="image/webp" srcset="img/@2x/webp/reviews-slider.webp"/><img src="img/@2x/reviews-slider.png" alt="" loading="lazy"/>
 											</picture>
 											<!-- /picture--></a></div>
-									<div class="swiper-slide"><a href="#" data-fancybox="single" data-src="img/@2x/reviews-slider.png">
+									<div class="swiper-slide"><a href="img/@2x/reviews-slider.png" data-fancybox="single">
 											<!-- picture-->
 											<picture> 
 												<source type="image/webp" srcset="img/@2x/webp/reviews-slider.webp"/><img src="img/@2x/reviews-slider.png" alt="" loading="lazy"/>
 											</picture>
 											<!-- /picture--></a></div>
-									<div class="swiper-slide"><a href="#" data-fancybox="single" data-src="img/@2x/reviews-slider.png">
+									<div class="swiper-slide"><a href="img/@2x/reviews-slider.png" data-fancybox="single">
 											<!-- picture-->
 											<picture> 
 												<source type="image/webp" srcset="img/@2x/webp/reviews-slider.webp"/><img src="img/@2x/reviews-slider.png" alt="" loading="lazy"/>
