@@ -137,17 +137,33 @@
 		width: 100%;
 		max-width: rem(419);
 		position: relative;
+		margin-top: rem(26);
+		padding-top: 8px;
+		padding-bottom: 11px;
+		font-size: 20px;
+		font-weight: 500;
+		@include media-breakpoint-up(sm){
+			margin-top: rem(41);
+		}
 		@include media-breakpoint-up(lg){
 			&::after{
 				content: '';
 				position: absolute;
-				right: 100px;
-				top: -50px;
+				right: rem(-113);
+				top: rem(-50);
 				width: 83px;
 				height: 91px;
 				background-image: url('../img/@2x/request-arrow.png');
 			}
 		}
+	}
+	&__btn-wrap{
+		display: flex;
+		justify-content: center;
+	}
+	&__warning-info{
+		display: flex;
+		width: 345px;
 	}
 	@include media-breakpoint-up(xl) {
 	}
