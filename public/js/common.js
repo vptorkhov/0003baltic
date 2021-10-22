@@ -534,6 +534,13 @@ function eventHandler() {
 			prevEl: ".place-slider-wrap .swiper-button-prev",
 		},
 	}); 
+	const swiperbreadcrumb = new Swiper('.breadcrumb-wrap .swiper', {
+		// slidesPerView: 5,
+		...defaultSl,
+		slidesPerView: 'auto',
+		freeMode: true,  
+		loop: false,
+	}); 
 
 
 
@@ -569,6 +576,14 @@ function eventHandler() {
 		$(".sidebar__filter").removeClass("active")
 		$("body").removeClass("fixed")
 	})
+
+	if (document.querySelector(".prod-right-block")) {
+
+		var Sticky = new hcSticky('.prod-right-block', {
+			stickTo: '.sOneProduct__wrap'
+		});
+	}
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

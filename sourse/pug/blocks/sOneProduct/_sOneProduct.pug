@@ -17,7 +17,7 @@ mixin ProductSlider()
 			.swiper-wrapper
 				mixin slide1()
 					.swiper-slide
-						a(data-fancybox="single" href="img/@2x/sOneProduct.png")
+						a(href="img/@2x/sOneProduct.png" data-fancybox="single") 
 							img(src="img/@2x/sOneProduct.png", alt="")
 				+slide1()
 				+slide1()
@@ -40,11 +40,31 @@ mixin ProductSlider()
 
 
 mixin ProductCalc()
-	+e.calc
-
-
-
+	+b.prod-right-block
+		+e.head
+			h1 Облицовочная плита
+		+e.group
+			+e.table
+				.row.row-cols-sm-2
+					+e.col.col-sm Месторождение: Южно Сулатаевский
+					+e.col.col-sm Цвет: Красный
+					+e.col.col-sm Поверхность: Полировка,  
+					+e.col.col-sm 600х300х20 (ДхШхТ)
+			+e.more Все характеристики
+		+e.group
+			.row
+				+e.price.col-auto
+					+e.price--old 2 900 руб/м<sup>2</sup>
+					+e.price--new 2 450 руб/м<sup>2</sup>
+				.col-sm-auto
+					+addblock()
+			+e.total Итого: #[strong 369 950 руб]
+			p Указаны оптовые цены от 100 м2. Окончательную стоимость уточняйте у менеджера.
+			+e.btn-wrap
+				+e.btn(href="#").btn-primary В корзину
+				+e.btn(href="#").btn-outline-primary Купить в 1 клик
 mixin ProductSpec()
+<<<<<<< HEAD
 	+e.spec
 		h3 Характеристики камня
 		+e.spec-block
@@ -66,9 +86,49 @@ mixin ProductSpec()
 			+item(`Предел прочности при сжатии породы в сухом состоянии `,`126&nbsp;Мпа`)
 			+item(`Предел прочности при сжатии горной породы при водонасыщении`,`126&nbsp;Мпа`)
 			+item(`Морозостойкость`,`100&nbsp;F`)
+=======
+	+e.spec 2
+
+>>>>>>> 0fe33db532c4e474aa415c886d0816c4343f14c7
 
 mixin ProductAdvantages()
-	+e.advantages
+	+b.advantages-block
+		.row
+			mixin item(i,t)
+				+e.col.col-6
+					+e.img-wrap
+						img(src=`img/svg/qqadv-${i}.svg` laoding="lazy", alt="")
+					+e.title!= t
+			+item(`1`,`Не&nbsp;срываем сроки поставки`)
+			+item(`2`,`Производство в&nbsp;СПБ, 3&nbsp;склада по&nbsp;России`)
+			+item(`3`,`Гарантия 12&nbsp;месяцев`)
+			+item(`4`,`Напилим под ваши размеры`)
 
 mixin ProductSeeAlso()
 	+e.seeAlso
+		h3 Смотрите также
+		.row
+			.col-sm-6
+				+prodCard({
+					stock:'Акция',
+					old:'true',
+					t:'Облицовочная плита '
+					})
+					
+			.col-sm-6
+				+prodCard({
+					stock:'Акция',
+					old:'true',
+					blockAdd:'true',
+					t:'Облицовочная плита '
+					})
+			.col-sm-6
+				+prodCard({
+					t:'Облицовочная плита '
+
+				})
+			.col-sm-6
+				+prodCard({
+					t:'Облицовочная плита '
+
+				})

@@ -46,9 +46,10 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^4.0.5",
+    "hc-sticky": "^2.2.7",
     "inputmask": "^5.0.6",
-    "jquery": "^3.6.0",
     "ion-rangeslider": "^2.3.1",
+    "jquery": "^3.6.0",
     "swiper": "^7.0.8"
   }
 }

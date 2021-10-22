@@ -613,3 +613,13 @@ iframe {
 		background-color: inherit;
 	}
 }
+.breadcrumb-wrap{
+
+	margin-bottom: rem(30);
+}
+.breadcrumb{
+	flex-wrap: nowrap;
+}
+.breadcrumb-item{
+	width: auto;
+}
