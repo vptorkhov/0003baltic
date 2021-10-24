@@ -1,0 +1,30 @@
+extends layout/main.pug
+
+
+include ../blocks/sArticles/_sArticles.pug
+//- include ../blocks/sOffers/_sOffers.pug
+//- include ../blocks/sOneProduct/_sOneProduct.pug
+//- include ../blocks/sProducts/_sProducts.pug 
+//- include ../blocks/sContact/_sContact.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= 'Статьи'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		+topLine('cart')
+		+top-nav()
+	+breadcrumb('Главная', title).mb-0
+	+sArticles()
+	+sForm
+	//- +sContact()
+	+footer()
+      
+
+
+

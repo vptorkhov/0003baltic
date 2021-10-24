@@ -1,0 +1,35 @@
+// start .sArticles
+.sArticles {
+	--sPT: #{rem(60)};
+	--sPB: #{rem(100)};
+	--sTPB: #{rem(40)};
+	.section-title {
+		h1 {
+			margin-bottom: 0;
+		}
+	}
+	.row {
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-x: #{rem(30)};
+		}
+	}
+	&__item {
+		picture {
+			
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sArticles
