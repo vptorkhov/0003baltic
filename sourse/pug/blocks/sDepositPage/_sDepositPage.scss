@@ -149,6 +149,9 @@
 			// text-align: center;
 		}
 	}
+	&__col {
+		@extend .d-none, .d-lg-flex, .align-items-center, .flex-column;
+	}
 	@include media-breakpoint-up(md) {
 	}
 	@include media-breakpoint-up(sm) {

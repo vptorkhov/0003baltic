@@ -514,6 +514,24 @@ function eventHandler() {
 			prevEl: ".swiper-button-prev",
 		},
 	});
+	var productionSlider = new Swiper(".sProduction__slider--js", {
+		slidesPerView: 'auto',
+		spaceBetween: 10,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		breakpoints: {
+			992:{
+				slidesPerView: 2,
+				spaceBetween:30,
+			},
+			576:{
+				spaceBetween:20,
+			}
+		}
+		
+	});
 	const swiper4 = new Swiper('.sBanners__slider--js', {
 		// slidesPerView: 5,
 		...defaultSl,
