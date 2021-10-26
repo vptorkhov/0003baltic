@@ -4,4 +4,4 @@
 4. <https://vptorkhov.github.io/0003baltic/public/04-production.html>
 5. <https://vptorkhov.github.io/0003baltic/public/05-deposits.html>
 9. <https://vptorkhov.github.io/0003baltic/public/09-ourworks.html>
- 
+10. <https://vptorkhov.github.io/0003baltic/public/10-project.html>

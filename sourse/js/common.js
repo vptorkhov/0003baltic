@@ -266,9 +266,9 @@ const JSCCommon = {
 						if (this === clickedHead) {
 							//parent element gain toggle class, style head change via parent
 							$(this.parentElement).toggleClass('active')
-							.find('.dd-content-js').slideToggle(function () {
-								$(this).toggleClass('active');
-							});
+								.find('.dd-content-js').slideToggle(function () {
+									$(this).toggleClass('active');
+								});
 						}
 						// else {
 						// 	$(this.parentElement).removeClass('active');
@@ -420,10 +420,10 @@ function eventHandler() {
 	// 	$('.top-nav').toggleClass('mob-menu');
 	// }); //до утра
 
-	$('.sCatalog__show-more').click(function(){
+	$('.sCatalog__show-more').click(function () {
 		$('.sCatalog__caption').toggleClass('sCatalog__caption--active');
 	});
-	$('.list-title--js').click(function(){
+	$('.list-title--js').click(function () {
 		$(this).toggleClass('active');
 		$(this).next().slideToggle();
 	});
@@ -474,7 +474,7 @@ function eventHandler() {
 		}
 	});
 	var deposits = new Swiper(".sDeposits__slider--js ", {
-		slidesPerView:'auto',
+		slidesPerView: 'auto',
 		spaceBetween: 42,
 		breakpoints: {
 			992: {
@@ -482,8 +482,19 @@ function eventHandler() {
 			},
 		},
 	});
+	var projectsSlider = new Swiper(".sProject__slider--js  ", {
+		slidesPerView: 1,
+		// spaceBetween: 42,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		pagination: {
+			el: ".swiper-pagination",
+		},
+	});
 	var reviews = new Swiper(".sReviews__slider--js", {
-		slidesPerView:'auto',
+		slidesPerView: 'auto',
 		navigation: {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
@@ -505,7 +516,7 @@ function eventHandler() {
 			1200: {
 				slidesPerView: 4
 			},
-			992:{
+			992: {
 				slidesPerView: 3
 			}
 		},
@@ -522,22 +533,22 @@ function eventHandler() {
 			prevEl: ".swiper-button-prev",
 		},
 		breakpoints: {
-			992:{
+			992: {
 				slidesPerView: 2,
-				spaceBetween:30,
+				spaceBetween: 30,
 			},
-			576:{
-				spaceBetween:20,
+			576: {
+				spaceBetween: 20,
 			}
 		}
-		
+
 	});
 	const swiper4 = new Swiper('.sBanners__slider--js', {
 		// slidesPerView: 5,
 		...defaultSl,
 		slidesPerView: 'auto',
-		freeMode: true, 
-		slideToClickedSlide: true, 
+		freeMode: true,
+		slideToClickedSlide: true,
 
 	});
 	// modal window
@@ -545,20 +556,20 @@ function eventHandler() {
 		// slidesPerView: 5,
 		...defaultSl,
 		slidesPerView: 'auto',
-		freeMode: true,  
+		freeMode: true,
 		loop: false,
 		navigation: {
 			nextEl: ".place-slider-wrap .swiper-button-next",
 			prevEl: ".place-slider-wrap .swiper-button-prev",
 		},
-	}); 
+	});
 	const swiperbreadcrumb = new Swiper('.breadcrumb-wrap .swiper', {
 		// slidesPerView: 5,
 		...defaultSl,
 		slidesPerView: 'auto',
-		freeMode: true,  
+		freeMode: true,
 		loop: false,
-	}); 
+	});
 
 
 

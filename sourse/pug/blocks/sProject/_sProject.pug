@@ -1,0 +1,24 @@
+mixin sProject(data)
+	// start sProject
+	+b.SECTION.sProject.section#sProject&attributes(attributes)
+		.container
+			+e.slider--js.swiper
+				.swiper-wrapper
+					mixin slide()
+						+e.slide.swiper-slide
+							h1 Министерство Иностранных Дел РФ
+							+e.wrap
+								+pic('sProject.png','',0)
+								+e.text-block
+									p Реконструкция правого крыла служебного здания: 2017 г.
+									.title Материал:
+									p гранитная брусчатка и гранитный бордюр.
+									.title Месторождение:
+									p гранит Покостовское.
+					+slide()
+					+slide()
+					+slide()
+				.swiper-button-prev
+				.swiper-button-next
+				.swiper-pagination
+	// end sProject
