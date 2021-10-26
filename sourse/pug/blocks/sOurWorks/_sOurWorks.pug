@@ -1,0 +1,21 @@
+mixin sOurWorks(data)
+	// start sOurWorks
+	+b.SECTION.sOurWorks.section#sOurWorks&attributes(attributes)
+		.container
+			+b.section-title
+				h1 Наши работы
+			.row
+				mixin item(i,t,c)
+					.col-lg-6
+						+e.item(href="#")
+							+pic(`sOurWorks-${i}.png`,'',0)
+							+e.title!=t
+							+e.caption!=c
+				- for (var x=0;x<4;x++)
+					+item(1,`ЖК Садовые кварталы`,`Плиты 1200*600*40, колотые, 2000 м2 для фасада.`)
+					+item(2,`Дудергофский канал`,`Гранитные ступени.`)
+			+e.show
+				+e.show-title(href="#") Показать еще XX
+					+icon('plus-load')
+			+pugin()
+	// end sOurWorks
