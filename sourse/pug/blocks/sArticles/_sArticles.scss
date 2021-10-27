@@ -19,7 +19,7 @@
 		background-color: $white;
 		height: 100%;
 		&:hover {
-			box-shadow: 0 0 16 rgba(0, 0, 0, 0.15);
+			box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
 		}
 		picture {
 			@include block(360, 263);
@@ -66,3 +66,6 @@
 	@include media-breakpoint-down(xl) {
 	}
 } // end.sArticles
+
+
+

@@ -6,7 +6,7 @@ mixin sArticles(data)
 				h1 Статьи
 			.row
 				mixin item(i, h, t)
-					.col-4
+					.col-md-6.col-lg-4
 						+e.item(href="#")
 							+pic(`sArticles-${i}.jpg`,'bg',0)
 							+e.item-caption
