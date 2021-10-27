@@ -484,13 +484,14 @@ function eventHandler() {
 	});
 	var projectsSlider = new Swiper(".sProject__slider--js  ", {
 		slidesPerView: 1,
+		loop: true,
 		pagination: {
 			el: ".swiper-pagination",
 			clickable: true,
 		},
 		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
+			nextEl: ".sProject__page-link--next",
+			prevEl: ".sProject__page-link--prev",
 		},
 	});
 	var reviews = new Swiper(".sReviews__slider--js", {

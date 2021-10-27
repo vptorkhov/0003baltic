@@ -15,17 +15,20 @@ mixin sProject(data)
 									p гранитная брусчатка и гранитный бордюр.
 									.title Месторождение:
 									p гранит Покостовское.
+									.swiper-pagination
 					+slide()
 					+slide()
 					+slide()
 					+slide()
 					+slide()
-				+e.slider-buttons
-					+e.btn-swiper--prev
-						.swiper-button-prev
-						.title-prev Воскресенский Ново-Иерусалимский монастырь
-					+e.btn-swiper--next
-						.title-next Благоустройство ЖК Династия 
-						.swiper-button-next
-				.swiper-pagination.d-block
+				+e.page-links
+					+e.page-link--prev
+						.page-link-btn
+							+icon('project-slider-arrow')
+						.page-link-caption Воскресенский Ново-Иерусалимский монастырь
+					+e.page-link--next
+						.page-link-btn
+							+icon('project-slider-arrow')
+						.page-link-caption Благоустройство ЖК Династия 
+				
 	// end sProject
