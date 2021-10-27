@@ -1,0 +1,29 @@
+extends layout/main.pug
+
+
+include ../blocks/sOffers/_sOffers.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sOneArticle/_sOneArticle.pug 
+
+block variables
+	- let  mainPage= null 
+	- let  bg= '8.jpg'
+
+block title
+	- let  title= 'Фонтаны из натурального камня'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		+topLine('cart')
+		+top-nav()
+	+breadcrumb('Главная','О компании','Статьи',title)
+	//- +sContact()
+	+sOneArticle()
+	+sForm(`Нужна помощь специалиста?`)
+	+sContact()
+	+footer()
+      
+
+
+

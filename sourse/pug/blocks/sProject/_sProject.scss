@@ -32,14 +32,14 @@
 			padding-top: 45px;
 			padding-bottom: 49px;
 			padding-left: 43px;
-			max-width: 313px;
+			max-width: 340px;
 		}
 		padding-top: 20px;
 		padding-bottom: 40px;
 		padding-left: 20px;
 		padding-right: 20px;
 		// padding-right: 43px;
-		
+
 		color: #6a6a6a;
 		font-size: $large;
 		p {
@@ -49,6 +49,53 @@
 		.title {
 			font-weight: 500;
 			color: $black;
+		}
+	}
+	&__slider {
+		position: relative;
+		padding-bottom: 10px;
+		.swiper-button-prev {
+			width: 39px;
+			height: 39px;
+		}
+		.swiper-button-next {
+			width: 39px;
+			height: 39px;
+		}
+		.swiper-button-next,
+		.swiper-button-prev {
+			&::after {
+				background-image: url("../img/svg/project-slider-arrow.svg");
+				background-size: cover;
+				height: 22px;
+				width: 13px;
+			}
+		}
+		.title-prev,
+		.title-next {
+			color: $black;
+		}
+	}
+	&__slider-buttons {
+		margin-top: 38px;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__btn-swiper {
+		display: flex;
+		&:hover {
+			.title-next,
+			.title-prev {
+				color:$primary;
+			}
+		}
+		.title-next {
+			padding-right: 14px;
+			@include mt;
+		}
+		.title-prev {
+			padding-left: 14px;
+			@include mt;
 		}
 	}
 	@include media-breakpoint-up(xl) {
