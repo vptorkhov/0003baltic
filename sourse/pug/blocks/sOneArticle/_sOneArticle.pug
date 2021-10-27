@@ -41,20 +41,22 @@ mixin sOneArticle(data)
 						li устойчивость к высоким и низким температурам;
 						li эстетичность;
 						li разнообразие текстур и сортов камня.
-			+e.share
-				p Поделиться в
-				+e.share-link(href="#")
-					img(src="img/svg/fb.svg", alt="")
-				+e.share-link(href="#")
-					img(src="img/svg/insta.svg", alt="")
-				+e.share-link(href="#")
-					img(src="img/svg/vk.svg", alt="")
-				+e.share-link(href="#")
-					img(src="img/svg/youtube.svg", alt="")
-				+e.share-link(href="#")
-					img(src="img/svg/yandex.svg", alt="")
-				+e.share-link(href="#")
-					img(src="img/svg/gplus.svg", alt="")
+			//- +e.share
+			//- 	p Поделиться в
+			//- 	+e.share-link(href="#")
+			//- 		img(src="img/svg/fb.svg", alt="")
+			//- 	+e.share-link(href="#")
+			//- 		img(src="img/svg/insta.svg", alt="")
+			//- 	+e.share-link(href="#")
+			//- 		img(src="img/svg/vk.svg", alt="")
+			//- 	+e.share-link(href="#")
+			//- 		img(src="img/svg/youtube.svg", alt="")
+			//- 	+e.share-link(href="#")
+			//- 		img(src="img/svg/yandex.svg", alt="")
+			//- 	+e.share-link(href="#")
+			//- 		img(src="img/svg/gplus.svg", alt="")
+			script(src='https://yastatic.net/share2/share.js')
+			.ya-share2(data-curtain='' data-size='l' data-shape='round' data-services='vkontakte,facebook,odnoklassniki,telegram,twitter,whatsapp')
 			+e.page-links
 				+e.page-link--prev(href="#")
 					.page-link-btn
@@ -64,4 +66,10 @@ mixin sOneArticle(data)
 					.page-link-btn
 						+icon('project-slider-arrow')
 					.page-link-caption Следующая статья
+			
+			+e.also
+				h2 Смотрите также
+				.row
+					+article-item(1, `Фонтаны из натурального камня`, `Фонтаны из натурального камня украшают интерьеры и архитектурно-ландшафтные ансамбли с давних времен. Они придают помещению благородный внешний вид, создают атмосферу спокойствия и умиротворения`)
+					+article-item(2, `Виды гранитной брусчатки`, `Брусчатка из гранита - это очень красивое и долговечное покрытие. Она появилась еще во времена Римской Империи и до сегодняшнего дня не утратила своей популярности в строительстве.`)
 	// end sOneArticle

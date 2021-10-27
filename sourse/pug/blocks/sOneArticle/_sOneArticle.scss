@@ -253,45 +253,59 @@
 		margin-bottom: 29px;
 	}
 
-	&__share {
+	// &__share {
+	// 	background-color: $white;
+	// 	display: flex;
+	// 	padding-left: 39px;
+	// 	padding-right: 39px;
+	// 	padding-top: 20px;
+	// 	padding-bottom: 20px;
+	// 	align-items: center;
+	// 	@include media-breakpoint-down(sm) {
+	// 		display: grid;
+	// 		grid-template-columns: 1fr 1fr 1fr;
+	// 	}
+	// 	p {
+	// 		margin-right: 18px;
+	// 		min-width: 100px;
+	// 		display: inline-block;
+	// 		margin-bottom: 0;
+	// 		@include media-breakpoint-down(sm) {
+	// 			display: block;
+	// 			grid-column-start: 1;
+	// 			grid-column-end: 4;
+	// 			margin-right: 0;
+	// 			text-align: center;
+	// 			margin-bottom: 10px;
+	// 		}
+	// 	}
+	// }
+	// &__share-link {
+	// 	margin-right: 12px;
+	// 	@include media-breakpoint-down(sm) {
+	// 		display: block;
+	// 		text-align: center;
+	// 		margin-right: 0;
+	// 		margin-top: 10px;
+	// 		margin-bottom: 10px;
+	// 	}
+	// 	img {
+	// 		width: 43px;
+	// 		height: 43px;
+	// 	}
+	// }
+	.ya-share2{
 		background-color: $white;
-		display: flex;
-		padding-left: 39px;
-		padding-right: 39px;
-		padding-top: 20px;
-		padding-bottom: 20px;
-		align-items: center;
-		@include media-breakpoint-down(sm) {
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr;
-		}
-		p {
-			margin-right: 18px;
-			min-width: 100px;
-			display: inline-block;
-			margin-bottom: 0;
-			@include media-breakpoint-down(sm) {
-				display: block;
-				grid-column-start: 1;
-				grid-column-end: 4;
-				margin-right: 0;
-				text-align: center;
-				margin-bottom: 10px;
-			}
+		padding-top: 17px;
+		padding-bottom: 17px;
+		@include media-breakpoint-up(lg){
+			padding-left: 30px;
+			padding-right: 30px;
 		}
 	}
-	&__share-link {
-		margin-right: 12px;
-		@include media-breakpoint-down(sm) {
-			display: block;
-			text-align: center;
-			margin-right: 0;
-			margin-top: 10px;
-			margin-bottom: 10px;
-		}
-		img {
-			width: 43px;
-			height: 43px;
+	.ya-share2__item{
+		@include media-breakpoint-up(lg){
+			margin-right: 10px;
 		}
 	}
 	&__page-links {
@@ -357,7 +371,12 @@
 			}
 		}
 	}
-	
+	&__also{
+		margin-top: 43px;
+		h2{
+			margin-bottom: 26px;
+		}
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
