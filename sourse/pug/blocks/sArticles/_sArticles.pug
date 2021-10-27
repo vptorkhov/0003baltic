@@ -7,8 +7,8 @@ mixin sArticles(data)
 			.row
 				mixin item(i, h, t)
 					.col-4
-						+e.item
-							+pic(`sArticles-${i}.jpg`,'',0)
+						+e.item(href="#")
+							+pic(`sArticles-${i}.jpg`,'bg',0)
 							+e.item-caption
 								h5!= h
 								p!= t
