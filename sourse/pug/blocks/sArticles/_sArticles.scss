@@ -1,56 +1,28 @@
 // start .sArticles
 .sArticles {
-	--sPT: #{rem(60)};
-	--sPB: #{rem(100)};
-	--sTPB: #{rem(40)};
+	--sPT: calc(#{rem(60)} * 0.7);
+	--sPB: calc(#{rem(100)} * 0.7);
+	--sTPB: calc(#{rem(40)} * 0.7);
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(60)};
+		--sPB: #{rem(100)};
+		--sTPB: #{rem(40)};
+	}
 	.section-title {
 		h1 {
 			margin-bottom: 0;
 		}
 	}
 	.row {
+		--bs-gutter-y: calc(var(--bs-gutter-x) * 1.2);
+		@include media-breakpoint-up(md) {
+			--bs-gutter-y: var(--bs-gutter-x);
+		}
 		@include media-breakpoint-up(lg) {
 			--bs-gutter-x: #{rem(30)};
 		}
 	}
-	&__item {
-		display: flex;
-		flex-direction: column;
-		background-color: $white;
-		height: 100%;
-		&:hover {
-			box-shadow: 0 0 16 rgba(0, 0, 0, 0.15);
-		}
-		picture {
-			@include block(360, 263);
-			img {
-				position: absolute;
-				left: 0;
-				top: 0;
-			}
-		}
-		
-	}
-	&__item-caption {
-		display: flex;
-		flex-direction: column;
-		flex-grow: 1;
-		padding: rem(26);
-		h5 {
-			color: $body-color;
-			margin-bottom: rem(15);
-			letter-spacing: 0.5px;
-		}
-		p {
-			flex-grow: 1;
-			line-height: calc(24 / 16);
-			letter-spacing: 0.4px;
-			color: #6a6a6a;
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-	}
+	
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
