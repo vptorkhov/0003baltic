@@ -305,7 +305,7 @@
 	&__page-link {
 		display: flex;
 		align-items: center;
-		@include media-breakpoint-down(sm){
+		@include media-breakpoint-down(sm) {
 			justify-content: center;
 			margin-top: 10px;
 			margin-bottom: 10px;
@@ -315,13 +315,13 @@
 				background-color: $primary;
 				color: $white;
 			}
-			.page-link-caption{
+			.page-link-caption {
 				color: $primary;
 			}
 		}
 		.page-link-btn {
-			width: 39px;
-			height: 39px;
+			min-width: 39px;
+			min-height: 39px;
 			border-radius: 50%;
 			background-color: #e0e0e0;
 			position: relative;
@@ -357,6 +357,7 @@
 			}
 		}
 	}
+	
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
