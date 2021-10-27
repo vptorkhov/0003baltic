@@ -18,7 +18,14 @@ mixin sProject(data)
 					+slide()
 					+slide()
 					+slide()
-				.swiper-button-prev
-				.swiper-button-next
-				.swiper-pagination
+					+slide()
+					+slide()
+				+e.slider-buttons
+					+e.btn-swiper--prev
+						.swiper-button-prev
+						.title-prev Воскресенский Ново-Иерусалимский монастырь
+					+e.btn-swiper--next
+						.title-next Благоустройство ЖК Династия 
+						.swiper-button-next
+				.swiper-pagination.d-block
 	// end sProject
