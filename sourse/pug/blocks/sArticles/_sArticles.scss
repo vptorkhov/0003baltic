@@ -14,8 +14,41 @@
 		}
 	}
 	&__item {
+		display: flex;
+		flex-direction: column;
+		background-color: $white;
+		height: 100%;
+		&:hover {
+			box-shadow: 0 0 16 rgba(0, 0, 0, 0.15);
+		}
 		picture {
-			
+			@include block(360, 263);
+			img {
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
+		
+	}
+	&__item-caption {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		padding: rem(26);
+		h5 {
+			color: $body-color;
+			margin-bottom: rem(15);
+			letter-spacing: 0.5px;
+		}
+		p {
+			flex-grow: 1;
+			line-height: calc(24 / 16);
+			letter-spacing: 0.4px;
+			color: #6a6a6a;
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {

@@ -5,7 +5,7 @@ include ../blocks/sArticles/_sArticles.pug
 //- include ../blocks/sOffers/_sOffers.pug
 //- include ../blocks/sOneProduct/_sOneProduct.pug
 //- include ../blocks/sProducts/_sProducts.pug 
-//- include ../blocks/sContact/_sContact.pug
+include ../blocks/sContact/_sContact.pug
 
 block variables
 	- let  mainPage= null 
@@ -22,9 +22,8 @@ block pagecontent
 	+breadcrumb('Главная', title).mb-0
 	+sArticles()
 	+sForm
-	//- +sContact()
+	+sContact()
 	+footer()
-      
 
 
 
