@@ -34,7 +34,13 @@ mixin slider-arrows()
 		.swiper-button-next
 		.swiper-button-prev
 
-
+mixin article-item(i, h, t)
+	.col-md-6.col-lg-4
+		+b.article-item(href="#")
+			+pic(`sArticles-${i}.jpg`,'bg',0)
+			+e.caption
+				h5!= h
+				p!= t
 
 //- +b.text-block
 //- 	span Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos iusto doloribus unde deleniti ipsum, dignissimos aliquid? Reiciendis, dolore ea eveniet, architecto alias a eos aspernatur porro inventore modi dicta. Quasi, quia incidunt ullam et numquam facilis accusamus, facere perspiciatis fugiat labore repellendus rerum doloremque, rem voluptatem mollitia. Quae, provident necessitatibus fugit ipsam omnis aspernatur molestiae sequi illum laborum fuga unde reprehenderit nemo ab sapiente modi ducimus quos atque vero beatae eaque sint! Omnis perferendis, a repellendus fugit quos, consequuntur corporis inventore dolor quo possimus aliquam alias, laudantium delectus quis voluptate libero asperiores numquam. Hic tempora nemo atque deleniti magnam dicta. 
