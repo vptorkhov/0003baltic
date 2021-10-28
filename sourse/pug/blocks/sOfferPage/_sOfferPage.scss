@@ -1,0 +1,130 @@
+// start .sOfferPage
+.sOfferPage {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+	@include media-breakpoint-up(lg) {
+		--sPT: 49px;
+		--sTPB: 58px;
+		--sPB: 111px;
+	}
+	.row {
+		--bs-gutter-x: 30px;
+		--bs-gutter-y: #{var(--bs-gutter-x)};
+	}
+	&__item {
+		display: block;
+		position: relative;
+		@include mt;
+		height: 100%;
+		background-color: #fff;
+		display: flex;
+		flex-direction: column;
+		@include media-breakpoint-down(lg) {
+			// width: 274px;
+			// height: 357px;
+		}
+		&:hover {
+			box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+		}
+		picture {
+			@include block(274, 192);
+			background-color: $white;
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+	&__text-wrap {
+		background-color: $white;
+		padding-top: rem(25);
+		padding-bottom: rem(25);
+		padding-left: rem(23);
+		padding-right: rem(58);
+		flex-grow: 1;
+	}
+	&__title {
+		font-weight: 500;
+		color: $body-color !important;
+		height: rem(43);
+		display: inline-block;
+		margin-bottom: rem(16);
+		&:hover {
+			text-decoration: underline dotted;
+		}
+	}
+	&__old-price {
+		color: $primary;
+		display: inline-block;
+		position: relative;
+		margin-bottom: rem(5);
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background-color: rgba($primary, 0.4);
+			z-index: 5;
+		}
+	}
+	&__new-price {
+		color: $black;
+		font-size: 24px;
+		line-height: 30px;
+	}
+	&__offer-label {
+		text-transform: uppercase;
+		color: #f7f7f7;
+		font-size: 12px;
+		line-height: 27px;
+		text-align: center;
+		height: 27px;
+		width: 90px;
+		position: absolute;
+		top: 11px;
+		left: 11px;
+		z-index: 3;
+		background-color: $primary;
+		border-radius: 14px;
+	}
+	&__link {
+		position: absolute;
+		width: rem(45);
+		height: rem(45);
+		bottom: 16px;
+		right: 13px;
+		border-radius: 50%;
+		border: 1px solid $primary;
+		color: $primary;
+		background-color: $white;
+		@include mt;
+		&:hover {
+			background-color: $primary;
+			color: $white;
+		}
+		.icon {
+			font-size: rem(15);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sOfferPage

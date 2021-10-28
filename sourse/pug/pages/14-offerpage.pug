@@ -1,0 +1,31 @@
+extends layout/main.pug
+
+
+include ../blocks/sOffers/_sOffers.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sOfferPage/_sOfferPage.pug 
+include ../blocks/sOfferPageIcons/_sOfferPageIcons.pug 
+
+block variables
+	- let  mainPage= 'breadcrumb-no-margin' 
+	- let  bg= '14.jpg'
+
+block title
+	- let  title= 'Акции'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		+topLine('cart')
+		+top-nav()
+	+breadcrumb('Главная',title)
+	//- +sContact()
+	+sOfferPage()
+	+sOfferPageIcons()
+	+sForm(`Нужна помощь специалиста?`)
+	+sContact()
+	+footer()
+      
+
+
+
