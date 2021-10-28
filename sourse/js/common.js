@@ -506,6 +506,22 @@ function eventHandler() {
 			},
 		},
 	});
+	var reviewsSlider = new Swiper(".sReviewsSlider__slider--js", {
+		slidesPerView: 'auto',
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		breakpoints: {
+			576: {
+				slidesPerView: 1
+			},
+		},
+	});
 	var offers = new Swiper(".sOffers__slider--js", {
 		slidesPerView: 'auto',
 		spaceBetween: 15,

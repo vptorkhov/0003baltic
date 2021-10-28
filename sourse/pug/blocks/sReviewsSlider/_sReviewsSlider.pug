@@ -1,0 +1,29 @@
+mixin sReviewsSlider(data)
+	// start sReviewsSlider
+	+b.SECTION.sReviewsSlider.section.bg-wrap#sReviewsSlider&attributes(attributes)
+		+pic('sReviews-bg.png','bg',0).picture-bg
+		.container
+			.row
+				.col-lg-6
+					h1 Отзывы наших клиентов
+					+e.caption Мы очень любим своих клиентов, что написали этот отзыв в несколько строчек специально для них. Мы очень любим своих клиентов, что написали этот отзыв в несколько строчек специально для них.
+					+e.row.row
+						mixin item(t,c)
+							.col-sm-6
+								+e.item-title!=t
+								+e.item-caption!=c
+						+item(`10+`,`лет на рынке обработки и производства материалов из гранита`)
+						+item(`XX`,`довольных клиентов за 10+лет работы на рынке`)
+						+item(`XX`,`лорем ипсум лорем ипсум лорем ипсум лорем`)
+						+item(`XX`,`лорем ипсум лорем ипсум лорем ипсум лорем`)
+				.col-lg-6
+					+e.slider--js.swiper
+						.swiper-wrapper
+							- for (var x=0;x<8;x++)
+								.swiper-slide
+									a(href="img/@2x/reviews-slider.png" data-fancybox="single"  )
+										+pic('reviews-slider.png','',0)
+						.swiper-button-prev.d-sm-inline-block.d-none
+						.swiper-button-next.d-sm-inline-block.d-none
+						.swiper-pagination
+	// end sReviewsSlider
