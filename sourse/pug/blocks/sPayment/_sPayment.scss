@@ -1,0 +1,139 @@
+// start .sPayment
+.sPayment {
+	--sPT: 48px;
+	// --sPB: ;
+	@include media-breakpoint-up(lg) {
+		--sTPB: 48px;
+	}
+	--sTPB: 20px;
+	background-color: #131313;
+	.picture-bg {
+		opacity: 0.76;
+	}
+	h1 {
+		color: $white;
+	}
+	&__caption {
+		font-size: $large;
+		color: #c1c1c1;
+		font-weight: 200;
+		line-height: 28px;
+		margin-bottom: 47px;
+	}
+	.tabs {
+		display: flex;
+		flex-direction: column;
+		@include media-breakpoint-up(lg) {
+			flex-direction: row;
+		}
+		&__btn {
+			cursor: pointer;
+			color: $white;
+			font-size: 20px;
+			width: 360px;
+			max-width: 100%;
+			border: 5px solid $primary;
+			@include mt;
+			background-color: transparent;
+			margin-bottom: 20px;
+			padding-top: 17px;
+			padding-bottom: 17px;
+			text-align: center;
+			position: relative;
+			z-index: 4;
+			@include media-breakpoint-up(lg){
+				&::before {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					background-repeat: no-repeat;
+					// background-size: contain;
+					width: 420px;
+					height: 74px;
+					z-index: -1;
+					background-image: url('../img/svg/payment-btn-bg.svg');
+					@include mt;
+					opacity: 0;
+				}
+			}
+		}
+		&__wrap {
+			flex-grow: 1;
+		}
+		&__caption {
+			@include media-breakpoint-up(lg) {
+				padding-right: 35px;
+				padding-top: 7px;
+			}
+			.active {
+				@include media-breakpoint-up(lg) {
+					background-color: transparent;
+					border-color: transparent;
+					&::before{
+						opacity: 1;
+					}
+				}
+				background-color: $primary;
+			}
+		}
+	}
+	&__info-block {
+		width: 100%;
+		background-color: $white;
+		@include media-breakpoint-up(lg) {
+			padding-top: 49px;
+			padding-bottom: 68px;
+			padding-left: 96px;
+			padding-right: 96px;
+		}
+		padding-top: 25px;
+		padding-bottom: 25px;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	ul {
+		list-style-type: none;
+		li {
+			padding-left: 36px;
+			position: relative;
+			margin-bottom: 17px;
+			color: $black;
+			font-weight: 500;
+			font-size: 20px;
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-image: url("../img/svg/payment-mark.svg");
+				width: 22px;
+				height: 16px;
+			}
+		}
+	}
+	&__info-caption {
+		color: #6a6a6a;
+		font-weight: 200;
+		font-size: $large;
+		line-height: 28px;
+		padding-top: 11px;
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sPayment
