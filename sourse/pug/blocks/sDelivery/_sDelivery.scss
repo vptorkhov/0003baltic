@@ -1,0 +1,71 @@
+// start .sDelivery
+.sDelivery {
+	--sPT: 50px;
+	--sPB: 98px;
+	--sTPB: 50px;
+	color: $white;
+	background-color: #131313;
+
+	h3 {
+		max-width: 13em;
+	}
+	&__info {
+		max-width: rem(420);
+		color: #838383;
+		.row {
+			--bs-gutter-x: #{rem(20)};
+		}
+		.icon {
+			position: relative;
+			top: rem(-15);
+			fill: none;
+			stroke: currentColor;
+			font-size: rem(53);
+		}
+		p {
+			font-size: rem(18);
+			line-height: calc(24 / 18);
+			font-weight: 200;
+			letter-spacing: normal;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__col {
+		display: flex;
+		justify-content: center;
+		margin-top: rem(55);
+		@include media-breakpoint-up(lg) {
+			justify-content: flex-start;
+		}
+	}
+	&__btn {
+		@extend .btn, .btn-primary;
+		width: 100%;
+		font-weight: 500;
+		line-height: calc(24 / 20);
+		text-align: center;
+		margin-top: rem(48);
+		font-size: rem(18);
+		padding: rem(24.5);
+		@include media-breakpoint-up(sm) {
+			font-size: rem(20);
+			padding: rem(26.5);
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sDelivery
