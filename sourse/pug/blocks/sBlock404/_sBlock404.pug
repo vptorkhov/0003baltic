@@ -1,0 +1,22 @@
+mixin sBlock404(data)
+	// start sBlock404
+	+b.SECTION.sBlock404.section.bg-wrap#sBlock404&attributes(attributes)
+		+pic('bg-image.png','bg',0).picture-bg
+		.container
+			+b.section-title.text-center
+				h1 404
+			h2 Похоже, мы не можем найти нужную вам страницу.
+			+e.sub-title Свяжитесь с нами удобным для вас способом:
+			+e.block
+				+e.call-wrap
+					+e.call-icon
+						+icon('phone')
+					+e.call-title Звоните ежедневно с 9:30 до 18:00. Ответим за 1 минуту
+				+e.tel 8 (812) 317-12-09
+				+e.tel-btn(href="#") Связаться с нами
+				+e.soc-wrap
+					a(href="#")
+						img(src="img/svg/whatsapp.svg", alt="")
+					a(href="#")
+						img(src="img/svg/telegram.svg", alt="")
+	// end sBlock404

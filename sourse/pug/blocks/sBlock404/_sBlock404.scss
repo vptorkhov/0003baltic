@@ -1,0 +1,117 @@
+// start .sBlock404
+.sBlock404 {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+	@include media-breakpoint-up(lg) {
+		--sPT: 74px;
+		--sTPB: 25px;
+		--sPB: 98px;
+	}
+	background-color: #131313;
+	.picture-bg {
+		opacity: 0.76;
+	}
+	h1 {
+		font-size: 85px;
+		color: $primary;
+		font-weight: 900;
+	}
+	h2 {
+		text-align: center;
+		color: $white;
+		margin-bottom: 33px;
+	}
+	&__sub-title {
+		font-size: $large;
+		color: #cbcbcb;
+		line-height: 28px;
+		letter-spacing: 0.3px;
+		text-align: center;
+	}
+	&__block {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__call-wrap {
+		display: flex;
+		margin-bottom: rem(9);
+		padding-top: 40px;
+		padding-left: 19px;
+	}
+	&__call-title {
+		font-size: $small;
+		margin-left: 8px;
+		max-width: 146px;
+		padding-top: 4px;
+		color: #cbcbcb;
+		line-height: 19px;
+	}
+	&__call-icon {
+		min-width: rem(64);
+		height: rem(64);
+		position: relative;
+		margin-right: 8px;
+		background-color: $primary;
+		border-radius: 50%;
+		box-shadow: 0px 0px 0px 8px rgba($primary, 0.2), 0px 0px 0px 16px rgba($primary, 0.07);
+		animation-name: shadowPulse;
+		animation-duration: 1.5s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+
+		.icon {
+			color: $white;
+			font-size: rem(25);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 1;
+		}
+	}
+	&__tel {
+		font-size: $h3-font-size;
+		color: $white;
+		font-weight: 900;
+		margin-top: 24px;
+		margin-bottom: 38px;
+	}
+	&__tel-btn {
+		@extend .btn, .btn-primary;
+		width: 287px;
+		max-width: 100%;
+		padding-top: 16px;
+		padding-bottom: 19px;
+		font-size: $large;
+		font-weight: 500;
+	}
+	&__soc-wrap {
+		display: flex;
+		margin-top: 30px;
+		a {
+			display: inline-block;
+			img {
+				width: 35px;
+				height: 35px;
+				margin-left: 9px;
+				margin-right: 9px;
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sBlock404
