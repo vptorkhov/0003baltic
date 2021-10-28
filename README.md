@@ -7,6 +7,7 @@
 8. <https://vptorkhov.github.io/0003baltic/public/08-onearticle.html>
 9. <https://vptorkhov.github.io/0003baltic/public/09-ourworks.html>
 10. <https://vptorkhov.github.io/0003baltic/public/10-project.html>
+12. <https://vptorkhov.github.io/0003baltic/public/12-delivery.html>
 14. <https://vptorkhov.github.io/0003baltic/public/14-offerpage.html>
 15. <https://vptorkhov.github.io/0003baltic/public/15-contacts.html>
 17. <https://vptorkhov.github.io/0003baltic/public/17-404.html>
