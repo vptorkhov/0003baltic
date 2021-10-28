@@ -1,8 +1,10 @@
 // start .sDelivery
 .sDelivery {
-	--sPT: 50px;
-	--sPB: 98px;
-	--sTPB: 50px;
+	@include media-breakpoint-up(md) {
+		--sPT: 50px;
+		--sPB: 98px;
+		--sTPB: 50px;
+	}
 	color: $white;
 	background-color: #131313;
 
@@ -46,12 +48,16 @@
 		font-weight: 500;
 		line-height: calc(24 / 20);
 		text-align: center;
-		margin-top: rem(48);
+		margin-top: rem(35);
 		font-size: rem(18);
-		padding: rem(24.5);
-		@include media-breakpoint-up(sm) {
+		padding: rem(22.5);
+		@include media-breakpoint-up(lg) {
 			font-size: rem(20);
 			padding: rem(26.5);
+		}
+		@include media-breakpoint-up(md) {
+			margin-top: rem(48);
+
 		}
 	}
 	@include media-breakpoint-up(xl) {
