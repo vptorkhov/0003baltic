@@ -1,0 +1,28 @@
+extends layout/main.pug
+
+
+include ../blocks/sOffers/_sOffers.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sBlock404/_sBlock404.pug 
+
+block variables
+	- let  mainPage= 'breadcrumb-no-margin' 
+	- let  bg= '17.jpg'
+
+block title
+	- let  title= 'Ошибка 404'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		+topLine('cart')
+		+top-nav()
+	+breadcrumb('Главная',title)
+	//- +sContact()
+	+sBlock404()
+	+sContact()
+	+footer()
+      
+
+
+

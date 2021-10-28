@@ -1,0 +1,16 @@
+mixin sOfferPageIcons(data)
+	// start sOfferPageIcons
+	+b.sOfferPageIcons.section#sOfferPageIcons&attributes(attributes)
+		.container
+			.row
+				mixin item(i,t)
+					.col-lg-3.col-sm-6
+						+e.item
+							+e.item-icon
+								+icon(i)
+							+e.item-title!=t
+				+item(`quality-header`,`Качество материала соответствует ГОСТ&nbsp;32018-2012`)
+				+item(`pasport`,`Паспорт изделия в каждой поставке`)
+				+item(`factory-machine`,`Работаем на импортном оборудовании`)
+				+item(`handcraft`,`Можем производить вручную отдельные элементы`)
+	// end sOfferPageIcons
