@@ -507,6 +507,19 @@ function eventHandler() {
 			prevEl: ".sDeliveryMethods .swiper-button-prev",
 		},
 	});
+	var sCertificatesSlider = new Swiper(".sCertificates__slider--js  ", {
+		slidesPerView: 'auto',
+		// loop: true,
+		spaceBetween: 24,
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		navigation: {
+			nextEl: ".sCertificates .swiper-button-next",
+			prevEl: ".sCertificates .swiper-button-prev",
+		},
+	});
 	var reviews = new Swiper(".sReviews__slider--js", {
 		slidesPerView: 'auto',
 		navigation: {

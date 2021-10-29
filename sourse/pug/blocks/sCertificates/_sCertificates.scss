@@ -1,0 +1,168 @@
+// start .sCertificates
+.sCertificates {
+	// --sPT: ;
+	// --sPB: ;
+	--sTPB: #{rem(50)};
+	background-color: $white;
+	.row {
+		@include media-breakpoint-up(xl) {
+			--bs-gutter-x: #{rem(30)};
+		}
+	}
+	.section-title {
+		h2 {
+			margin-bottom: 0;
+		}
+	}
+	&__text-content {
+		font-size: $large;
+		ul {
+			list-style: none;
+			margin-bottom: 0;
+			li {
+				position: relative;
+				padding-left: rem(30);
+				font-size: rem(16);
+				line-height: calc(28 / 18);
+				color: #6a6a6a;
+				margin-bottom: calc(var(--bs-gutter-x) / 3);
+				// @include media-breakpoint-up(md) {
+				// margin-bottom: calc(var(--bs-gutter-x) / 2);
+				// }
+				@include media-breakpoint-up(lg) {
+					margin-bottom: calc(var(--bs-gutter-x) * 0.7);
+				}
+				@include media-breakpoint-up(xl) {
+					font-size: rem(18);
+					padding-left: rem(32);
+					margin-bottom: calc(var(--bs-gutter-x) * 0.88);
+				}
+
+				&::before {
+					content: "";
+					position: absolute;
+					width: rem(20);
+					height: rem(15);
+					left: 0;
+					top: rem(5);
+					background-image: url(../img/svg/li-check.svg);
+					background-size: contain;
+					background-repeat: no-repeat;
+					@include media-breakpoint-up(lg) {
+						width: rem(22);
+						height: rem(16);
+					}
+				}
+				&:last-child {
+					@include media-breakpoint-up(md) {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+	&__title {
+		color: $body-color;
+		font-size: $large;
+		font-weight: 500;
+		line-height: calc(28 / 18);
+		font-style: normal;
+		letter-spacing: 0.45px;
+		margin-bottom: calc(var(--bs-gutter-x) * 1);
+	}
+
+	&__slider-wrapper {
+		position: relative;
+	}
+	&__slider {
+		max-width: 360px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.swiper-button-hand {
+		--swiperArrowSize: #{rem(50)};
+		--swiperArrowPosition: 0;
+		// --swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
+		--swiperBorderColorDef: var(--bs-primary);
+		--swiperColorDef: var(--bs-primary);
+		--swiperBgDef: #ffffff;
+
+		--swiperBorderColorDefHover: var(--bs-primary);
+		--swiperColorDefHover: var(--bs-primary);
+		--swiperBgDefHover: #ffffff;
+		width: var(--swiperArrowSize);
+		height: var(--swiperArrowSize);
+		border-radius: 50%;
+		padding: 0;
+		// background-color: var(--swiperBgDef);
+		// border: 2px solid var(--swiperBorderColorDef);
+		// color: var(--swiperColorDef);
+		// @include bgs;
+		z-index: 300;
+		outline: none !important;
+		@extend .btn, .btn-primary;
+		// margin-bottom: 0;
+		background-image: none;
+		margin: 0;
+		@include a-cent(y);
+		// box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
+		@include mt;
+		// user-select: none;
+
+		// &:hover {
+		// 	background-color: var(--swiperBgDefHover);
+		// 	border-color: var(--swiperBorderColorDefHover);
+		// 	color: var(--swiperColorDefHover);
+		// }
+
+		.icon {
+			@include a-cent;
+			font-size: rem(15);
+		}
+
+		&::after {
+			display: none;
+		}
+		&-next {
+			right: var(--swiperArrowPosition);
+		}
+
+		&-prev {
+			left: var(--swiperArrowPosition);
+		}
+	}
+	.swiper-pagination {
+		position: static;
+		display: flex;
+		justify-content: center;
+		bottom: auto;
+		margin-top: rem(15);
+		@include media-breakpoint-up(md) {
+			margin-top: rem(20);
+		}
+		.swiper-pagination-bullet {
+			width: rem(14);
+			height: rem(14);
+			@include media-breakpoint-up(md) {
+				--swiper-pagination-bullet-horizontal-gap: #{rem(5)};
+				width: rem(19);
+				height: rem(19);
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sCertificates
