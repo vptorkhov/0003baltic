@@ -494,6 +494,19 @@ function eventHandler() {
 			prevEl: ".sProject__page-link--prev",
 		},
 	});
+	var sDeliverySlider = new Swiper(".sDeliveryMethods__slider--js  ", {
+		slidesPerView: 'auto',
+		// loop: true,
+		spaceBetween: 1,
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		navigation: {
+			nextEl: ".sDeliveryMethods .swiper-button-next",
+			prevEl: ".sDeliveryMethods .swiper-button-prev",
+		},
+	});
 	var reviews = new Swiper(".sReviews__slider--js", {
 		slidesPerView: 'auto',
 		navigation: {

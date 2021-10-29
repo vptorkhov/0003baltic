@@ -2,8 +2,25 @@ mixin sDeliveryMethods(data)
 	// start sDeliveryMethods
 	+b.SECTION.sDeliveryMethods.section#sDeliveryMethods&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sDeliveryMethods
-				
-			.row
+			h2 Способы доставки
+			+e.slider--js.swiper
+				.swiper-wrapper
+					mixin item(i, t, ...items)
+						+e.slide.swiper-slide
+							+e.item(href="#")
+								.row
+									.col-md-6
+										+pic(`sDeliveryMethods-${i}.jpg`,'bg',0)
+									.col-md-6
+										+e.text-content
+											h3!= t
+											ul
+												each item in items
+													li!= item
+
+					+item(1,`Железнодорожный транспорт`, `Низкая стоимость логистики в&nbsp;дальние точки страны&nbsp;и&nbsp;за&nbsp;пределы ее&nbsp;территории;`, `большая перевозная способность;`, `удобный и надежный вид транспорта для перевозки тяжелого груза на большие расстояния;`, `отсутствует зависимость от погодных условий.`)
+					+item(1,`Железнодорожный транспорт`, `Низкая стоимость логистики в&nbsp;дальние точки страны&nbsp;и&nbsp;за&nbsp;пределы ее&nbsp;территории;`, `большая перевозная способность;`, `удобный и надежный вид транспорта для перевозки тяжелого груза на большие расстояния;`, `отсутствует зависимость от погодных условий.`)
+					+item(1,`Железнодорожный транспорт`, `Низкая стоимость логистики в&nbsp;дальние точки страны&nbsp;и&nbsp;за&nbsp;пределы ее&nbsp;территории;`, `большая перевозная способность;`, `удобный и надежный вид транспорта для перевозки тяжелого груза на большие расстояния;`, `отсутствует зависимость от погодных условий.`)
+				+slider-arrows
+				.swiper-pagination
 	// end sDeliveryMethods
