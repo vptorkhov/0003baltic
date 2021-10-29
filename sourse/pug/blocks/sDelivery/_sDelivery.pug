@@ -4,9 +4,9 @@ mixin sDelivery(h1, h2)
 		+pic('sDelivery-bg.jpg','bg',0).picture-bg
 		//- +pic('bg-image.png','bg',0).picture-bg
 		.container
-			if h
+			if h1
 				+b.section-title
-					h1!= h
+					h1!= h1
 			else if h2
 				+b.section-title.d-none
 					h2!= h2

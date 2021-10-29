@@ -497,7 +497,7 @@ function eventHandler() {
 	var sDeliverySlider = new Swiper(".sDeliveryMethods__slider--js  ", {
 		slidesPerView: 'auto',
 		// loop: true,
-		spaceBetween: 1,
+		spaceBetween: 24,
 		pagination: {
 			el: ".swiper-pagination",
 			clickable: true,
@@ -567,6 +567,29 @@ function eventHandler() {
 			prevEl: ".swiper-button-prev",
 		},
 	});
+	var sSignificantObjects = new Swiper(".sSignificantObjects__slider--js", {
+		slidesPerView: 'auto',
+		spaceBetween: 24,
+		pagination: {
+			el: ".sSignificantObjects .swiper-pagination",
+			clickable: true,
+		},
+		breakpoints: {
+			768: {
+				spaceBetween: 35,
+				slidesPerView: 2
+			},
+			1200: {
+				spaceBetween: 50,
+				slidesPerView: 2
+			}
+		},
+		navigation: {
+			nextEl: ".sSignificantObjects .swiper-button-next",
+			prevEl: ".sSignificantObjects .swiper-button-prev",
+		},
+	});
+
 	var productionSlider = new Swiper(".sProduction__slider--js", {
 		slidesPerView: 'auto',
 		spaceBetween: 10,
