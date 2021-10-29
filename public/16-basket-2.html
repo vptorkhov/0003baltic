@@ -376,40 +376,29 @@
 							<h2>Оформление заказа </h2>
 							<div class="order-block">
 								<div class="order-block__head">
-									<a class="order-block__link-head active" href="#">1. Доставка 
+									<a class="order-block__link-head done" href="#"> <img src="img/svg/check-r.svg" alt=""/>Доставка 
 									</a>
-									<a class="order-block__link-head" href="#">2. Получатель
+									<a class="order-block__link-head active" href="#">2. Получатель
 									</a>
 									<a class="order-block__link-head" href="#">3. Оплата 
 									</a>
 								</div>
-								<div class="order-block__progress" style="--w:33%">
+								<div class="order-block__progress" style="--w:50%">
 								</div>
 								<div class="order-block__body">
 									<div class="order-block__step">
 										<div class="row">
-											<div class="col">
-												<label class="shipping-block">
-													<input type="checkbox"/><span class="shipping-block__title">Доставка</span><span class="shipping-block__title">Самовывоз</span>
-												</label>
-												<div class="h5 text-secondary">Введите адрес</div>
-												<div class="order-block__input-wrap form-group"><input class="order-block__input form-control is-valid" name="text" type="text" placeholder="Адрес"/>
+											<div class="col"> 
+												<div class="order-block__input-wrap form-group"><input class="order-block__input form-control" name="text" type="text" placeholder="ФИО получателя"/>
 												</div>
 												<!-- +e.input-wrap-->
-												<div class="order-block__input-wrap form-group"><input class="order-block__input form-control is-invalid" name="text" type="text" placeholder="Адрес"/>
+												<div class="order-block__input-wrap form-group"><input class="order-block__input form-control is-invalid" name="email" type="email" placeholder="Email"/>
 												</div>
 												<!-- +e.input-wrap-->
-												<div class="order-block__input-wrap form-group">
-													<select class="order-block__input form-select" name="select">
-														<option value="Выберите">Выберите</option>
-														<option value=" placeholder 1">placeholder 1</option>
-														<option value=" placeholder 2">placeholder 2</option>
-														<option value=" placeholder 3">placeholder 3</option>
-														<option value=" placeholder 4">placeholder 4</option>
-													</select>
+												<div class="order-block__input-wrap form-group"><input class="order-block__input form-control" name="tel" type="tel" placeholder="Телефон"/>
 												</div>
 												<!-- +e.input-wrap-->
-												<div class="order-block__input-wrap form-group"><input class="order-block__input form-control" name="text" type="text" placeholder="ИНН (для юр.лиц)"/>
+												<div class="order-block__input-wrap form-group"><textarea class="order-block__input form-control" name="textarea" placeholder="Комментарий к заказу"></textarea>
 												</div>
 												<!-- +e.input-wrap-->
 											</div>

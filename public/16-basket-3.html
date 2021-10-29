@@ -376,56 +376,32 @@
 							<h2>Оформление заказа </h2>
 							<div class="order-block">
 								<div class="order-block__head">
-									<a class="order-block__link-head active" href="#">1. Доставка 
+									<a class="order-block__link-head done" href="#"> <img src="img/svg/check-r.svg" alt=""/>Доставка 
 									</a>
-									<a class="order-block__link-head" href="#">2. Получатель
+									<a class="order-block__link-head done" href="#"> <img src="img/svg/check-r.svg" alt=""/>Получатель
 									</a>
-									<a class="order-block__link-head" href="#">3. Оплата 
+									<a class="order-block__link-head done" href="#"><img src="img/svg/check-r.svg" alt=""/>Оплата 
 									</a>
 								</div>
-								<div class="order-block__progress" style="--w:33%">
+								<div class="order-block__progress" style="--w:100%">
 								</div>
 								<div class="order-block__body">
 									<div class="order-block__step">
-										<div class="row">
-											<div class="col">
-												<label class="shipping-block">
-													<input type="checkbox"/><span class="shipping-block__title">Доставка</span><span class="shipping-block__title">Самовывоз</span>
-												</label>
-												<div class="h5 text-secondary">Введите адрес</div>
-												<div class="order-block__input-wrap form-group"><input class="order-block__input form-control is-valid" name="text" type="text" placeholder="Адрес"/>
-												</div>
-												<!-- +e.input-wrap-->
-												<div class="order-block__input-wrap form-group"><input class="order-block__input form-control is-invalid" name="text" type="text" placeholder="Адрес"/>
-												</div>
-												<!-- +e.input-wrap-->
-												<div class="order-block__input-wrap form-group">
-													<select class="order-block__input form-select" name="select">
-														<option value="Выберите">Выберите</option>
-														<option value=" placeholder 1">placeholder 1</option>
-														<option value=" placeholder 2">placeholder 2</option>
-														<option value=" placeholder 3">placeholder 3</option>
-														<option value=" placeholder 4">placeholder 4</option>
-													</select>
-												</div>
-												<!-- +e.input-wrap-->
-												<div class="order-block__input-wrap form-group"><input class="order-block__input form-control" name="text" type="text" placeholder="ИНН (для юр.лиц)"/>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-											<div class="col-sm-auto align-self-end">
-												<div class="order-btn-next disabled">Далее
-													<div class="order-btn-next__btn-circle"> 
-														<svg class="icon icon-arrow-right ">
-															<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
-														</svg>
-													</div>
-												</div>
-											</div>
-										</div>
+										<label class="radio-shipping form-check"> 
+											<input class="form-check-input checked" type="radio" name="shipp"/><span class="radio-shipping__title form-check-label">Безналичный (Юр. лицо, ИП)</span>
+										</label>
+										<label class="radio-shipping form-check"> 
+											<input class="form-check-input" type="radio" name="shipp"/><span class="radio-shipping__title form-check-label"> <span class="row">
+												<div class="col-auto">Банковской картой</div>
+												<div class="col"> <img src="img/@2x/pay-1.png" alt=""/><img src="img/@2x/pay-2.png" alt=""/><img src="img/@2x/pay-3.png" alt=""/><img src="img/@2x/pay-4.png" alt=""/><img src="img/@2x/pay-5.png" alt=""/><img src="img/@2x/pay-6.png" alt=""/></div></span></span>
+										</label>
+										<label class="radio-shipping form-check"> 
+											<input class="form-check-input" type="radio" name="shipp"/><span class="radio-shipping__title form-check-label">Наличными</span>
+										</label>
 									</div>
 								</div>
 							</div>
+							<p class="small text-secondary">Предложение не является публичной офертой. Цены на сайте и в розничной сети могут отличаться. Информация на сайте о товаре носит рекламный характер и расценивается как приглашение делать оферты на основании п.1 ст. 437 Гражданского кодекса РФ. Нажимая кнопку «Оформить заказ», Вы принимаете пользовательское соглашение</p>
 						</div>
 						<div class="col-xl-auto col-lg-4">
 							<div class="sidebar-basket">
