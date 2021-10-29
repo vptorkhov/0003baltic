@@ -1,0 +1,80 @@
+mixin sBasket(step)
+	// start sBasket
+	+b.SECTION.sBasket.section#sBasket&attributes(attributes)
+		.container
+			+b.section-title 
+				h1 Корзина
+			+e.row.row
+				.col-xl.col-lg-8
+					+e.body
+						+e.panel-head Ваш заказ
+						table
+							thead
+								tr
+									th Товар
+									th Цена
+							tbody
+								- for (var x = 0; x < 3; x++)
+									tr
+										td
+											.row
+												.col-auto
+													+e.img-wrap(href="#")
+														+pic("basket.png",'',0)
+												.col
+													+e.title
+														a(href="#") Облицовочная плита Полировка 300x600x20 Южно-Султаевский
+													+addblock()
+
+										td
+											+e.price 2 450 руб.
+											+e.remove Удалить
+												+icon("close")
+
+
+						+e.panel-foot
+							+form-wrap
+								.row
+									.col-sm-auto
+										+e.title Заказать в 1 клик!
+										+e.text Введите свой номер телефона и оформите заказ прямо сейчас
+									.col-sm-auto
+										+input("Телефон",'tel')
+									.col-sm-auto
+										+e.BUTTON.btn-circle(type="submit")
+											+icon('arrow-right')
+					h2 Оформление заказа 
+					+b.order-block
+						+e.head
+							+e.link-head(href="#").active 1. Доставка 
+							if step=="2"
+								+e.link-head(href="#").active 2. Получатель
+							else
+								+e.link-head(href="#")  2. Получатель
+							+e.link-head(href="#") 3. Оплата
+						+e.progress(style="--w:33%")
+						+e.body
+							+e.step
+								.row
+									.col
+										+b.LABEL.shipping-block
+											input(type="checkbox")
+											+e.SPAN.title Доставка
+											+e.SPAN.title Самовывоз
+										.h5.text-secondary Введите адрес
+										+input("Адрес").is-valid
+										+input("Адрес").is-invalid
+										+input("Выберите",'select')
+										+input("ИНН (для юр.лиц)")
+									.col-sm-auto.align-self-end
+										+b.order-btn-next.disabled
+											| Далее
+											+e.btn-circle 
+												+icon('arrow-right')
+				.col-xl-auto.col-lg-4
+					+b.sidebar-basket
+						+e.total-price  Итого с НДС:
+							.strong 369 950 руб	
+						+e.btn(href="#") Оформить заказ
+						+e.text Указаны оптовые цены от&nbsp;100 м2. Окончательную стоимость уточняйте у&nbsp;менеджера.
+	// end sBasket
