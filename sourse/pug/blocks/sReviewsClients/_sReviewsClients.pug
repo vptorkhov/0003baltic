@@ -1,0 +1,13 @@
+mixin sReviewsClients(data)
+	// start sReviewsClients
+	+b.SECTION.sReviewsClients.section#sReviewsClients&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Наши клиенты
+			.row
+				mixin item(i)
+					.col-lg-2.col-md-3.col-sm-4.col-6
+						+pic(`reviews-client-${i}.png`,'',0)
+				- for(x=1;x<12;x++)
+					+item(x)
+	// end sReviewsClients

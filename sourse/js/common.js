@@ -363,7 +363,7 @@ const $ = jQuery;
 function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
-	// JSCCommon.tabscostume('tabs');
+	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
@@ -515,6 +515,34 @@ function eventHandler() {
 		},
 		breakpoints: {
 			768: {
+				slidesPerView: 1
+			},
+		},
+	});
+	var reviewsSlider = new Swiper(".sReviewsSlider__slider--js", {
+		slidesPerView: 'auto',
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		breakpoints: {
+			576: {
+				slidesPerView: 1
+			},
+		},
+	});
+	var reviewsNoteSlider = new Swiper(".sReviewsNoteSlider__slider--js", {
+		slidesPerView: 'auto',
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		breakpoints: {
+			576: {
 				slidesPerView: 1
 			},
 		},
