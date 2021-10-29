@@ -41,9 +41,9 @@
 		}
 	}
 	&__slider {
-		// @include media-breakpoint-down(){
-		// 	overflow: unset !important;
-		// }
+		@include media-breakpoint-down(sm){
+			overflow: unset !important;
+		}
 		@include media-breakpoint-down(lg){
 			margin-top: 30px;
 		}

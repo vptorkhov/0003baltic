@@ -1,7 +1,7 @@
 // start .sReviewsNoteSlider
 .sReviewsNoteSlider {
 	// --sPT: ;
-	// --sPB: ;
+	--sPB: 10px;
 	// --sTPB: ;
 	position: relative;
 	z-index: 5;
@@ -11,7 +11,9 @@
 		@include media-breakpoint-up(lg) {
 			padding: 0;
 		}
-		
+		@include media-breakpoint-down(sm){
+			overflow: unset;
+		}
 		padding-bottom: 80px;
 	}
 	&__slide{
