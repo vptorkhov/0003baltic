@@ -5,6 +5,7 @@ extends layout/main.pug
 //- include ../blocks/sOffers/_sOffers.pug
 include ../blocks/sDelivery/_sDelivery.pug
 include ../blocks/sSignificantObjects/_sSignificantObjects.pug 
+include ../blocks/sOurMission/_sOurMission.pug 
 include ../blocks/sContact/_sContact.pug
 
 block variables
@@ -21,6 +22,7 @@ block pagecontent
 		+top-nav()
 	+breadcrumb('Главная', title).mb-0
 	+sDelivery(``, `Доставка`)
+	+sOurMission()
 	+sSignificantObjects()
 	+sForm(`Нужна помощь специалиста?`)
 	+sContact()
