@@ -525,9 +525,9 @@ function eventHandler() {
 	// modal window
 	const swiper5 = new Swiper('.place-slider--js', {
 		// slidesPerView: 5,
-		...defaultSl,
+		watchOverflow: true,
 		slidesPerView: 'auto',
-		freeMode: true,  
+		// freeMode: true,  
 		loop: false,
 		navigation: {
 			nextEl: ".place-slider-wrap .swiper-button-next",
@@ -536,7 +536,8 @@ function eventHandler() {
 	}); 
 	const swiperbreadcrumb = new Swiper('.breadcrumb-wrap .swiper', {
 		// slidesPerView: 5,
-		...defaultSl,
+		// ...defaultSl,
+		watchOverflow: true,
 		slidesPerView: 'auto',
 		freeMode: true,  
 		loop: false,
