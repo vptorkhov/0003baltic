@@ -17,7 +17,7 @@ html {
 	font-size: var(--bs-body-font-size);
 }
 html {
-	-webkit-text-size-adjust: 100%;
+	// -webkit-text-size-adjust: 100%;
 	-webkit-tap-highlight-color: rgba(33, 36, 41, 0);
 	// margin-right: calc(-1 * (100vw - 100%));
 }
@@ -295,8 +295,7 @@ ul {
 	@include a-cent(y);
 	// box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
 	@include mt;
-	user-select: none;
-
+	// user-select: none;
 
 	// &:hover {
 	// 	background-color: var(--swiperBgDefHover);
@@ -466,15 +465,15 @@ iframe {
 }
 
 ::-webkit-calendar-picker-indicator {
-  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='15' viewBox='0 0 24 24'><path fill='#{$primary}' d='M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z'/></svg>"); 
+	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='15' viewBox='0 0 24 24'><path fill='#{$primary}' d='M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z'/></svg>");
 }
 
-.breadcrumb-wrap{
+.breadcrumb-wrap {
 	background-color: #fff;
 }
-.custom-input{
+.custom-input {
 	cursor: pointer;
-	&__color{
+	&__color {
 		display: inline-block;
 		width: 1rem;
 		height: 1rem;
@@ -485,59 +484,56 @@ iframe {
 		margin-right: rem(6);
 		background-color: var(--color);
 	}
-	.text-secondary{
+	.text-secondary {
 		font-weight: normal;
 		margin-left: em(5);
 	}
 }
-.form-check-input[type=checkbox] {
-		background-size: 120%;
-		position: relative;
-		top: rem(-2);
-		&:checked ~  .custom-input__text{
-			font-weight: 500;
-		}
-	} 
-
-	.irs--round .irs-bar ,
-	.irs--round .irs-line{
-		top: 36px;
-		height: 1px;
-
+.form-check-input[type="checkbox"] {
+	background-size: 120%;
+	position: relative;
+	top: rem(-2);
+	&:checked ~ .custom-input__text {
+		font-weight: 500;
 	}
-	.irs--round .irs-bar { 
-    background-color: $primary;
 }
 
+.irs--round .irs-bar,
+.irs--round .irs-line {
+	top: 36px;
+	height: 1px;
+}
+.irs--round .irs-bar {
+	background-color: $primary;
+}
 
 .irs--round .irs-handle {
-    top: 30px;
-    width: 14px;
-    height: 14px;
-    background-color: $primary !important;
-		border: none !important;
-    border-radius: 50%;
-    box-shadow: 0 1px 3px rgb(0 0 255 / 30%);
+	top: 30px;
+	width: 14px;
+	height: 14px;
+	background-color: $primary !important;
+	border: none !important;
+	border-radius: 50%;
+	box-shadow: 0 1px 3px rgb(0 0 255 / 30%);
 }
 .irs--round {
-    height: 40px;
+	height: 40px;
 }
 
+.slider-arrows {
+	display: flex;
+	flex-direction: row-reverse;
+	position: absolute;
+	@include media-breakpoint-up(md) {
+		top: rem(23);
+		right: 0;
+	}
+	@include media-breakpoint-down(md) {
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 
-.slider-arrows{ 
-		display: flex;
-		flex-direction: row-reverse;
-		position: absolute;
-		@include media-breakpoint-up(md) {
-			top: rem(23);
-			right: 0;
-		}
-		@include media-breakpoint-down(md){
-			bottom: 0;
-			left: 50%;
-			transform: translateX(-50%);
-		} 
-	
 	.swiper-button-prev,
 	.swiper-button-next {
 		position: relative;
@@ -571,55 +567,61 @@ iframe {
 	}
 }
 
-
 .btn-primary-disabled {
 	background-color: #bfbfbf !important;
 	border-color: #bfbfbf !important;
 }
 
-
-.text-block{
+.text-block {
 	display: flex;
 	align-items: flex-end;
 	position: relative;
 	justify-content: space-between;
-	background-color: #fff; 
- 
-	&__left{
-		span{
+	background-color: #fff;
+
+	&__left {
+		span {
 			background-color: inherit;
 			position: relative;
 			z-index: 2;
-
 		}
-		// flex-grow: 1;
-		padding-right: 30px; 
+		flex-grow: 1;
+		padding-right: 30px;
 		position: relative;
-		&::before{
-			content: '............................................................................................................................................................................................';
+		&::before {
+			content: "............................................................................................................................................................................................";
 			position: absolute;
-			left: 0;bottom: 0;
+			left: 0;
+			bottom: 0;
 			max-width: 100%;
 			width: 100%;
 			// position: relative;
 			overflow: hidden;
-	
 		}
 	}
 	&__left,
-	&__right{
+	&__right {
 		position: relative;
 		z-index: 2;
 		background-color: inherit;
 	}
 }
-.breadcrumb-wrap{
-
+.breadcrumb-wrap {
 	margin-bottom: rem(30);
 }
-.breadcrumb{
+.breadcrumb {
 	flex-wrap: nowrap;
 }
-.breadcrumb-item{
+.breadcrumb-item {
 	width: auto;
+}
+.breadcrumb-no-margin {
+	.breadcrumb-wrap {
+		margin-bottom: 0;
+	}
+}
+
+
+.bg-grey{
+	background-color: #ececec;
 }

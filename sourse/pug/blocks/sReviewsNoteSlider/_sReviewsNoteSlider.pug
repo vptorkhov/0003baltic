@@ -1,0 +1,21 @@
+mixin sReviewsNoteSlider(data)
+	// start sReviewsNoteSlider
+	+b.sReviewsNoteSlider.section#sReviewsNoteSlider&attributes(attributes)
+		.container
+			+e.slider--js.swiper
+				.swiper-wrapper
+					mixin slide()
+						+e.slide.swiper-slide
+							+e.slide-wrap
+								+e.profile
+									+pic('slide-avatar.png','',0)
+									+e.profile-name
+										+e.name Алексей Садько
+										+e.status Владелец частного дома
+								+e.slide-caption Заказал продукцию, перед поставкой заехал на предприятие, осмотрел свой заказ и как его упаковывают - все достойно. Заказывал плиту полированную 150 метров, сказали, что сделают в течение 25 рабочих дней, а по факту напилили за 10 дней. Впечатления о предприятии отличное, думаю, мне теперь редко когда потребуется гранит, но советовать определенно буду знакомым. Самое главное, что цены были гораздо ниже, чем у других компаний.
+					- for (var x=0; x<5; x++)
+						+slide()
+				+e.slider-arrows
+					.swiper-button-prev
+					.swiper-button-next
+	// end sReviewsNoteSlider

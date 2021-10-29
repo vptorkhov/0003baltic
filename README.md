@@ -1,4 +1,15 @@
 1. <https://vptorkhov.github.io/0003baltic/public/>
 2. <https://vptorkhov.github.io/0003baltic/public/02-catalog.html>
 3. <https://vptorkhov.github.io/0003baltic/public/03-product.html>
- 
+4. <https://vptorkhov.github.io/0003baltic/public/04-production.html>
+5. <https://vptorkhov.github.io/0003baltic/public/05-deposits.html>
+7. <https://vptorkhov.github.io/0003baltic/public/07-articles.html>
+8. <https://vptorkhov.github.io/0003baltic/public/08-onearticle.html>
+9. <https://vptorkhov.github.io/0003baltic/public/09-ourworks.html>
+10. <https://vptorkhov.github.io/0003baltic/public/10-project.html>
+11. <https://vptorkhov.github.io/0003baltic/public/11-about.html>
+12. <https://vptorkhov.github.io/0003baltic/public/12-delivery.html>
+14. <https://vptorkhov.github.io/0003baltic/public/14-offerpage.html>
+15. <https://vptorkhov.github.io/0003baltic/public/15-contacts.html>
+17. <https://vptorkhov.github.io/0003baltic/public/17-404.html>
+19. <https://vptorkhov.github.io/0003baltic/public/19-error.html>

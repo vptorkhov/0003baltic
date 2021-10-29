@@ -1,0 +1,40 @@
+// start .sArticles
+.sArticles {
+	--sPT: calc(#{rem(60)} * 0.7);
+	--sPB: calc(#{rem(100)} * 0.7);
+	--sTPB: calc(#{rem(40)} * 0.7);
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(60)};
+		--sPB: #{rem(100)};
+		--sTPB: #{rem(40)};
+	}
+	.section-title {
+		h1 {
+			margin-bottom: 0;
+		}
+	}
+	.row {
+		--bs-gutter-y: calc(var(--bs-gutter-x) * 1.2);
+		@include media-breakpoint-up(md) {
+			--bs-gutter-y: var(--bs-gutter-x);
+		}
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-x: #{rem(30)};
+		}
+	}
+	
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sArticles

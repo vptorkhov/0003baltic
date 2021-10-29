@@ -1,0 +1,31 @@
+extends layout/main.pug
+
+
+include ../blocks/sOffers/_sOffers.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sPayment/_sPayment.pug 
+include ../blocks/sOfferPageIcons/_sOfferPageIcons.pug 
+
+block variables
+	- let  mainPage= 'breadcrumb-no-margin' 
+	- let  bg= '13.jpg'
+
+block title
+	- let  title= 'Оплата'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		+topLine('cart')
+		+top-nav()
+	+breadcrumb('Главная',title)
+	//- +sContact()
+	+sPayment()
+	+sOfferPageIcons()
+	+sForm(`Нужна помощь специалиста?`)
+	+sContact()
+	+footer()
+      
+
+
+

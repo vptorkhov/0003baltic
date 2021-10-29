@@ -1,0 +1,29 @@
+extends layout/main.pug
+
+
+include ../blocks/sOffers/_sOffers.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sDepositPage/_sDepositPage.pug 
+
+block variables
+	- let  mainPage= null 
+	- let  bg= '5.jpg'
+
+block title
+	- let  title= 'Месторождения'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		+topLine('cart')
+		+top-nav()
+	+breadcrumb('Главная',title)
+	//- +sContact()
+	+sDepositPage()
+	+sForm(`Нужна помощь специалиста?`)
+	+sContact()
+	+footer()
+      
+
+
+

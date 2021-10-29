@@ -1,20 +1,20 @@
-mixin sForm()
+mixin sForm(title)
 	// start sForm
 	+b.SECTION.sForm.section.bg-wrap#sForm&attributes(attributes)
 		+pic("sForm-bg.jpg",'bg').picture-bg
 		.container
 			+b.section-title.text-center
-				h2 Сделать заказ в&nbsp;1&nbsp;клик!
+				h2!= title
 				p Наши специалисты с&nbsp;радостью проконсультируют Вас и&nbsp;подберут наилучшее предожение
 			+form-wrap
 
 				.row
-					.col 
+					.col-sm
 						+input("Имя")
-					.col 
+					.col-sm
 						+input("Телефон",'tel')
 					.col-auto
-						+e.BUTTON.btn-circle(type="submit")  
+						+e.BUTTON.btn-circle(type="submit")
 							+icon('arrow-right')
 				+e.policy При отправке данных вы&nbsp;соглашаетесь с&nbsp;текущей политикой конфиденциальности.
 	// end sForm

@@ -1,0 +1,34 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sArticles/_sArticles.pug
+//- include ../blocks/sOffers/_sOffers.pug
+include ../blocks/sDelivery/_sDelivery.pug
+include ../blocks/sSignificantObjects/_sSignificantObjects.pug 
+include ../blocks/sCertificates/_sCertificates.pug 
+include ../blocks/sOurMission/_sOurMission.pug 
+include ../blocks/sContact/_sContact.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= '11.png'
+
+block title
+	- let  title= 'О компании'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		+topLine('cart')
+		+top-nav()
+	+breadcrumb('Главная', title).mb-0
+	+sDelivery(``, `Доставка`)
+	+sCertificates()
+	+sOurMission()
+	+sSignificantObjects()
+	+sForm(`Нужна помощь специалиста?`)
+	+sContact()
+	+footer()
+
+
+

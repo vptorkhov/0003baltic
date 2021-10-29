@@ -1,0 +1,57 @@
+mixin sProduction(data)
+	// start sProduction
+	+b.SECTION.sProduction.section#sProduction&attributes(attributes)
+		.container
+			.row
+				.col-lg-9.col-12
+					h1 Производство
+					+e.caption-wrap
+						p Мы&nbsp;более 10&nbsp;лет занимаемся обработкой натурального камня на&nbsp;собственном производстве&nbsp;полного цикла по&nbsp;самым передовым технологиям: от&nbsp;распила гранитных&nbsp;блоков и&nbsp;до&nbsp;изготовления финального изделия с&nbsp;обработкой, дальнейшей его упаковкой и&nbsp;доставкой на&nbsp;объект Покупателя.
+						p Мы осуществляем следующие виды обработки натурального камня:
+						ul
+							li термообработка;
+							li пиление;
+							li шлифовка;
+							li лощение;
+							li полировка;
+							li бучардирование;
+							li старение камня (антика);
+							li обработка скала (рванная поверхность/горка) и другие.
+						+e.slider-block
+							+e.slider--js.swiper
+								.swiper-wrapper
+									mixin slide()
+										+e.slide.swiper-slide
+											a(data-fancybox='video-gallery' data-src='https://www.youtube.com/watch?v=UqvQEhnHgY8' data-width='1280' data-height='720')
+												img(loading="lazy" src='https://redbookrf.ru/wp-content/uploads/2015/02/0000000000000001.jpg' alt="")
+									+slide()
+									+slide()
+									+slide()
+									+slide()
+									+slide()
+									+slide()
+							.swiper-button-prev
+							.swiper-button-next
+				+e.col.col-lg-3
+					+e.call-wrap
+						+e.call-icon
+							+icon('factory')
+						+e.call-title Мы производим камень с 2011г.
+					//- +e.tel 8 (812) 317-12-09
+					+e.call-caption Гарантируем высокое качество и не срываем сроки
+					+e.tel-link(href="#") Заказать звонок
+					+e.soc-wrap
+						a(href="#")
+							img(src="img/svg/whatsapp.svg", alt="")
+						a(href="#")
+							img(src="img/svg/telegram.svg", alt="")
+					mixin item(i,t)
+						+e.item
+							+e.item-icon
+								+icon(i)
+							+e.item-title!=t
+					+item(`quality-header`,`Качество материала соответствует ГОСТ&nbsp;32018-2012`)
+					+item(`pasport`,`Паспорт изделия в каждой поставке`)
+					+item(`factory-machine`,`Работаем на импортном оборудовании`)
+					+item(`handcraft`,`Можем производить вручную отдельные элементы`)
+	// end sProduction

@@ -1,0 +1,26 @@
+mixin sOfferPage(data)
+	// start sOfferPage
+	+b.SECTION.sOfferPage.section#sOfferPage&attributes(attributes)
+		.container
+			+b.section-title
+				h1 Акции и спецпредложения
+			.row
+				mixin item(i,t)
+					.col-xl-3.col-lg-4.col-sm-6
+						+e.item(href="#")
+							+pic(`sOffers-${i}.png`,'',0)
+							+e.text-wrap
+								+e.title!=t
+								+e.old-price 4 900 руб/м<sup>2</sup>
+								+e.new-price 4 159 руб/м<sup>2</sup>
+							+e.offer-label Акция
+							+e.link
+								+icon('arrow-link')
+				+item(1,`Гранит Дымовский Брусчатка`)
+				+item(2,`Гранит Серый Плита`)
+				+item(3,`Гранит Габбро-Диабаз Брусчатка`)
+				+item(4,`Гранит Дымовский Брусчатка`)
+				+item(1,`Гранит Дымовский Брусчатка`)
+				+item(2,`Гранит Серый Плита`)
+				+item(3,`Гранит Габбро-Диабаз Брусчатка`)
+	// end sOfferPage

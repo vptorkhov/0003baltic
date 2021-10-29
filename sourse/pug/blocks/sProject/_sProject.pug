@@ -1,0 +1,34 @@
+mixin sProject(data)
+	// start sProject
+	+b.SECTION.sProject.section#sProject&attributes(attributes)
+		.container
+			+e.slider--js.swiper
+				.swiper-wrapper
+					mixin slide()
+						+e.slide.swiper-slide
+							h1 Министерство Иностранных Дел РФ
+							+e.wrap
+								+pic('sProject.png','',0)
+								+e.text-block
+									p Реконструкция правого крыла служебного здания: 2017 г.
+									.title Материал:
+									p гранитная брусчатка и гранитный бордюр.
+									.title Месторождение:
+									p гранит Покостовское.
+									.swiper-pagination
+					+slide()
+					+slide()
+					+slide()
+					+slide()
+					+slide()
+				+e.page-links
+					+e.page-link--prev
+						.page-link-btn
+							+icon('project-slider-arrow')
+						.page-link-caption Воскресенский Ново-Иерусалимский монастырь
+					+e.page-link--next
+						.page-link-btn
+							+icon('project-slider-arrow')
+						.page-link-caption Благоустройство ЖК Династия 
+				
+	// end sProject

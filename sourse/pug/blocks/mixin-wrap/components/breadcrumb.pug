@@ -1,6 +1,6 @@
 //- breadcrumb
 mixin breadcrumb(...items)
-	.breadcrumb-wrap
+	.breadcrumb-wrap&attributes(attributes)
 		nav(aria-label="breadcrumb" ).container.swiper
 			ol.breadcrumb.swiper-wrapper(itemscope itemtype="http://schema.org/BreadcrumbList")
 				-for (var i = 0; i < items.length; i++)

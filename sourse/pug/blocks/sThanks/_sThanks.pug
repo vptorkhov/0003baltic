@@ -1,0 +1,20 @@
+mixin sThanks(data)
+	// start sThanks
+	+b.SECTION.sThanks.section#sThanks&attributes(attributes)
+		.container
+			+b.section-title
+				h1 Оформление заказа
+			+e.wrap
+				+e.title Спасибо! Ваш заказ оформлен!
+				+e.info
+					+e.info-title Детали заказа
+					+e.info-caption
+						p Ваш заказ 
+							span №ХХХХХ не был оплачен
+						p Способ оплаты: 
+							span Банковской картой
+						p Способ доставки: 
+							span Самовывоз
+						p Сумма: 
+							span 393 400 руб. 
+	// end sThanks

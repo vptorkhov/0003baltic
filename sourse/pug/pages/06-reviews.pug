@@ -1,0 +1,33 @@
+extends layout/main.pug
+
+
+include ../blocks/sOffers/_sOffers.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sReviewsSlider/_sReviewsSlider.pug 
+include ../blocks/sReviewsNoteSlider/_sReviewsNoteSlider.pug 
+include ../blocks/sReviewsClients/_sReviewsClients.pug 
+
+block variables
+	- let  mainPage= 'breadcrumb-no-margin bg-grey' 
+	- let  bg= '6.jpg'
+
+block title
+	- let  title= 'Отзывы'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		+topLine('cart')
+		+top-nav()
+	+breadcrumb('Главная','О компании',title)
+	//- +sContact()
+	+sReviewsSlider()
+	+sReviewsNoteSlider()
+	+sReviewsClients()
+	+sForm(`Нужна помощь специалиста?`)
+	+sContact()
+	+footer()
+      
+
+
+

@@ -1,0 +1,58 @@
+mixin sContactPage(data)
+	// start sContactPage
+	+b.SECTION.sContactPage.section#sContactPage&attributes(attributes)
+		.container
+			+b.section-title
+				h1 Контакты
+			.tabs
+				.tabs__caption
+					.tabs__btn.active Контакты
+					.tabs__btn Реквизиты
+				.tabs__wrap
+					.tabs__content.active
+						+e.contacts-wrap
+							+e.info-block
+								+e.title--address Адрес офиса
+								+e.caption Санкт-Петербург, Маршала Блюхера, 12, корп. 7, офис 612-2
+								+e.title--address Адрес офиса
+								+e.caption Санкт-Петербург, Уманский&nbsp;переулок,&nbsp;84&nbsp;лит&nbsp;3
+								+e.title--work Режим работы
+								+e.caption Пн-Вс с 9:30 до 18:00
+								+e.title--call Телефоны
+								+e.caption--tel
+									p +7 (812) 565-02-20
+									a(href="#")
+										img(src="img/svg/whatsapp.svg", alt="")
+									a(href="#")
+										img(src="img/svg/telegram.svg", alt="")
+								+e.title--mail Email
+								+e.caption 
+									a(href="mailto:info@baltkz.ru") info@baltkz.ru
+								script(src='https://yastatic.net/share2/share.js')
+								.ya-share2(data-curtain='' data-shape='round' data-services='telegram,twitter,viber,whatsapp')
+							+e.map-block
+								a(href='https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps' style='color:#eee;font-size:12px;position:absolute;top:0px;') Санкт‑Петербург
+								a(href='https://yandex.ru/maps/2/saint-petersburg/house/prospekt_marshala_blyukhera_12k7/Z0kYdQBoQUQEQFtjfXV5cHxkZw==/?ll=30.378356%2C59.981192&utm_medium=mapframe&utm_source=maps&z=16.93' style='color:#eee;font-size:12px;position:absolute;top:14px;') Проспект Маршала Блюхера, 12к7 — Яндекс.Карты
+								iframe(src='https://yandex.ru/map-widget/v1/-/CCUqzRviHC' frameborder='1' allowfullscreen='true' style='position:relative;')
+					.tabs__content
+						+e.requisites
+							+e.requisites-text
+								h3 Наши реквизиты
+								+e.req-title ООО «Балтийский Камнеобрабатывающий Завод»
+								+e.req-block
+									mixin string(t,c)
+										+e.string
+											+e.string-title!=t
+											+e.string-caption!=c
+									+string(`ИНН`,`7810606988`)
+									+string(`КПП`,`780401001`)
+									+string(`ОГРН`,`1167837327856`)
+									+string(`Расчетный счет`,`40702810455080001346`)
+									+string(`Название банка`,`Северо-Западный Банк ПАО СБЕРБАНК`)
+									+string(`БИК`,`044030653`)
+									+string(`Корпоративный счет`,`30101810500000000653`)
+									+string(`Генеральный директор`,`Нилов Артём Вячеславович `)
+							+e.requisites-photo
+								+pic('requisites-1.png','',0)
+								+pic('requisites-2.png','',0)
+	// end sContactPage

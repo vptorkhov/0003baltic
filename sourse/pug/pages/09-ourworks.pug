@@ -1,0 +1,29 @@
+extends layout/main.pug
+
+
+include ../blocks/sOffers/_sOffers.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sOurWorks/_sOurWorks.pug 
+
+block variables
+	- let  mainPage= null 
+	- let  bg= '9.jpg'
+
+block title
+	- let  title= 'Наши работы'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		+topLine('cart')
+		+top-nav()
+	+breadcrumb('Главная',title)
+	//- +sContact()
+	+sOurWorks()
+	+sForm(`Нужна помощь специалиста?`)
+	+sContact()
+	+footer()
+      
+
+
+

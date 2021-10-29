@@ -1,0 +1,127 @@
+// start .sOurMission
+.sOurMission {
+	--sTPB: 0;
+	@include media-breakpoint-up(lg) {
+		--sPT: 0;
+		--sPB: 0;
+	}
+	.row {
+		--bs-gutter-y: var(--bs-gutter-x);
+		@include media-breakpoint-up(xl) {
+			--bs-gutter-x: #{rem(30)};
+		}
+	}
+	.section-title {
+		height: 100%;
+		@include media-breakpoint-up(lg) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			max-width: 520px;
+		}
+		h2 {
+			letter-spacing: 0.9px;
+			line-height: calc(48 / 36);
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(50);
+			}
+		}
+		p {
+			color: #6a6a6a;
+			font-size: rem(16);
+			font-weight: 200;
+			line-height: calc(28 / 18);
+			letter-spacing: 0.45px;
+			@include media-breakpoint-up(xl) {
+				font-size: $large;
+
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__title {
+		// Style for "Наши принц"
+		color: $primary;
+		font-size: $large;
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 0.45px;
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(xl) {
+			margin-bottom: rem(30);
+		}
+	}
+	&__principles {
+		border: rem(10) solid $primary;
+		height: 100%;
+		padding: rem(25) rem(20);
+		margin-left: rem(-10);
+		margin-right: rem(-10);
+		@include media-breakpoint-up(sm) {
+			padding: rem(30) rem(25);
+		}
+		@include media-breakpoint-up(lg) {
+			height: calc(100% + rem(20));
+			margin-left: 0;
+			margin-right: 0;
+			margin-bottom: rem(-10);
+			margin-top: rem(-10);
+		}
+		@include media-breakpoint-up(xl) {
+			padding: rem(40) rem(30);
+		}
+		ul {
+			list-style: none;
+			margin-bottom: 0;
+			li {
+				position: relative;
+				padding-left: rem(38);
+				color: $black;
+				font-size: rem(16);
+				font-weight: 500;
+				line-height: calc(28 / 18);
+				letter-spacing: 0.45px;
+				margin-bottom: rem(20);
+				@include media-breakpoint-up(xl) {
+					font-size: $large;
+					padding-left: rem(42);
+					margin-bottom: rem(30);
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+				&::before {
+					content: "";
+					position: absolute;
+					width: rem(25);
+					height: rem(4);
+					left: 0;
+					top: rem(12);
+					background-color: $primary;
+					@include media-breakpoint-up(xl) {
+						width: rem(29);
+						height: rem(4);
+					}
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sOurMission
