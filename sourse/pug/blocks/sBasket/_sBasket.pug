@@ -1,0 +1,130 @@
+mixin sBasket(step, w="33")
+	// start sBasket
+	+b.SECTION.sBasket.section#sBasket&attributes(attributes)
+		.container
+			+b.section-title 
+				h1 Корзина
+			+e.row.row
+				.col-xl.col-lg-8
+					+e.body
+						+e.panel-head Ваш заказ
+						table
+							thead
+								tr
+									th Товар
+									th Цена
+							tbody
+								- for (var x = 0; x < 3; x++)
+									tr
+										td
+											.row
+												.col-auto
+													+e.img-wrap(href="#")
+														+pic("basket.png",'',0)
+												.col
+													+e.title
+														a(href="#") Облицовочная плита Полировка 300x600x20 Южно-Султаевский
+													+addblock()
+
+										td
+											+e.price 2 450 руб.
+											+e.remove Удалить
+												+icon("close")
+
+
+						+e.panel-foot
+							+form-wrap
+								.row
+									.col-sm-auto
+										+e.title Заказать в 1 клик!
+										+e.text Введите свой номер телефона и оформите заказ прямо сейчас
+									.col-sm-auto
+										+input("Телефон",'tel')
+									.col-sm-auto
+										+e.BUTTON.btn-circle(type="submit")
+											+icon('arrow-right')
+					h2 Оформление заказа 
+					+b.order-block
+						+e.head
+							if step=="2"
+								+e.link-head(href="#").done 
+									img(src="img/svg/check-r.svg", alt="")
+									| Доставка 
+								+e.link-head(href="#").active 2. Получатель
+								+e.link-head(href="#") 3. Оплата 
+							else if step=="3"
+								+e.link-head(href="#").done 
+									img(src="img/svg/check-r.svg", alt="")
+									| Доставка 
+								+e.link-head(href="#").done 
+									img(src="img/svg/check-r.svg", alt="")
+									| Получатель
+								+e.link-head(href="#").done
+									img(src="img/svg/check-r.svg", alt="")
+									| Оплата 
+							else
+								+e.link-head(href="#").active 1. Доставка 
+								+e.link-head(href="#") 2. Получатель
+								+e.link-head(href="#") 3. Оплата 
+						+e.progress(style=`--w:${w}%`)
+						+e.body
+							+e.step
+								if step=="2"
+									.row
+										.col 
+											+input("ФИО получателя")
+											+input("Email",'email').is-invalid
+											+input("Телефон",'tel')
+											+input("Комментарий к заказу",'textarea')
+										.col-sm-auto.align-self-end
+											+b.order-btn-next.disabled
+												| Далее
+												+e.btn-circle 
+													+icon('arrow-right')
+								else if step=="3"
+									+b.LABEL.radio-shipping.form-check 
+										input.form-check-input(type="radio" name="shipp").checked
+										+e.SPAN.title.form-check-label Безналичный (Юр. лицо, ИП)
+										
+									+b.LABEL.radio-shipping.form-check 
+										input.form-check-input(type="radio" name="shipp")
+										+e.SPAN.title.form-check-label 
+											span.row
+												.col-auto Банковской картой
+												.col 
+													img(src="img/@2x/pay-1.png", alt="")
+													img(src="img/@2x/pay-2.png", alt="")
+													img(src="img/@2x/pay-3.png", alt="")
+													img(src="img/@2x/pay-4.png", alt="")
+													img(src="img/@2x/pay-5.png", alt="")
+													img(src="img/@2x/pay-6.png", alt="") 
+									+b.LABEL.radio-shipping.form-check 
+										input.form-check-input(type="radio" name="shipp")
+										+e.SPAN.title.form-check-label Наличными
+
+								else
+									.row
+										.col
+											+b.LABEL.shipping-block
+												input(type="checkbox")
+												+e.SPAN.title Доставка
+												+e.SPAN.title Самовывоз
+											.h5.text-secondary Введите адрес
+											+input("Адрес").is-valid
+											+input("Адрес").is-invalid
+											+input("Выберите",'select')
+											+input("ИНН (для юр.лиц)")
+										.col-sm-auto.align-self-end
+											+b.order-btn-next.disabled
+												| Далее
+												+e.btn-circle 
+													+icon('arrow-right')
+					if step=="3"
+						p.small.text-secondary Предложение не является публичной офертой. Цены на сайте и в розничной сети могут отличаться. Информация на сайте о товаре носит рекламный характер и расценивается как приглашение делать оферты на основании п.1 ст. 437 Гражданского кодекса РФ. Нажимая кнопку «Оформить заказ», Вы принимаете пользовательское соглашение
+				.col-xl-auto.col-lg-4
+					+b.sidebar-basket
+						+e.total-price  Итого с НДС:
+							.strong 369 950 руб	
+						+e.btn(href="#") Оформить заказ
+						+e.text Указаны оптовые цены от&nbsp;100 м2. Окончательную стоимость уточняйте у&nbsp;менеджера.
+	// end sBasket

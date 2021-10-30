@@ -662,6 +662,7 @@ function eventHandler() {
 	const swiperbreadcrumb = new Swiper('.breadcrumb-wrap .swiper', {
 		// slidesPerView: 5,
 		// ...defaultSl,
+		watchOverflow: true,
 		slidesPerView: 'auto',
 		freeMode: true,
 		loop: false,

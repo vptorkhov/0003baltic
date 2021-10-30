@@ -1,0 +1,27 @@
+extends layout/main.pug
+
+
+include ../blocks/sOffers/_sOffers.pug
+include ../blocks/sOneProduct/_sOneProduct.pug
+include ../blocks/sProducts/_sProducts.pug 
+include ../blocks/sBasket/_sBasket.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= '3.png'
+
+block title
+	- let  title= 'Корзина'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		+topLine('cart')
+		+top-nav()
+	+breadcrumb('Главная',title)
+	+sBasket
+	+footer()
+      
+
+
+
