@@ -11,7 +11,7 @@
 		}
 	}
 	&__row-main {
-		--bs-gutter-y: #{rem(45)};
+		--bs-gutter-y: #{rem(55)};
 	}
 	&__caption {
 		color: #cbcbcb;
@@ -48,17 +48,45 @@
 	}
 	&__slider {
 		padding-bottom: 50px;
+		padding-top: calc(45px / 2);
+		margin-top: calc(-1 * 45px / 2);
 		@include media-breakpoint-up(xl) {
 			max-width: rem(490);
 			margin-right: 0;
 		}
 		.swiper-slide {
 			a {
+				position: relative;
 				max-height: 318px;
 				max-width: 225px;
 				@include media-breakpoint-up(lg) {
 					max-height: 480px;
 					max-width: 340px;
+				}
+				span {
+					position: absolute;
+					left: rem(5);
+					top: 0;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					z-index: 3;
+					font-size: rem(16);
+					color: $body-bg;
+					font-weight: 500;
+					line-height: 1;
+					text-transform: uppercase;
+					letter-spacing: 0.45px;
+					background-color: $primary;
+					width: rem(250);
+					height: rem(37);
+					transform: translateY(-50%);
+					@include media-breakpoint-up(sm) {
+						font-size: $large;
+						width: rem(300);
+						height: rem(45);
+						left: rem(10);
+					}
 				}
 			}
 			picture {
@@ -96,7 +124,7 @@
 	}
 	.swiper-button-disabled {
 		background-color: #b11b1b !important;
-    border-color: #b11b1b !important;
+		border-color: #b11b1b !important;
 		opacity: 0.2;
 	}
 	.swiper-pagination {
