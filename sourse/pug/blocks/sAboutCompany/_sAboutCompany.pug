@@ -1,0 +1,29 @@
+mixin sAboutCompany(data)
+	// start sAboutCompany
+	+b.SECTION.sAboutCompany.bg-wrap.section#sAboutCompany&attributes(attributes)
+		+pic('sDelivery-bg.jpg','bg',0).picture-bg
+		.container
+			h1 О компании
+			+e.row-main.row
+				.col-lg-6
+					+e.caption Наша компания располагает собственным современным цехом полного цикла с новейшим импортным оборудованием от ведущих производителей. Наши специалисты стремятся к усовершенствованию производственного процесса и стремятся получать знания в области новинок и тенденций камнеобработки, в том числе оборудования и методов пиления.
+					+e.row.row
+						mixin item(t,c)
+							.col-sm-6
+								+e.item-title!=t
+								+e.item-caption!=c
+						+item(`10+`,`лет на рынке обработки и производства материалов из гранита`)
+						+item(`600`,`600м2 производственных помещений`)
+						+item(`180`,`производимых изделий`)
+						+item(`3`,`3 склада по России`)
+				.col-lg-6
+					+e.slider--js.swiper
+						.swiper-wrapper
+							- for (var x = 0; x < 3; x++)
+								.swiper-slide
+									a(href="img/@2x/sAboutCompany-1.jpg" data-fancybox="sAboutCompany"  )
+										+pic('sAboutCompany-1.jpg','bg',0)
+						.swiper-button-prev
+						.swiper-button-next
+						.swiper-pagination
+	// end sAboutCompany

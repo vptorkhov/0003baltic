@@ -548,6 +548,23 @@ function eventHandler() {
 			},
 		},
 	});
+	var sAboutCompanySlider = new Swiper(".sAboutCompany__slider--js", {
+		slidesPerView: 'auto',
+		spaceBetween: 24,
+		navigation: {
+			nextEl: ".sAboutCompany .swiper-button-next",
+			prevEl: ".sAboutCompany .swiper-button-prev",
+		},
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		// breakpoints: {
+		// 	576: {
+		// 		slidesPerView: 1
+		// 	},
+		// },
+	});
 	var reviewsNoteSlider = new Swiper(".sReviewsNoteSlider__slider--js", {
 		slidesPerView: 'auto',
 		navigation: {

@@ -1,16 +1,20 @@
 // start .sCertificates
 .sCertificates {
-	// --sPT: ;
-	// --sPB: ;
-	--sTPB: #{rem(50)};
 	background-color: $white;
+	@include media-breakpoint-up(md) {
+		--sTPB: #{rem(45)};
+		--sPT: #{rem(70)};
+		--sPB: #{rem(70)};
+	}
 	.row {
+		--bs-gutter-y: calc(var(--bs-gutter-x) * 1.5);
 		@include media-breakpoint-up(xl) {
 			--bs-gutter-x: #{rem(30)};
 		}
 	}
 	.section-title {
 		h2 {
+			letter-spacing: 0.9px;
 			margin-bottom: 0;
 		}
 	}
@@ -26,6 +30,7 @@
 				line-height: calc(28 / 18);
 				color: #6a6a6a;
 				margin-bottom: calc(var(--bs-gutter-x) / 3);
+				letter-spacing: 0.45px;
 				// @include media-breakpoint-up(md) {
 				// margin-bottom: calc(var(--bs-gutter-x) / 2);
 				// }
@@ -34,8 +39,8 @@
 				}
 				@include media-breakpoint-up(xl) {
 					font-size: rem(18);
-					padding-left: rem(32);
-					margin-bottom: calc(var(--bs-gutter-x) * 0.88);
+					padding-left: rem(40);
+					margin-bottom: calc(var(--bs-gutter-x) * 0.89);
 				}
 
 				&::before {
@@ -49,6 +54,7 @@
 					background-size: contain;
 					background-repeat: no-repeat;
 					@include media-breakpoint-up(lg) {
+						left: rem(7);
 						width: rem(22);
 						height: rem(16);
 					}
@@ -68,16 +74,26 @@
 		line-height: calc(28 / 18);
 		font-style: normal;
 		letter-spacing: 0.45px;
-		margin-bottom: calc(var(--bs-gutter-x) * 1);
+		margin-bottom: calc(var(--bs-gutter-x) * 0.9);
 	}
 
 	&__slider-wrapper {
 		position: relative;
 	}
 	&__slider {
-		max-width: 360px;
+		max-width: rem(360);
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	&__slide {
+		height: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		picture {
+			max-height: rem(510);
+		}
 	}
 
 	.swiper-button-hand {
@@ -144,10 +160,17 @@
 		.swiper-pagination-bullet {
 			width: rem(14);
 			height: rem(14);
+			background-color: #ff0000;
+			@include mt;
+			opacity: 0.3;
 			@include media-breakpoint-up(md) {
 				--swiper-pagination-bullet-horizontal-gap: #{rem(5)};
 				width: rem(19);
 				height: rem(19);
+			}
+			&-active {
+				background-color: $primary;
+				opacity: 1;
 			}
 		}
 	}

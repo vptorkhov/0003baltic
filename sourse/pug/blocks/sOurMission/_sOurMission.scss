@@ -24,7 +24,7 @@
 			line-height: calc(48 / 36);
 			margin-bottom: rem(20);
 			@include media-breakpoint-up(lg) {
-				margin-bottom: rem(50);
+				margin-bottom: rem(40);
 			}
 		}
 		p {
@@ -35,7 +35,6 @@
 			letter-spacing: 0.45px;
 			@include media-breakpoint-up(xl) {
 				font-size: $large;
-
 			}
 			&:last-child {
 				margin-bottom: 0;
@@ -43,16 +42,12 @@
 		}
 	}
 	&__title {
-		// Style for "Наши принц"
 		color: $primary;
 		font-size: $large;
 		font-weight: 500;
 		text-transform: uppercase;
 		letter-spacing: 0.45px;
 		margin-bottom: rem(20);
-		@include media-breakpoint-up(xl) {
-			margin-bottom: rem(30);
-		}
 	}
 	&__principles {
 		border: rem(10) solid $primary;
@@ -88,7 +83,7 @@
 				@include media-breakpoint-up(xl) {
 					font-size: $large;
 					padding-left: rem(42);
-					margin-bottom: rem(30);
+					margin-bottom: rem(27);
 				}
 				&:last-child {
 					margin-bottom: 0;

@@ -15,20 +15,19 @@ mixin sCertificates(data)
 							li контроль качества упаковки;
 							li контроль выпускаемой продукции с&nbsp;производственного цеха на&nbsp;склад;
 							li контроль приема на&nbsp;объекте, если требуется.
-
 				.col-lg-6
 					+e.slider-wrapper
 						+e.slider--js.swiper
 							.swiper-wrapper
 								+e.slide.swiper-slide
-									+e.img-wrap
+									a(href="img/@2x/sCertificates-1.png" data-fancybox="sCertificates"  )
 										+pic(`sCertificates-1.png`,'bg',0)
 								+e.slide.swiper-slide
-									+e.img-wrap
+									a(href="img/@2x/sCertificates-1.png" data-fancybox="sCertificatessingle"  )
 										+pic(`sCertificates-1.png`,'bg',0)
 								+e.slide.swiper-slide
-									+e.img-wrap
-										+pic(`sCertificates-1.png`,'bg',0)
+									a(href="img/@2x/reviews-slider.png" data-fancybox="sCertificates"  )
+										+pic(`reviews-slider.png`,'bg',0)
 							.swiper-pagination
 						+arrow
 	// end sCertificates

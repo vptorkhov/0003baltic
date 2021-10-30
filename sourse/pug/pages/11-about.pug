@@ -3,6 +3,7 @@ extends layout/main.pug
 
 //- include ../blocks/sArticles/_sArticles.pug
 //- include ../blocks/sOffers/_sOffers.pug
+include ../blocks/sAboutCompany/_sAboutCompany.pug
 include ../blocks/sDelivery/_sDelivery.pug
 include ../blocks/sSignificantObjects/_sSignificantObjects.pug 
 include ../blocks/sCertificates/_sCertificates.pug 
@@ -22,7 +23,8 @@ block pagecontent
 		+topLine('cart')
 		+top-nav()
 	+breadcrumb('Главная', title).mb-0
-	+sDelivery(``, `Доставка`)
+	+sAboutCompany()
+	+sDelivery-inner(`Доставка`)
 	+sCertificates()
 	+sOurMission()
 	+sSignificantObjects()
