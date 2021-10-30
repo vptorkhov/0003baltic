@@ -484,7 +484,7 @@ function eventHandler() {
 	});
 	var projectsSlider = new Swiper(".sProject__slider--js  ", {
 		slidesPerView: 1,
-		loop: true,
+		loop: false,
 		pagination: {
 			el: ".swiper-pagination",
 			clickable: true,
@@ -492,6 +492,23 @@ function eventHandler() {
 		navigation: {
 			nextEl: ".sProject__page-link--next",
 			prevEl: ".sProject__page-link--prev",
+		},
+		on: {
+			init(swiper) {
+
+				let next = $(".sProject__slider--js .swiper-slide-next").data("title");
+				let prev = $(".sProject__slider--js .swiper-slide-prev").data("title");
+
+				$(".sProject__page-link--next .page-link-caption").html(next)
+				$(".sProject__page-link--prev .page-link-caption").html(prev)
+			},
+			slideChangeTransitionEnd() {
+				let next = $(".sProject__slider--js .swiper-slide-next").data("title");
+				let prev = $(".sProject__slider--js .swiper-slide-prev").data("title"); 
+				
+					$(".sProject__page-link--next .page-link-caption").html(next)
+					$(".sProject__page-link--prev .page-link-caption").html(prev) 
+			},
 		},
 	});
 	var sDeliverySlider = new Swiper(".sDeliveryMethods__slider--js  ", {
@@ -709,6 +726,8 @@ function eventHandler() {
 			stickTo: '.sOneProduct__wrap'
 		});
 	}
+
+
 
 };
 if (document.readyState !== 'loading') {

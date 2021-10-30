@@ -105,10 +105,11 @@
 		}
 	}
 	&__page-links {
+		display: flex;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		justify-content: space-around;
 		@include media-breakpoint-up(sm) {
-			display: flex;
-			padding-top: 30px;
-			padding-bottom: 30px;
 			justify-content: space-between;
 		}
 		.swiper-button-disabled {
