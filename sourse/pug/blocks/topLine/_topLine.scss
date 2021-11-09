@@ -137,6 +137,9 @@
 			}
 			&:hover {
 				color: #8e1616;
+				&::before {
+					opacity: 0;
+				}
 			}
 			&::before {
 				content: "";
@@ -298,11 +301,11 @@
 		}
 		display: none;
 		@include media-breakpoint-down(lg) {
-		position: absolute;
-		top: 100%;
-		left: 0;
-		top: 100%;
-		width: 100%; 
+			position: absolute;
+			top: 100%;
+			left: 0;
+			top: 100%;
+			width: 100%;
 		}
 		input {
 			height: rem(62);
@@ -350,6 +353,8 @@
 		&-number {
 			font-size: rem(13);
 			font-weight: 500;
+			display: block;
+			color: $body-color;
 			@include media-breakpoint-up(md) {
 				font-size: $large;
 			}
@@ -362,8 +367,11 @@
 			@include media-breakpoint-down(lg) {
 				display: none;
 			}
+			&:hover {
+				border-color: transparent;
+			}
 			&-mob {
-				@extend  .btn, .btn-primary;
+				@extend .btn, .btn-primary;
 				border-radius: 0;
 				font-size: $small;
 				color: #f7f7f7 !important;

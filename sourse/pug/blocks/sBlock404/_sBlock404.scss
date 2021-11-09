@@ -73,10 +73,11 @@
 	}
 	&__tel {
 		font-size: $h3-font-size;
-		color: $white;
+		color: $white !important;
 		font-weight: 900;
 		margin-top: 24px;
 		margin-bottom: 38px;
+		display: inline-block;
 	}
 	&__tel-btn {
 		@extend .btn, .btn-primary;
