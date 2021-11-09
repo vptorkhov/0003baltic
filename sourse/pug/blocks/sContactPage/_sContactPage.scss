@@ -75,6 +75,43 @@
 		font-weight: 500;
 		position: relative;
 		margin-bottom: 8px;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			transform: translateY(-65%);
+			left: -30px;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		&--address {
+			&::before {
+				background-image: url("../img/svg/contact-loc.svg");
+				width: 14px;
+				height: 19px;
+			}
+		}
+		&--work {
+			&::before {
+				background-image: url("../img/svg/contact-time.svg");
+				width: 19px;
+				height: 19px;
+			}
+		}
+		&--call {
+			&::before {
+				background-image: url("../img/svg/contact-call.svg");
+				width: 16px;
+				height: 16px;
+			}
+		}
+		&--mail {
+			&::before {
+				background-image: url("../img/svg/contact-mail.svg");
+				width: 17px;
+				height: 12px;
+			}
+		}
 	}
 	&__caption {
 		font-weight: 200;
@@ -208,25 +245,24 @@
 			flex-direction: column;
 			justify-content: space-evenly;
 		}
-		@include media-breakpoint-up(xl){
+		@include media-breakpoint-up(xl) {
 			justify-content: space-between;
 		}
 		display: flex;
 		justify-content: center;
-		@include media-breakpoint-down(sm){
+		@include media-breakpoint-down(sm) {
 			flex-direction: column;
 			align-items: center;
 		}
 		picture {
-			@include media-breakpoint-down(lg){
+			@include media-breakpoint-down(lg) {
 				margin-left: 5px;
 				margin-right: 5px;
 			}
-			@include media-breakpoint-down(sm){
+			@include media-breakpoint-down(sm) {
 				margin-left: 0;
 				margin-right: 0;
 				margin-bottom: 10px;
-
 			}
 		}
 	}
