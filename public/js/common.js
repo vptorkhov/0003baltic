@@ -485,9 +485,9 @@ function eventHandler() {
 	var projectsSlider = new Swiper(".sProject__slider--js  ", {
 		slidesPerView: 1,
 		loop: false,
-		pagination: {
-			el: ".swiper-pagination",
-			clickable: true,
+		allowTouchMove: false,
+		autoplay: {
+			delay: 2000,
 		},
 		navigation: {
 			nextEl: ".sProject__page-link--next",
@@ -501,6 +501,13 @@ function eventHandler() {
 
 				$(".sProject__page-link--next .page-link-caption").html(next)
 				$(".sProject__page-link--prev .page-link-caption").html(prev)
+				this.el.addEventListener('mouseenter', () => {
+					this.autoplay.stop();
+				});
+	
+				this.el.addEventListener('mouseleave', () => {
+					this.autoplay.start();
+				});
 			},
 			slideChangeTransitionEnd() {
 				let next = $(".sProject__slider--js .swiper-slide-next").data("title");
@@ -509,6 +516,15 @@ function eventHandler() {
 					$(".sProject__page-link--next .page-link-caption").html(next)
 					$(".sProject__page-link--prev .page-link-caption").html(prev) 
 			},
+		},
+	});
+	var projectPicSlider = new Swiper(".sProject__slider-pic--js  ", {
+		slidesPerView: '1',
+		loop: true,
+		spaceBetween: 0,
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
 		},
 	});
 	var sDeliverySlider = new Swiper(".sDeliveryMethods__slider--js  ", {

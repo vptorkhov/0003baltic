@@ -8,14 +8,26 @@ mixin sProject(data)
 						+e.slide.swiper-slide(data-title= t)
 							h1 Министерство Иностранных Дел РФ
 							+e.wrap
-								+pic('sProject.png','',0)
+								+e.slider-pic--js.swiper
+									.swiper-wrapper
+										.swiper-slide
+											+pic('sProject.png','',0)
+										.swiper-slide
+											+pic('sProject.png','',0)
+										.swiper-slide
+											+pic('sProject.png','',0)
+										.swiper-slide
+											+pic('sProject.png','',0)
+										.swiper-slide
+											+pic('sProject.png','',0)
+									.swiper-pagination
 								+e.text-block
 									p.text-js= t
 									.title Материал:
 									p гранитная брусчатка и гранитный бордюр.
 									.title Месторождение:
 									p гранит Покостовское.
-									.swiper-pagination
+									
 					+slide()
 					+slide('Воскресенский Ново-Иерусалимский монастырь')
 					+slide('Благоустройство ЖК Династия ')
@@ -32,3 +44,12 @@ mixin sProject(data)
 						.page-link-caption.d-none.d-md-block
 				
 	// end sProject
+	//- +e.wrap
+	//- 							+pic('sProject.png','',0)
+	//- 							+e.text-block
+	//- 								p.text-js= t
+	//- 								.title Материал:
+	//- 								p гранитная брусчатка и гранитный бордюр.
+	//- 								.title Месторождение:
+	//- 								p гранит Покостовское.
+	//- 								.swiper-pagination

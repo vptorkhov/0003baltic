@@ -20,16 +20,26 @@
 		}
 		flex-direction: column;
 		picture {
-			@include media-breakpoint-up(md) {
-				width: 57%;
-			}
-			width: 100%;
+			// @include media-breakpoint-up(md) {
+			// 	width: 57%;
+			// }
+			// width: 100%;
 			img {
 				max-height: 100%;
 				object-fit: cover;
 				width: 100%;
 				height: 100%;
 			}
+		}
+	}
+	&__slider-pic {
+		@include media-breakpoint-up(md) {
+			width: 57%;
+		}
+		width: 100%;
+		margin: 0;
+		picture {
+			height: 100%;
 		}
 	}
 	&__text-block {
@@ -176,10 +186,22 @@
 		height: 19px;
 	}
 	.swiper-pagination {
+		@include media-breakpoint-up(md) {
+			padding: 15px;
+		}
+		border-radius: 5px 5px 0 0;
+		padding: 10px;
+		@include media-breakpoint-down(md){
+			display: flex;
+			justify-content: center;
+		}
+		background-color: $white;
 		position: absolute;
 		text-align: left;
-		bottom: 15px;
-		left: 40px;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: auto;
 	}
 	@include media-breakpoint-up(xl) {
 	}
