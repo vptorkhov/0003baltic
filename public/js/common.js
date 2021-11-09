@@ -484,7 +484,7 @@ function eventHandler() {
 	});
 	var projectsSlider = new Swiper(".sProject__slider--js  ", {
 		slidesPerView: 1,
-		loop: true,
+		loop: false,
 		pagination: {
 			el: ".swiper-pagination",
 			clickable: true,
@@ -493,11 +493,28 @@ function eventHandler() {
 			nextEl: ".sProject__page-link--next",
 			prevEl: ".sProject__page-link--prev",
 		},
+		on: {
+			init(swiper) {
+
+				let next = $(".sProject__slider--js .swiper-slide-next").data("title");
+				let prev = $(".sProject__slider--js .swiper-slide-prev").data("title");
+
+				$(".sProject__page-link--next .page-link-caption").html(next)
+				$(".sProject__page-link--prev .page-link-caption").html(prev)
+			},
+			slideChangeTransitionEnd() {
+				let next = $(".sProject__slider--js .swiper-slide-next").data("title");
+				let prev = $(".sProject__slider--js .swiper-slide-prev").data("title"); 
+				
+					$(".sProject__page-link--next .page-link-caption").html(next)
+					$(".sProject__page-link--prev .page-link-caption").html(prev) 
+			},
+		},
 	});
 	var sDeliverySlider = new Swiper(".sDeliveryMethods__slider--js  ", {
 		slidesPerView: 'auto',
 		// loop: true,
-		spaceBetween: 1,
+		spaceBetween: 24,
 		pagination: {
 			el: ".swiper-pagination",
 			clickable: true,
@@ -505,6 +522,19 @@ function eventHandler() {
 		navigation: {
 			nextEl: ".sDeliveryMethods .swiper-button-next",
 			prevEl: ".sDeliveryMethods .swiper-button-prev",
+		},
+	});
+	var sCertificatesSlider = new Swiper(".sCertificates__slider--js  ", {
+		slidesPerView: 'auto',
+		// loop: true,
+		spaceBetween: 24,
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		navigation: {
+			nextEl: ".sCertificates .swiper-button-next",
+			prevEl: ".sCertificates .swiper-button-prev",
 		},
 	});
 	var reviews = new Swiper(".sReviews__slider--js", {
@@ -534,6 +564,23 @@ function eventHandler() {
 				slidesPerView: 1
 			},
 		},
+	});
+	var sAboutCompanySlider = new Swiper(".sAboutCompany__slider--js", {
+		slidesPerView: 'auto',
+		spaceBetween: 24,
+		navigation: {
+			nextEl: ".sAboutCompany .swiper-button-next",
+			prevEl: ".sAboutCompany .swiper-button-prev",
+		},
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		// breakpoints: {
+		// 	576: {
+		// 		slidesPerView: 1
+		// 	},
+		// },
 	});
 	var reviewsNoteSlider = new Swiper(".sReviewsNoteSlider__slider--js", {
 		slidesPerView: 'auto',
@@ -567,6 +614,29 @@ function eventHandler() {
 			prevEl: ".swiper-button-prev",
 		},
 	});
+	var sSignificantObjects = new Swiper(".sSignificantObjects__slider--js", {
+		slidesPerView: 'auto',
+		spaceBetween: 24,
+		pagination: {
+			el: ".sSignificantObjects .swiper-pagination",
+			clickable: true,
+		},
+		breakpoints: {
+			768: {
+				spaceBetween: 35,
+				slidesPerView: 2
+			},
+			1200: {
+				spaceBetween: 50,
+				slidesPerView: 2
+			}
+		},
+		navigation: {
+			nextEl: ".sSignificantObjects .swiper-button-next",
+			prevEl: ".sSignificantObjects .swiper-button-prev",
+		},
+	});
+
 	var productionSlider = new Swiper(".sProduction__slider--js", {
 		slidesPerView: 'auto',
 		spaceBetween: 10,
@@ -609,6 +679,7 @@ function eventHandler() {
 	const swiperbreadcrumb = new Swiper('.breadcrumb-wrap .swiper', {
 		// slidesPerView: 5,
 		// ...defaultSl,
+		watchOverflow: true,
 		slidesPerView: 'auto',
 		freeMode: true,
 		loop: false,
@@ -655,6 +726,8 @@ function eventHandler() {
 			stickTo: '.sOneProduct__wrap'
 		});
 	}
+
+
 
 };
 if (document.readyState !== 'loading') {

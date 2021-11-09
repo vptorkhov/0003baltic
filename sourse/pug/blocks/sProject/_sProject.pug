@@ -4,31 +4,31 @@ mixin sProject(data)
 		.container
 			+e.slider--js.swiper
 				.swiper-wrapper
-					mixin slide()
-						+e.slide.swiper-slide
+					mixin slide(t='Реконструкция правого крыла служебного здания: 2017 г.')
+						+e.slide.swiper-slide(data-title= t)
 							h1 Министерство Иностранных Дел РФ
 							+e.wrap
 								+pic('sProject.png','',0)
 								+e.text-block
-									p Реконструкция правого крыла служебного здания: 2017 г.
+									p.text-js= t
 									.title Материал:
 									p гранитная брусчатка и гранитный бордюр.
 									.title Месторождение:
 									p гранит Покостовское.
 									.swiper-pagination
 					+slide()
-					+slide()
-					+slide()
-					+slide()
-					+slide()
+					+slide('Воскресенский Ново-Иерусалимский монастырь')
+					+slide('Благоустройство ЖК Династия ')
+					+slide('Благоустройство ЖК Династия 2')
+					+slide('Благоустройство ЖК Династия 3')
 				+e.page-links
 					+e.page-link--prev
 						.page-link-btn
 							+icon('project-slider-arrow')
-						.page-link-caption Воскресенский Ново-Иерусалимский монастырь
+						.page-link-caption.d-none.d-md-block
 					+e.page-link--next
 						.page-link-btn
 							+icon('project-slider-arrow')
-						.page-link-caption Благоустройство ЖК Династия 
+						.page-link-caption.d-none.d-md-block
 				
 	// end sProject

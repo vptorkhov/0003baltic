@@ -1,11 +1,11 @@
-mixin sDelivery(data)
+mixin sDelivery(h1)
 	// start sDelivery
 	+b.SECTION.sDelivery.section.bg-wrap#sDelivery&attributes(attributes)
 		+pic('sDelivery-bg.jpg','bg',0).picture-bg
 		//- +pic('bg-image.png','bg',0).picture-bg
 		.container
 			+b.section-title
-				h1 Доставка
+				h1!= h1
 			h3 Бесплатно доставим груз в любой город России
 			.row
 				.col-lg-7
@@ -21,3 +21,27 @@ mixin sDelivery(data)
 								p Если не нашли свой город рассчитаем сроки доставки специально для Вас.
 						+e.btn Рассчитать срок доставки
 	// end sDelivery
+
+mixin sDelivery-inner(h2)
+	// start sDelivery--inner
+	+b.SECTION.sDelivery--inner.section.bg-wrap#sDelivery&attributes(attributes)
+		+pic('sDelivery-bg.jpg','bg',0).picture-bg
+		//- +pic('bg-image.png','bg',0).picture-bg
+		.container
+			+b.section-title.d-none
+					h2!= h2
+			h3 Бесплатно доставим груз в любой город России
+			.row
+				.col-lg-7
+					+e.img-wrap
+						+pic('delivery-map.png','',0)
+				+e.col.col-lg-5
+					+e.info
+						.row
+							.col-auto
+								+icon('exclamation')
+							.col
+								p Мы несем ответственность за сохранность груза.
+								p Если не нашли свой город рассчитаем сроки доставки специально для Вас.
+						+e.btn Рассчитать срок доставки
+	// end sDelivery--inner

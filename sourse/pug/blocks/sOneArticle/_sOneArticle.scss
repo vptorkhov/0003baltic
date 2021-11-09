@@ -294,17 +294,17 @@
 	// 		height: 43px;
 	// 	}
 	// }
-	.ya-share2{
+	.ya-share2 {
 		background-color: $white;
 		padding-top: 17px;
 		padding-bottom: 17px;
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			padding-left: 30px;
 			padding-right: 30px;
 		}
 	}
-	.ya-share2__item{
-		@include media-breakpoint-up(lg){
+	.ya-share2__item {
+		@include media-breakpoint-up(lg) {
 			margin-right: 10px;
 		}
 	}
@@ -371,10 +371,19 @@
 			}
 		}
 	}
-	&__also{
+	&__also {
 		margin-top: 43px;
-		h2{
+		h2 {
 			margin-bottom: 26px;
+		}
+		.row {
+			--bs-gutter-y: calc(var(--bs-gutter-x) * 1.2);
+			@include media-breakpoint-up(md) {
+				--bs-gutter-y: var(--bs-gutter-x);
+			}
+			@include media-breakpoint-up(lg) {
+				--bs-gutter-x: #{rem(30)};
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {

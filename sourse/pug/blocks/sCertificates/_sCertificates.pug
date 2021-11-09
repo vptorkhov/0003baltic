@@ -1,0 +1,33 @@
+mixin sCertificates(data)
+	// start sCertificates
+	+b.SECTION.sCertificates.section#sCertificates&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Сертификаты и дипломы
+			.row
+				.col-lg-6
+					+e.text-content
+						+e.title Особое внимание мы уделяем качеству выпускаемой продукции, цикл которого проходит в несколько этапов:
+						ul 
+							li контроль отбора блоков и&nbsp;распределение по&nbsp;цехам;
+							li контроль продукции в&nbsp;момент ее&nbsp;распиловки,фрезеровки и&nbsp;обработки;
+							li контроль качества изготовленной продукции до&nbsp;ее&nbsp;упаковки;
+							li контроль качества упаковки;
+							li контроль выпускаемой продукции с&nbsp;производственного цеха на&nbsp;склад;
+							li контроль приема на&nbsp;объекте, если требуется.
+				.col-lg-6
+					+e.slider-wrapper
+						+e.slider--js.swiper
+							.swiper-wrapper
+								+e.slide.swiper-slide
+									a(href="img/@2x/sCertificates-1.png" data-fancybox="sCertificates"  )
+										+pic(`sCertificates-1.png`,'bg',0)
+								+e.slide.swiper-slide
+									a(href="img/@2x/sCertificates-1.png" data-fancybox="sCertificatessingle"  )
+										+pic(`sCertificates-1.png`,'bg',0)
+								+e.slide.swiper-slide
+									a(href="img/@2x/reviews-slider.png" data-fancybox="sCertificates"  )
+										+pic(`reviews-slider.png`,'bg',0)
+							.swiper-pagination
+						+arrow
+	// end sCertificates

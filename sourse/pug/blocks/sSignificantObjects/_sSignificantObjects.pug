@@ -1,0 +1,15 @@
+mixin sSignificantObjects(data)
+	// start sSignificantObjects
+	+b.SECTION.sSignificantObjects.section#sSignificantObjects&attributes(attributes)
+		.container
+			h2 Знаковые объекты из нашего камня
+			+e.slider--js.swiper
+				.swiper-wrapper
+					- for (var x = 0; x < 4; x++)
+						+e.slide.swiper-slide
+							+work-example(1,`ЖК Садовые кварталы`,`Плиты 1200*600*40, колотые, 2000 м2 для фасада.`)
+						+e.slide.swiper-slide
+							+work-example(2,`Дудергофский канал`,`Гранитные ступени.`)
+				+slider-arrows
+
+	// end sSignificantObjects
