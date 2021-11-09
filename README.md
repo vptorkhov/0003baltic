@@ -15,4 +15,5 @@
 1. <https://vptorkhov.github.io/0003baltic/public/16-basket-2.html>
 1. <https://vptorkhov.github.io/0003baltic/public/16-basket-3.html>
 1. <https://vptorkhov.github.io/0003baltic/public/17-404.html>
-1. <https://vptorkhov.github.io/0003baltic/public/19-error.html>
+2. 1. <https://vptorkhov.github.io/0003baltic/public/18-thanks.html>
+3. <https://vptorkhov.github.io/0003baltic/public/19-error.html>
