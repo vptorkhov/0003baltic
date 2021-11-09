@@ -539,6 +539,10 @@ function eventHandler() {
 	});
 	var reviews = new Swiper(".sReviews__slider--js", {
 		slidesPerView: 'auto',
+		loop: true,
+		autoplay: {
+			delay: 2000,
+		},
 		navigation: {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
@@ -547,6 +551,17 @@ function eventHandler() {
 			768: {
 				slidesPerView: 1
 			},
+		},
+		on: {
+			init() {
+				this.el.addEventListener('mouseenter', () => {
+					this.autoplay.stop();
+				});
+	
+				this.el.addEventListener('mouseleave', () => {
+					this.autoplay.start();
+				});
+			}
 		},
 	});
 	var reviewsSlider = new Swiper(".sReviewsSlider__slider--js", {

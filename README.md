@@ -9,11 +9,12 @@
 1. <https://vptorkhov.github.io/0003baltic/public/10-project.html>
 1. <https://vptorkhov.github.io/0003baltic/public/11-about.html>
 1. <https://vptorkhov.github.io/0003baltic/public/12-delivery.html>
+1. <https://vptorkhov.github.io/0003baltic/public/13-payment.html>
 1. <https://vptorkhov.github.io/0003baltic/public/14-offerpage.html>
 1. <https://vptorkhov.github.io/0003baltic/public/15-contacts.html>
 1. <https://vptorkhov.github.io/0003baltic/public/16-basket.html>
 1. <https://vptorkhov.github.io/0003baltic/public/16-basket-2.html>
 1. <https://vptorkhov.github.io/0003baltic/public/16-basket-3.html>
 1. <https://vptorkhov.github.io/0003baltic/public/17-404.html>
-2. 1. <https://vptorkhov.github.io/0003baltic/public/18-thanks.html>
-3. <https://vptorkhov.github.io/0003baltic/public/19-error.html>
+1. <https://vptorkhov.github.io/0003baltic/public/18-thanks.html>
+1. <https://vptorkhov.github.io/0003baltic/public/19-error.html>
