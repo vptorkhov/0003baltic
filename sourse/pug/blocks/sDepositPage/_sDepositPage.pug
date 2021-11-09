@@ -19,9 +19,9 @@ mixin sDepositPage(data)
 						a(href="#")
 							img(src="img/svg/telegram.svg", alt="")
 				mixin item(i,t,c)
-					+e.item
+					+e.item(href="#")
 						+pic(`sDeposits-${i}.png`,'',0)
-						+e.item-title(href="#")!=t
+						+e.item-title!=t
 						+e.item-caption!=c
 			.row
 				- for(var x=0;x<3;x++)

@@ -22,9 +22,9 @@ mixin sDeposits(data)
 				.swiper-wrapper
 					mixin item(i,t,c)
 						.swiper-slide
-							+e.item
+							+e.item(href="#")
 								+pic(`sDeposits-${i}.png`,'',0)
-								+e.item-title(href="#")!=t
+								+e.item-title!=t
 								+e.item-caption!=c
 					+item(1,`Ладожское`,`Ладожский гранит добывается в Ленинградской области в поселке Кузнечное, Приозерский район.`)
 					+item(2,`Кузреченское`,`Кузреченский – российский гранит из месторождений Мурманской области.`)

@@ -115,7 +115,7 @@
 		&:hover{
 			picture{
 				img{
-					@include mt;
+					transition-duration: 0.2s;
 					box-shadow: 0 0 $em-base rgba(0, 0, 0, 0.15);
 				}
 			}
