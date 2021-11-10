@@ -533,6 +533,33 @@ function eventHandler() {
 			clickable: true,
 		},
 	});
+	var oneDepositSlider = new Swiper(".sOneDeposit__slider--js", {
+		slidesPerView: '1',
+		loop: true,
+		spaceBetween: 0,
+		autoplay: {
+			delay: 2000,
+		},
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		on: {
+			init() {
+				this.el.addEventListener('mouseenter', () => {
+					this.autoplay.stop();
+				});
+	
+				this.el.addEventListener('mouseleave', () => {
+					this.autoplay.start();
+				});
+			}
+		},
+	});
 	var sDeliverySlider = new Swiper(".sDeliveryMethods__slider--js  ", {
 		slidesPerView: 'auto',
 		// loop: true,

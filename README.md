@@ -18,3 +18,4 @@
 1. <https://vptorkhov.github.io/0003baltic/public/17-404.html>
 1. <https://vptorkhov.github.io/0003baltic/public/18-thanks.html>
 1. <https://vptorkhov.github.io/0003baltic/public/19-error.html>
+1. <https://vptorkhov.github.io/0003baltic/public/21-one-deposit.html>

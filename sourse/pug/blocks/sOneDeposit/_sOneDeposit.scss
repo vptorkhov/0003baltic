@@ -1,0 +1,304 @@
+// start .sOneDeposit
+.sOneDeposit {
+	--sPT: 20px;
+	// --sPB: ;
+	// --sTPB: ;
+	&__block {
+		background-color: $white;
+		@include media-breakpoint-up(lg) {
+			padding-top: 49px;
+			padding-left: 50px;
+			padding-right: 50px;
+			padding-bottom: 80px;
+		}
+		padding-top: 30px;
+		padding-bottom: 60px;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	h1 {
+		margin-bottom: 31px;
+	}
+	h2 {
+		font-size: 32px;
+		margin-bottom: 23px;
+	}
+	&__caption {
+		display: flex;
+		flex-direction: column;
+		@include media-breakpoint-up(lg) {
+			flex-direction: row;
+			margin-bottom: 48px;
+		}
+		margin-bottom: 30px;
+		picture {
+			@include media-breakpoint-up(lg) {
+				max-width: 459px;
+				width: 50%;
+				height: 100%;
+				min-height: 296px;
+			}
+			width: 100%;
+			img {
+				width: 100%;
+				max-height: 100%;
+			}
+		}
+		p {
+			margin-bottom: 0;
+			color: $black;
+			font-size: $large;
+			font-weight: 500;
+			line-height: calc(28 / 18);
+			padding-top: 30px;
+			@include media-breakpoint-up(lg) {
+				max-width: 50%;
+				padding-left: 30px;
+				padding-top: 20px;
+				padding-bottom: 30px;
+			}
+			@include media-breakpoint-up(xl) {
+				max-width: 500px;
+				padding-left: 46px;
+				padding-top: 42px;
+				padding-bottom: 61px;
+			}
+		}
+	}
+	ul {
+		list-style-type: none;
+		max-width: 940px;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 48px;
+		}
+		margin-bottom: 30px;
+		li {
+			position: relative;
+			padding-left: 32px;
+			margin-bottom: 0;
+			font-size: $large;
+			font-weight: 200;
+			line-height: 28px;
+			color: #6a6a6a;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 9px;
+				left: 5px;
+				width: 14px;
+				height: 14px;
+				background-color: $primary;
+				border-radius: 50%;
+			}
+		}
+	}
+	&__mini-caption {
+		max-width: 950px;
+		padding-top: 13px;
+		padding-bottom: 13px;
+		padding-left: 30px;
+		position: relative;
+		color: $black;
+		font-size: $large;
+		font-weight: 500;
+		line-height: calc(28 / 18);
+		margin-top: 32px;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 9px;
+			height: 100%;
+			background-color: $primary;
+		}
+	}
+	&__page-links {
+		display: flex;
+		padding-top: 21px;
+		padding-bottom: 40px;
+		@include media-breakpoint-up(lg) {
+			padding-bottom: 74px;
+		}
+		justify-content: space-around;
+		@include media-breakpoint-down(sm) {
+			flex-wrap: wrap;
+		}
+		@include media-breakpoint-up(sm) {
+			justify-content: space-between;
+		}
+		.swiper-button-disabled {
+			background-color: transparent !important;
+		}
+	}
+	&__page-link {
+		display: flex;
+		align-items: center;
+		@include media-breakpoint-down(sm) {
+			justify-content: center;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			width: 100%;
+		}
+		&:hover {
+			.page-link-btn {
+				background-color: $primary;
+				color: $white;
+			}
+			.page-link-caption {
+				color: $primary;
+			}
+		}
+		.page-link-btn {
+			min-width: 39px;
+			min-height: 39px;
+			border-radius: 50%;
+			background-color: #e0e0e0;
+			position: relative;
+			@include mt;
+			color: rgba($black, 0.5);
+
+			.icon {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) rotate(180deg);
+				font-size: 20px;
+			}
+		}
+		.page-link-caption {
+			color: $black;
+			font-weight: 200;
+			margin-left: 12px;
+			@include mt;
+		}
+		&--next {
+			flex-direction: row-reverse;
+			.page-link-btn {
+				.icon {
+					transform: translate(-50%, -50%);
+				}
+			}
+			.page-link-caption {
+				color: $black;
+				font-weight: 200;
+				margin-left: 0;
+				margin-right: 12px;
+			}
+		}
+	}
+	&__slide-wrap {
+		background-color: $white;
+		@include media-breakpoint-up(lg) {
+			padding-top: 38px;
+			padding-bottom: 66px;
+			padding-left: 166px;
+			padding-right: 166px;
+			min-height: 321px;
+			margin: unset;
+		}
+		@include media-breakpoint-up(sm) {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: unset;
+		}
+		padding-top: 15px;
+		padding-bottom: 30px;
+		padding-left: 30px;
+		padding-right: 30px;
+		@include media-breakpoint-up(sm) {
+			padding-top: 20px;
+			padding-bottom: 40px;
+			padding-left: 40px;
+			padding-right: 40px;
+			min-height: 410px;
+		}
+		min-height: 330px;
+		@include media-breakpoint-up(md) {
+			min-height: 330px;
+		}
+		@include media-breakpoint-up(xl) {
+			min-height: 319px;
+		}
+	}
+	&__profile {
+		display: flex;
+		align-items: center;
+		margin-bottom: 21px;
+		picture {
+			width: 62px;
+			height: 62px;
+			border-radius: 50%;
+			img {
+				max-height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+	&__profile-name {
+		padding-left: 13px;
+	}
+	&__name {
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 20px;
+		margin-bottom: 7px;
+	}
+	&__status {
+		color: #6a6a6a;
+		line-height: 16px;
+		font-weight: 200;
+	}
+	&__slide-caption {
+		color: #6a6a6a;
+		font-weight: 200;
+		font-size: $small;
+		letter-spacing: 0.3px;
+		@include media-breakpoint-up(sm) {
+			font-size: $large;
+		}
+	}
+	&__slider {
+		position: relative;
+		padding-bottom: 40px;
+		.swiper-button-prev {
+			position: absolute;
+			left: 32px;
+			display: none;
+			@include media-breakpoint-up(lg){
+				top: 50%;
+				display: block;
+			}
+		}
+		.swiper-button-next {
+			position: absolute;
+			right: 32px;
+			display: none;
+			@include media-breakpoint-up(lg){
+				top: 50%;
+				display: block;
+			}
+		}
+		.swiper-pagination{
+			bottom: 0;
+		}
+		.swiper-pagination-bullet{
+			width: 19px;
+			height: 19px;
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sOneDeposit

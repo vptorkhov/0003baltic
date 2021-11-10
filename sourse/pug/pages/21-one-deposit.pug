@@ -1,0 +1,29 @@
+extends layout/main.pug
+
+
+include ../blocks/sOffers/_sOffers.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sOneDeposit/_sOneDeposit.pug 
+
+block variables
+	- let  mainPage= null
+	- let  bg= '21-one-deposit.png'
+
+block title
+	- let  title= 'Софиевское'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		+topLine('cart')
+		+top-nav()
+	+breadcrumb('Главная','Месторождения',title)
+	//- +sContact()
+	+sOneDeposit()
+	+sForm(`Нужна помощь специалиста?`)
+	+sContact()
+	+footer()
+      
+
+
+
