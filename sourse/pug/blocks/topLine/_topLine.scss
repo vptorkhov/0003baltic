@@ -313,16 +313,47 @@
 			border: 1px solid #d7d7d7;
 			font-size: $small;
 			padding-left: rem(49);
-			@include media-breakpoint-up(lg) {
+			@include mt;
+			&:focus {
+				padding-left: 0.75rem;
+				padding-right: rem(70);
+				& + .icon {
+					opacity: 0;
+				}
 			}
 		}
 		.icon {
+			@include mt;
 			position: absolute;
 			top: 50%;
 			left: rem(13);
 			font-size: rem(24);
 			color: #14305b;
 			transform: translateY(-50%);
+		}
+	}
+	&__input-btn {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 60px;
+		height: 100%;
+		display: none;
+		@include mt;
+		background-color: transparent;
+		&--active {
+			display: block;
+		}
+		&:hover {
+			background-color: rgba(black, 0.1);
+		}
+		.icon {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: $primary;
+			@include mt;
 		}
 	}
 	&__search-btn {

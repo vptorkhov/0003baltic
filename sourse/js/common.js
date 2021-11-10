@@ -423,6 +423,12 @@ function eventHandler() {
 	$('.sCatalog__show-more').click(function () {
 		$('.sCatalog__caption').toggleClass('sCatalog__caption--active');
 	});
+	$('.topLine__input').focus(function(){
+		$('.topLine__input-btn').toggleClass('topLine__input-btn--active');
+	});
+	$('.topLine__input').blur(function(){
+		$('.topLine__input-btn').toggleClass('topLine__input-btn--active');
+	});
 	$('.list-title--js').click(function () {
 		$(this).toggleClass('active');
 		$(this).next().slideToggle();
