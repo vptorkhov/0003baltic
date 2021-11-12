@@ -665,6 +665,11 @@ function eventHandler() {
 			el: ".swiper-pagination",
 			clickable: true,
 		},
+		autoplay: {
+			delay: 5000,
+			reverseDirection: true,
+			pauseOnMouseEnter: true,
+		},
 		breakpoints: {
 			1200: {
 				slidesPerView: 4
