@@ -93,12 +93,12 @@
 									<div class="topLine__tel">
 										<a class="topLine__tel-number" href="tel:+78125650220">8 (812) 565-02-20
 										</a>
-										<a class="topLine__tel-link" href="#">Заказать звонок
+										<a class="topLine__tel-link link-modal-js" href="#modal-call">Заказать звонок
 										</a>
 										<div class="topLine__tel-time">ПН-ВС:с 9:30 до 18
 										</div>
 									</div>
-									<a class="topLine__tel-link-mob d-lg-none d-block" href="#">Заказать звонок
+									<a class="topLine__tel-link-mob d-lg-none d-block link-modal-js" href="#modal-call">Заказать звонок
 									</a>
 								</div>
 							</div>
@@ -1296,7 +1296,7 @@
 									<div class="sContact__tel-wrap">
 										<div class="sContact__tel">8 (812) 565-02-20
 										</div>
-										<a class="sContact__tel-link" href="#">Заказать звонок
+										<a class="sContact__tel-link link-modal-js" href="#modal-call">Заказать звонок
 										</a>
 									</div>
 								</div>
@@ -1374,29 +1374,105 @@
 			</footer>
 		</div>
 		<!--  start modals-->
-		<div id="modal-call" style="display: none">
-			<div class="modal-win">
-				<div class="form-wrap">
-					<form>
-						<div class="text-center">
-							<div class="form-wrap__title form-data h3 ttu">Обратный звонок
-							</div>
-							<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
-						</div>
-						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
-						</div>
-						<!-- +e.input-wrap-->
-						<button class="form-wrap__btn btn" type="submit"> 
-						</button>
-						<div class="form-wrap__policy">
-							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+		<div class="modal-win modal-win--call" id="modal-call" style="display: none">
+			<div class="text-center">
+				<div class="h2 mb-3">Укажите ваш номер телефона</div>
+				<div class="text-secondary mb-3">И&nbsp;менеджер перезвонит вам в&nbsp;течение 10&nbsp;минут</div>
+				<div class="fw-500">Как с вами связаться?</div>
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="row mb-4 justify-content-center">
+						<div class="col-auto">
+							<label class="contact-variant">
+								<input name="var" type="radio" value="phone" checked="checked"/><span class="contact-variant__icon-wrap contact-variant__icon-wrap--phone">
+								<svg class="icon icon-phone ">
+									<use xlink:href="img/svg/sprite.svg#phone"></use>
+								</svg></span><span class="contact-variant__text">Звонок</span>
 							</label>
 						</div>
-					</form>
-				</div>
+						<div class="col-auto">
+							<label class="contact-variant">
+								<input name="var" type="radio" value="whatsapp"/><span class="contact-variant__icon-wrap contact-variant__icon-wrap--whatsapp">
+								<svg class="icon icon-whatsapp ">
+									<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+								</svg></span><span class="contact-variant__text">Whatsapp</span>
+							</label>
+						</div>
+						<div class="col-auto">
+							<label class="contact-variant">
+								<input name="var" type="radio" value="viber"/><span class="contact-variant__icon-wrap contact-variant__icon-wrap--viber">
+								<svg class="icon icon-viber ">
+									<use xlink:href="img/svg/sprite.svg#viber"></use>
+								</svg></span><span class="contact-variant__text">Viber</span>
+							</label>
+						</div>
+					</div>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Телефон"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="btn btn-primary" type="submit">Жду звонка</button>
+					<div class="form-wrap__policy text-secondary text-center pt-2">Нажимая на кнопку, Вы принимаете <a class="text-secondary tdu d-inline-block" href="#">условия обработки данных</a>
+					</div>
+				</form>
 			</div>
 		</div>
 		<!-- #modal-call-->
+		<div class="modal-win modal-win--get-samples" id="modal-get-samples" style="display: none">
+			<div class="row">
+				<div class="col-md-7">
+					<div class="text-center">
+						<div class="h2 mb-3">Получить образцы</div>
+						<div class="text-secondary mb-3">Мы&nbsp;привезем образцы лично или доставим почтой в&nbsp;любую точку России</div>
+						<div class="fw-500">Как с вами связаться?</div>
+					</div>
+					<div class="form-wrap">
+						<form>
+							<div class="row mb-4 justify-content-center">
+								<div class="col-auto">
+									<label class="contact-variant">
+										<input name="var" type="radio" value="phone" checked="checked"/><span class="contact-variant__icon-wrap contact-variant__icon-wrap--phone">
+										<svg class="icon icon-phone ">
+											<use xlink:href="img/svg/sprite.svg#phone"></use>
+										</svg></span><span class="contact-variant__text">Звонок</span>
+									</label>
+								</div>
+								<div class="col-auto">
+									<label class="contact-variant">
+										<input name="var" type="radio" value="whatsapp"/><span class="contact-variant__icon-wrap contact-variant__icon-wrap--whatsapp">
+										<svg class="icon icon-whatsapp ">
+											<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+										</svg></span><span class="contact-variant__text">Whatsapp</span>
+									</label>
+								</div>
+								<div class="col-auto">
+									<label class="contact-variant">
+										<input name="var" type="radio" value="viber"/><span class="contact-variant__icon-wrap contact-variant__icon-wrap--viber">
+										<svg class="icon icon-viber ">
+											<use xlink:href="img/svg/sprite.svg#viber"></use>
+										</svg></span><span class="contact-variant__text">Viber</span>
+									</label>
+								</div>
+							</div>
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Телефон"/>
+							</div>
+							<!-- +e.input-wrap-->
+							<button class="btn btn-primary" type="submit">Жду звонка</button>
+							<div class="form-wrap__policy text-secondary text-center pt-2">Нажимая на кнопку, Вы принимаете <a class="text-secondary tdu d-inline-block" href="#">условия обработки данных</a>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="col-md-5 d-none d-md-block text-center pt-5">
+					<!-- picture-->
+					<picture> 
+						<source type="image/webp" srcset="img/@2x/webp/modal-img.webp"/><img src="img/@2x/modal-img.png" alt="" loading="lazy"/>
+					</picture>
+					<!-- /picture-->
+				</div>
+			</div>
+		</div>
+		<!-- #modal-get-samples-->
 		<!-- end modals-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>

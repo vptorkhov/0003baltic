@@ -43,9 +43,9 @@ mixin topLine(cart)
 					+e.tel-wrap
 						+e.tel
 							+e.tel-number(href="tel:+78125650220") 8 (812) 565-02-20
-							+e.tel-link(href="#") Заказать звонок
+							+e.tel-link(href="#modal-call").link-modal-js Заказать звонок
 							+e.tel-time ПН-ВС:с 9:30 до 18
-						+e.tel-link-mob.d-lg-none.d-block(href="#") Заказать звонок
+						+e.tel-link-mob.d-lg-none.d-block(href="#modal-call").link-modal-js Заказать звонок
 				+e.col.col-auto
 					+e.cart
 						+e.cart-btn(href="#" class=(cart ? "goods" : ""))

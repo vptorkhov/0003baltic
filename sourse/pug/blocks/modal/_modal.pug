@@ -2,16 +2,70 @@
 mixin modal() 
 	//  start modals
 	//- a(href="modal-call").link-modal-js modal-call 
-	div(id="modal-call"  style="display: none" )
-		+b.modal-win
-			+form-wrap
-				.text-center
-					+e.title.form-data.h3.ttu Обратный звонок
-					p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
+	+b.modal-win--call(id="modal-call"  style="display: none" )
+		.text-center
+			.h2.mb-3 Укажите ваш номер телефона
+			.text-secondary.mb-3 И&nbsp;менеджер перезвонит вам в&nbsp;течение 10&nbsp;минут
 
-				+input("Ваше Имя")(required)  
-				+e.BUTTON.btn.btn(type="submit"  )  
-				+policy()
+			.fw-500 Как с вами связаться?
+		+form-wrap
+			.row.mb-4.justify-content-center
+				.col-auto
+					+b.LABEL.contact-variant
+						input(name="var" type="radio" value="phone" checked)
+						+e.SPAN.icon-wrap--phone
+							+icon("phone")
+						+e.SPAN.text Звонок
+				.col-auto
+					+b.LABEL.contact-variant
+						input(name="var" type="radio" value="whatsapp")
+						+e.SPAN.icon-wrap--whatsapp
+							+icon("whatsapp")
+						+e.SPAN.text Whatsapp
+				.col-auto
+					+b.LABEL.contact-variant
+						input(name="var" type="radio" value="viber")
+						+e.SPAN.icon-wrap--viber
+							+icon("viber")
+						+e.SPAN.text Viber
+			+input("Телефон",'tel')
+			button.btn.btn-primary(type="submit") Жду звонка
+			+policy()
 	// #modal-call
+	
+	+b.modal-win--get-samples(id="modal-get-samples"  style="display: none" )
+		.row
+			.col-md-7
+				.text-center
+					.h2.mb-3 Получить образцы
+					.text-secondary.mb-3 Мы&nbsp;привезем образцы лично или доставим почтой в&nbsp;любую точку России
+
+					.fw-500 Как с вами связаться?
+				+form-wrap
+					.row.mb-4.justify-content-center
+						.col-auto
+							+b.LABEL.contact-variant
+								input(name="var" type="radio" value="phone" checked)
+								+e.SPAN.icon-wrap--phone
+									+icon("phone")
+								+e.SPAN.text Звонок
+						.col-auto
+							+b.LABEL.contact-variant
+								input(name="var" type="radio" value="whatsapp")
+								+e.SPAN.icon-wrap--whatsapp
+									+icon("whatsapp")
+								+e.SPAN.text Whatsapp
+						.col-auto
+							+b.LABEL.contact-variant
+								input(name="var" type="radio" value="viber")
+								+e.SPAN.icon-wrap--viber
+									+icon("viber")
+								+e.SPAN.text Viber
+					+input("Телефон",'tel')
+					button.btn.btn-primary(type="submit") Жду звонка
+					+policy()
+			.col-md-5.d-none.d-md-block.text-center.pt-5
+				+pic("modal-img.png",'',0)
+	// #modal-get-samples
 	
 	// end modals
